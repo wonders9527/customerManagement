@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<head>
+	<title>个人信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/font.css" type="text/css"/>
+	<link href="css/font-awesome.css" rel="stylesheet">
+
+	<script src="js/modernizr.js"></script>
+	<script src="js/screenfull.js"></script>
+</head>
+
+<body class="dashboard-page">
+<nav class="main-menu">
+	<ul>
+		<li>
+			<a href="#"><i class="icon-table nav-icon"></i><span class="nav-text">企业信息</span></a>
+			<ul>
+				<li><a class="subnav-text" href="m_add_company.html">企业信息录入</a></li>
+				<li><a class="subnav-text" href="m_list_company.html">企业信息列表</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#"><i class="icon-font nav-icon"></i><span class="nav-text">个人信息</span></a>
+			<ul>
+				<li><a class="subnav-text" href="m_add_personal.html">个人信息录入</a></li>
+				<li><a class="subnav-text" href="m_list_personal.html">个人信息列表</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="m_account.html"><i class="icon-table nav-icon"></i><span class="nav-text">账号管理</span></a>
+		</li>
+	</ul>
+	<ul class="logout">
+		<li><a href="login.html"><i class="icon-off nav-icon"></i><span class="nav-text">Logout</span></a></li>
+	</ul>
+</nav>
+
+<section class="wrapper scrollable">
+
+	<nav class="user-menu">
+		<a href="javascript:;" class="main-menu-access">
+			<i class="icon-proton-logo"></i>
+			<i class="icon-reorder"></i>
+		</a>
+	</nav>
+
+	<section class="title-bar">
+		<div class="logo">
+			<h1><a href="index.html"><img src="images/logo.png" alt="" />客户管理</a></h1>
+		</div>
+		<div class="clearfix"> </div>
+	</section>
+
+
+	<div class="main-grid">
+		<div class="agile-grids">
+			<div class="grids">
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>主借款人信息</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">申请金额</span>
+										</div>
+										<input type="number" class="form-control" id="applicationAmount" name="applicationAmount">
+										<div class="input-group-prepend">
+											<span class="input-group-text">最高月还款额</span>
+										</div>
+										<input type="number" class="form-control" id="maximumMonthlyPayment" name="maximumMonthlyPayment">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">姓名</span>
+										</div>
+										<input type="text" class="form-control" id="personalName" name="personalName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">身份证号码</span>
+										</div>
+										<input type="text" class="form-control" id="identificationNumber" name="identificationNumber">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">婚姻状况</span>
+										</div>
+										<select class="form-control" id="maritalStatus">
+											<option value="0"></option>
+											<option value="1">未婚</option>
+											<option value="2">已婚</option>
+											<option value="3">离异</option>
+											<option value="4">丧偶</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">房屋性质</span>
+										</div>
+										<select class="form-control" id="propertyNature">
+											<option value="0"></option>
+											<option value="1">商品房</option>
+											<option value="2">租赁房</option>
+											<option value="3">公房</option>
+											<option value="4">自建房</option>
+										</select>
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">邮箱号</span>
+										</div>
+										<input type="text" class="form-control" id="mailboxNumber" name="mailboxNumber">
+										<div class="input-group-prepend">
+											<span class="input-group-text">最高学历</span>
+										</div>
+										<select class="form-control" id="highestEducation">
+											<option value="0"></option>
+											<option value="1">博士</option>
+											<option value="2">硕士</option>
+											<option value="3">本科</option>
+											<option value="4">专科</option>
+											<option value="5">高中</option>
+											<option value="6">初中</option>
+											<option value="7">小学</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">母亲姓名</span>
+										</div>
+										<input type="text" class="form-control" id="motherName" name="motherName">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">户籍地址</span>
+										</div>
+										<input type="text" class="form-control" id="residenceAddress" name="residenceAddress">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">现居住地</span>
+										</div>
+										<input type="text" class="form-control" id="nowLiving" name="nowLiving">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">房产所在地</span>
+										</div>
+										<input type="text" class="form-control" id="propertyLocation" name="propertyLocation">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">单位名称</span>
+										</div>
+										<input type="text" class="form-control" id="companyName" name="companyName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">入职时间</span>
+										</div>
+										<input type="date" class="form-control" id="entryTime" name="entryTime">
+										<div class="input-group-prepend">
+											<span class="input-group-text">用工类型</span>
+										</div>
+										<select class="form-control" id="employmentType">
+											<option value="0"></option>
+											<option value="1">受薪</option>
+											<option value="2">自雇</option>
+										</select>
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">单位地址</span>
+										</div>
+										<input type="text" class="form-control" id="companyAddress" name="companyAddress">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">单位电话</span>
+										</div>
+										<input type="number" class="form-control" id="companyPhone" name="username">
+										<div class="input-group-prepend">
+											<span class="input-group-text">手机号码</span>
+										</div>
+										<input type="number" class="form-control" id="companyCellphoneNumber" name="username">
+										<div class="input-group-prepend">
+											<span class="input-group-text">月均收入</span>
+										</div>
+										<input type="number" class="form-control" id="averageIncome" name="averageIncome">
+										<div class="col-mb-1">
+											<p class="help-block">元</p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>配偶信息</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">配偶姓名</span>
+										</div>
+										<input type="text" class="form-control" id="spouseName" name="spouseName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">身份证号码</span>
+										</div>
+										<input type="text" class="form-control" id="spouseIdentificationNumber" name="spouseIdentificationNumber">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">单位名称</span>
+										</div>
+										<input type="text" class="form-control" id="spouseCompanyName" name="spouseCompanyName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">单位地址</span>
+										</div>
+										<input type="text" class="form-control" id="spouseCompanyAddress" name="spouseCompanyAddress">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">单位电话</span>
+										</div>
+										<input type="text" class="form-control" id="spouseCompanyPhone" name="spouseCompanyPhone">
+										<div class="input-group-prepend">
+											<span class="input-group-text">手机号码</span>
+										</div>
+										<input type="text" class="form-control" id="spouseCellphoneNumber" name="spouseCellphoneNumber">
+										<div class="input-group-prepend">
+											<span class="input-group-text">月均收入</span>
+										</div>
+										<input type="number" class="form-control" id="spouseAverageIncome" name="spouseAverageIncome">
+									</div>
+
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>紧急联系人</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">直系亲属</span>
+										</div>
+										<input type="text" class="form-control" id="emergencyContact" name="emergencyContact">
+										<div class="input-group-prepend">
+											<span class="input-group-text">关系</span>
+										</div>
+										<input type="text" class="form-control" id="immediateKinship" name=immediateKinshipusername">
+										<div class="input-group-prepend">
+											<span class="input-group-text">联系人电话</span>
+										</div>
+										<input type="text" class="form-control" id="relativesPhone" name="relativesPhone">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">同事</span>
+										</div>
+										<input type="text" class="form-control" id="colleagueName" name="colleagueName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">联系人电话</span>
+										</div>
+										<input type="text" class="form-control" id="colleaguePhone" name="colleaguePhone">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">朋友</span>
+										</div>
+										<input type="text" class="form-control" id="friendOneName" name="friendOneName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">联系人电话</span>
+										</div>
+										<input type="text" class="form-control" id="friendOnePhone" name="friendOnePhone">
+									</div>
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">朋友</span>
+										</div>
+										<input type="text" class="form-control" id="friendTwoName" name="friendTwoName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">联系人电话</span>
+										</div>
+										<input type="text" class="form-control" id="friendTwoPhone" name="friendTwoPhone">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>房产</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">购买方式</span>
+										</div>
+										<select class="form-control" id="propertyPurchaseMethod">
+											<option value="0"></option>
+											<option value="1">按揭</option>
+											<option value="2">全款</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">有无房产证</span>
+										</div>
+										<select class="form-control" id="deedStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">房贷申请日期</span>
+										</div>
+										<input type="date" class="form-control" id="mortgageApplicationDate" name="mortgageApplicationDate">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">月供</span>
+										</div>
+										<input type="number" class="form-control" id="mortgageMonthly" name="mortgageMonthly">
+										<div class="input-group-prepend">
+											<span class="input-group-text">房屋建造年代</span>
+										</div>
+										<input type="date" class="form-control" id="houseConstructionData" name="houseConstructionData">
+										<div class="input-group-prepend">
+											<span class="input-group-text">房屋面积</span>
+										</div>
+										<input type="number" class="form-control" id="houseArea" name="houseArea">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>车产</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">车牌号</span>
+										</div>
+										<input type="text" class="form-control" id="vehicleNumber" name="vehicleNumber">
+										<div class="input-group-prepend">
+											<span class="input-group-text">车价</span>
+										</div>
+										<input type="number" class="form-control" id="vehiclePrice" name="vehiclePrice">
+										<div class="input-group-prepend">
+											<span class="input-group-text">车辆购买日期</span>
+										</div>
+										<input type="date" class="form-control" id="vehiclePurchaseDate" name="vehiclePurchaseDate">
+										<div class="input-group-prepend">
+											<span class="input-group-text">车型</span>
+										</div>
+										<input type="text" class="form-control" id="vehicleModel" name="vehicleModel">
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">保险公司名称</span>
+										</div>
+										<input type="text" class="form-control" id="vehicleInsuranceCompanyname" name="vehicleInsuranceCompanyname">
+										<div class="input-group-prepend">
+											<span class="input-group-text">保险到期日</span>
+										</div>
+										<input type="date" class="form-control" id="vehicleInsuranceEnddate" name="vehicleInsuranceEnddate">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>信用卡</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">主借款人有无信用卡</span>
+										</div>
+										<select class="form-control" id="borrowerCreditcardStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">授信额度</span>
+										</div>
+										<input type="number" class="form-control" id="borrowerCreditLine" name="borrowerCreditLine">
+										<div class="input-group-prepend">
+											<span class="input-group-text">已用额度</span>
+										</div>
+										<input type="number" class="form-control" id="borrowerUsedQuota" name="borrowerUsedQuota">
+										<div class="input-group-prepend">
+											<span class="input-group-text">有无逾期</span>
+										</div>
+										<select class="form-control" id="borrowerOverdueStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+									</div>
+
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">配偶有无信用卡</span>
+										</div>
+										<select class="form-control" id="spouseCreditcardStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">授信额度</span>
+										</div>
+										<input type="number" class="form-control" id="spouseCreditLine" name="spouseCreditLine">
+										<div class="input-group-prepend">
+											<span class="input-group-text">已用额度</span>
+										</div>
+										<input type="number" class="form-control" id="spouseUsedQuota" name="spouseUsedQuota">
+										<div class="input-group-prepend">
+											<span class="input-group-text">有无逾期</span>
+										</div>
+										<select class="form-control" id="spouseOverdueStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>贷款</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">有无贷款</span>
+										</div>
+										<select class="form-control" id="loanStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">贷款机构</span>
+										</div>
+										<input type="text" class="form-control" id="loanMechanism" name="loanMechanism">
+										<div class="input-group-prepend">
+											<span class="input-group-text">贷款日期</span>
+										</div>
+										<input type="date" class="form-control" id="loanDate" name="loanDate">
+										<div class="input-group-prepend">
+											<span class="input-group-text">贷款金额</span>
+										</div>
+										<input type="number" class="form-control" id="loanAmount" name="loanAmount">
+										<div class="input-group-prepend">
+											<span class="input-group-text">月还款额</span>
+										</div>
+										<input type="number" class="form-control" id="loanMonthlyRepayment" name="loanMonthlyRepayment">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>保单</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">有无保险</span>
+										</div>
+										<select class="form-control" id="insuranceStatus">
+											<option value="0"></option>
+											<option value="1">有</option>
+											<option value="2">无</option>
+										</select>
+										<div class="input-group-prepend">
+											<span class="input-group-text">保险公司名称</span>
+										</div>
+										<input type="text" class="form-control" id="insuranceName" name="insuranceName">
+										<div class="input-group-prepend">
+											<span class="input-group-text">年缴金额</span>
+										</div>
+										<input type="number" class="form-control" id="insuranceAnnualPayment" name="insuranceAnnualPayment">
+										<div class="input-group-prepend">
+											<span class="input-group-text">保单生效日期</span>
+										</div>
+										<input type="date" class="form-control" id="insuranceEffectiveDate" name="insuranceEffectiveDate">
+										<div class="input-group-prepend">
+											<span class="input-group-text">保险类型</span>
+										</div>
+										<input type="text" class="form-control" id="insuranceType" name="insuranceType">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>公积金</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">公积金缴金基数</span>
+										</div>
+										<input type="number" class="form-control"  id="providentFundBase" name="providentFundBase">
+										<div class="input-group-prepend">
+											<span class="input-group-text">是否缴满一年</span>
+										</div>
+										<select class="form-control" id="providentFundYear">
+											<option value="0"></option>
+											<option value="1">是</option>
+											<option value="2">否</option>
+										</select>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-widget forms-panel">
+					<div class="form-title">
+						<h4>备注</h4>
+					</div>
+					<div class="forms">
+						<div class="form-three widget-shadow">
+							<div class=" panel-body-inputin">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="input-group mb-3">
+										<textarea class="form-control" rows="5" id="remark"></textarea>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="modal-footer">
+	<button id="addPersonal" type="button" class="btn btn-primary">保存</button>
+</div>
+
+<div class="modal fade" id="Info_prompt">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div id="promptContent" class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="btnClose" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/editPersonal.js"></script>
+</body>
+</html>

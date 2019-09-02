@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.jinhuifeng.controller"/>
+
+    <mvc:annotation-driven/>  <!-- 开启SpringMVC注解模式 -->
+    <mvc:default-servlet-handler/>  <!-- 静态资源默认servlet配置 -->
+
+    <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
+    <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+                <!--<value>application/atom+xml;charset=UTF-8</value>-->
+                <!--<value>application/json;charset=UTF-8</value>-->
+            </list>
+        </property>
+    </bean>
+
+    <!--注册视图解析器-->
+    <!--<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">-->
+        <!--<property name="viewResolvers">-->
+            <!--<list>-->
+                <!--&lt;!&ndash; <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/> &ndash;&gt;-->
+                <!--<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+                    <!--<property name="prefix" value="/"/>-->
+                    <!--<property name="suffix" value=".html"/>-->
+                <!--</bean>-->
+            <!--</list>-->
+        <!--</property>-->
+        <!--<property name="defaultViews">-->
+            <!--<list>-->
+                <!--<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/"></property>  <!--前缀-->
+        <property name="suffix" value=".html"></property>  <!--后缀-->
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="209715200"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="resolveLazily" value="true"/>
+    </bean>
+
+</beans>

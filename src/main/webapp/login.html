@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+<title>登陆</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link href="css/style.css" rel="stylesheet"/>
+
+</head>
+<body class="signup-body">
+	<div class="agile-signup">
+		<div class="content2" style="margin-top:7%;">
+			<div class="grids-heading gallery-heading signup-heading">
+				<h2>Login</h2>
+			</div>
+			<form action="user/login" method="post">
+				<label>用户名</label>
+				<input id="form-username" type="text" name="userName"/>
+				<label>密&nbsp;&nbsp;&nbsp;码</label>
+				<input id="form-password" type="password" name="password"/>
+				<input id="loginForm" type="submit" class="register" value="Login">
+			</form>
+		</div>
+	</div>
+	<div class="modal fade" id="Info_prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">提示</h4>
+				</div>
+				<div id="promptContent" class="modal-body">
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="btnClose" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<script>-->
+
+	<!--$('#loginForm').on('click', function() {-->
+		<!--$.ajax({-->
+			<!--url:'user/login',-->
+			<!--type:'post',-->
+			<!--async: true,-->
+			<!--data:{userName:$('#form-username').val(),password:$('#form-password').val()},-->
+			<!--dataType:'json',-->
+			<!--timeout:2000,-->
+			<!--cache:false,-->
+			<!--error:erryFunction,  //错误执行方法-->
+			<!--success:succFunction //成功执行方法-->
+		<!--});-->
+		<!--function erryFunction() {-->
+			<!--$('#promptContent').html('登录失败！');-->
+			<!--$('#Info_prompt').modal('show');-->
+		<!--}-->
+		<!--function succFunction(data) {-->
+			<!--if(data==null){-->
+				<!--$('#promptContent').html('无此用户！');-->
+				<!--$('#Info_prompt').modal('show');-->
+			<!--}else{-->
+				<!--// sessionStorage.setItem("socialCreditCode",data.socialCreditCode);-->
+				<!--// sessionStorage.setItem("storeName",data.storeName);-->
+				<!--window.location.href ="index.html";-->
+			<!--}-->
+		<!--}-->
+	<!--});-->
+<!--</script>-->
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+	<title>个人信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" href="css/font.css" type="text/css"/>
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/table-style.css" />
+
+	<script src="js/modernizr.js"></script>
+	<script src="js/screenfull.js"></script>
+
+</head>
+<body class="dashboard-page">
+
+<nav class="main-menu">
+	<ul>
+		<li>
+			<a href="#"><i class="icon-table nav-icon"></i><span class="nav-text">企业信息</span></a>
+			<ul>
+				<li><a class="subnav-text" href="m_add_company.html">企业信息录入</a></li>
+				<li><a class="subnav-text" href="m_list_company.html">企业信息列表</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#"><i class="icon-font nav-icon"></i><span class="nav-text">个人信息</span></a>
+			<ul>
+				<li><a class="subnav-text" href="m_add_personal.html">个人信息录入</a></li>
+				<li><a class="subnav-text" href="m_list_personal.html">个人信息列表</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="m_account.html"><i class="icon-table nav-icon"></i><span class="nav-text">账号管理</span></a>
+		</li>
+	</ul>
+	<ul class="logout">
+		<li><a href="login.html"><i class="icon-off nav-icon"></i><span class="nav-text">Logout</span></a></li>
+	</ul>
+</nav>
+
+<section class="wrapper scrollable">
+	<nav class="user-menu">
+		<a href="javascript:;" class="main-menu-access">
+			<i class="icon-proton-logo"></i>
+			<i class="icon-reorder"></i>
+		</a>
+	</nav>
+	<section class="title-bar">
+		<div class="logo">
+			<h1><a href="index.html"><img src="images/logo.png" alt="" />客户管理</a></h1>
+		</div>
+		<div class="clearfix"> </div>
+	</section>
+
+	<div class="main-grid">
+		<div class="agile-grids">
+			<div class="agile-tables">
+				<div class="w3l-table-info">
+					<table>
+						<thead>
+						<tr>
+							<th style="display: none"></th>
+							<th class="text-center" style="width:10%">姓名</th>
+							<th class="text-center" style="width:10%">身份证号</th>
+							<th class="text-center" style="width:10%">邮箱号</th>
+							<th class="text-center" style="width:10%">学历</th>
+							<th class="text-center" style="width:10%">有无贷款</th>
+							<th class="text-center" style="width:10%">贷款机构</th>
+							<th class="text-center" style="width:10%">贷款日期</th>
+							<th class="text-center" style="width:10%">贷款金额</th>
+							<th class="text-center" style="width:10%">贷款月还款额</th>
+							<th class="text-center" style="width:10%">操作</th>
+						</tr>
+						</thead>
+						<tbody id="personalList">
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<div class="modal fade" id="Info_prompt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div id="promptContent" class="modal-body">
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" id="btnClose" class="btn btn-default" data-dismiss="modal">关闭</button>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/listPersonal.js"></script>
+
+</body>
+</html>

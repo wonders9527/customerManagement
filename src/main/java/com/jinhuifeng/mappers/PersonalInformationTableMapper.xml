@@ -1,0 +1,2679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinhuifeng.dao.PersonalInformationDao">
+
+  <resultMap id="BaseResultMap" type="com.jinhuifeng.model.PersonalInformationTable">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="application_amount" jdbcType="DOUBLE" property="applicationAmount" />
+    <result column="maximum_monthly_payment" jdbcType="DOUBLE" property="maximumMonthlyPayment" />
+    <result column="personal_name" jdbcType="VARCHAR" property="personalName" />
+    <result column="identification_number" jdbcType="VARCHAR" property="identificationNumber" />
+    <result column="marital_status" jdbcType="VARCHAR" property="maritalStatus" />
+    <result column="property_nature" jdbcType="VARCHAR" property="propertyNature" />
+    <result column="mailbox_number" jdbcType="VARCHAR" property="mailboxNumber" />
+    <result column="highest_education" jdbcType="VARCHAR" property="highestEducation" />
+    <result column="mother_name" jdbcType="VARCHAR" property="motherName" />
+    <result column="residence_address" jdbcType="VARCHAR" property="residenceAddress" />
+    <result column="now_living" jdbcType="VARCHAR" property="nowLiving" />
+    <result column="property_location" jdbcType="VARCHAR" property="propertyLocation" />
+    <result column="company_name" jdbcType="VARCHAR" property="companyName" />
+    <result column="entry_time" jdbcType="TIMESTAMP" property="entryTime" />
+    <result column="employment_type" jdbcType="VARCHAR" property="employmentType" />
+    <result column="company_address" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="company_phone" jdbcType="VARCHAR" property="companyPhone" />
+    <result column="company_cellphone_number" jdbcType="VARCHAR" property="companyCellphoneNumber" />
+    <result column="average_income" jdbcType="DOUBLE" property="averageIncome" />
+    <result column="spouse_name" jdbcType="VARCHAR" property="spouseName" />
+    <result column="spouse_identification_number" jdbcType="VARCHAR" property="spouseIdentificationNumber" />
+    <result column="spouse_company_name" jdbcType="VARCHAR" property="spouseCompanyName" />
+    <result column="spouse_company_address" jdbcType="VARCHAR" property="spouseCompanyAddress" />
+    <result column="spouse_company_phone" jdbcType="VARCHAR" property="spouseCompanyPhone" />
+    <result column="spouse_cellphone_number" jdbcType="VARCHAR" property="spouseCellphoneNumber" />
+    <result column="spouse_average_income" jdbcType="DOUBLE" property="spouseAverageIncome" />
+    <result column="emergency_contact" jdbcType="VARCHAR" property="emergencyContact" />
+    <result column="immediate_kinship" jdbcType="VARCHAR" property="immediateKinship" />
+    <result column="relatives_phone" jdbcType="VARCHAR" property="relativesPhone" />
+    <result column="colleague_name" jdbcType="VARCHAR" property="colleagueName" />
+    <result column="colleague_phone" jdbcType="VARCHAR" property="colleaguePhone" />
+    <result column="friend_one_name" jdbcType="VARCHAR" property="friendOneName" />
+    <result column="friend_one_phone" jdbcType="VARCHAR" property="friendOnePhone" />
+    <result column="friend_two_name" jdbcType="VARCHAR" property="friendTwoName" />
+    <result column="friend_two_phone" jdbcType="VARCHAR" property="friendTwoPhone" />
+    <result column="property_purchase_method" jdbcType="VARCHAR" property="propertyPurchaseMethod" />
+    <result column="deed_status" jdbcType="VARCHAR" property="deedStatus" />
+    <result column="mortgage_application_date" jdbcType="TIMESTAMP" property="mortgageApplicationDate" />
+    <result column="mortgage_monthly" jdbcType="DOUBLE" property="mortgageMonthly" />
+    <result column="house_construction_data" jdbcType="TIMESTAMP" property="houseConstructionData" />
+    <result column="house_area" jdbcType="DOUBLE" property="houseArea" />
+    <result column="vehicle_number" jdbcType="VARCHAR" property="vehicleNumber" />
+    <result column="vehicle_price" jdbcType="DOUBLE" property="vehiclePrice" />
+    <result column="vehicle_purchase_date" jdbcType="TIMESTAMP" property="vehiclePurchaseDate" />
+    <result column="vehicle_model" jdbcType="VARCHAR" property="vehicleModel" />
+    <result column="vehicle_insurance_companyName" jdbcType="VARCHAR" property="vehicleInsuranceCompanyname" />
+    <result column="vehicle_insurance_endDate" jdbcType="TIMESTAMP" property="vehicleInsuranceEnddate" />
+    <result column="borrower_creditCard_status" jdbcType="VARCHAR" property="borrowerCreditcardStatus" />
+    <result column="borrower_credit_line" jdbcType="DOUBLE" property="borrowerCreditLine" />
+    <result column="borrower_used_quota" jdbcType="DOUBLE" property="borrowerUsedQuota" />
+    <result column="borrower_overdue_status" jdbcType="VARCHAR" property="borrowerOverdueStatus" />
+    <result column="spouse_creditCard_status" jdbcType="VARCHAR" property="spouseCreditcardStatus" />
+    <result column="spouse_credit_line" jdbcType="DOUBLE" property="spouseCreditLine" />
+    <result column="spouse_used_quota" jdbcType="DOUBLE" property="spouseUsedQuota" />
+    <result column="spouse_overdue_status" jdbcType="VARCHAR" property="spouseOverdueStatus" />
+    <result column="loan_status" jdbcType="VARCHAR" property="loanStatus" />
+    <result column="loan_mechanism" jdbcType="VARCHAR" property="loanMechanism" />
+    <result column="loan_date" jdbcType="TIMESTAMP" property="loanDate" />
+    <result column="loan_amount" jdbcType="DOUBLE" property="loanAmount" />
+    <result column="loan_monthly_repayment" jdbcType="DOUBLE" property="loanMonthlyRepayment" />
+    <result column="insurance_status" jdbcType="VARCHAR" property="insuranceStatus" />
+    <result column="insurance_name" jdbcType="VARCHAR" property="insuranceName" />
+    <result column="insurance_annual_payment" jdbcType="DOUBLE" property="insuranceAnnualPayment" />
+    <result column="insurance_effective_date" jdbcType="TIMESTAMP" property="insuranceEffectiveDate" />
+    <result column="insurance_type" jdbcType="VARCHAR" property="insuranceType" />
+    <result column="provident_fund_base" jdbcType="DOUBLE" property="providentFundBase" />
+    <result column="provident_fund_year" jdbcType="VARCHAR" property="providentFundYear" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="entry_people" jdbcType="VARCHAR" property="entryPeople" />
+    <result column="account_manager" jdbcType="VARCHAR" property="accountManager" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="Temp1" jdbcType="VARCHAR" property="temp1" />
+    <result column="Temp2" jdbcType="VARCHAR" property="temp2" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, application_amount, maximum_monthly_payment, personal_name, identification_number, 
+    marital_status, property_nature, mailbox_number, highest_education, mother_name, 
+    residence_address, now_living, property_location, company_name, entry_time, employment_type, 
+    company_address, company_phone, company_cellphone_number, average_income, spouse_name, 
+    spouse_identification_number, spouse_company_name, spouse_company_address, spouse_company_phone, 
+    spouse_cellphone_number, spouse_average_income, emergency_contact, immediate_kinship, 
+    relatives_phone, colleague_name, colleague_phone, friend_one_name, friend_one_phone, 
+    friend_two_name, friend_two_phone, property_purchase_method, deed_status, mortgage_application_date, 
+    mortgage_monthly, house_construction_data, house_area, vehicle_number, vehicle_price, 
+    vehicle_purchase_date, vehicle_model, vehicle_insurance_companyName, vehicle_insurance_endDate, 
+    borrower_creditCard_status, borrower_credit_line, borrower_used_quota, borrower_overdue_status, 
+    spouse_creditCard_status, spouse_credit_line, spouse_used_quota, spouse_overdue_status, 
+    loan_status, loan_mechanism, loan_date, loan_amount, loan_monthly_repayment, insurance_status, 
+    insurance_name, insurance_annual_payment, insurance_effective_date, insurance_type, 
+    provident_fund_base, provident_fund_year, remark, entry_people, account_manager, 
+    create_date, Temp1, Temp2
+  </sql>
+
+  <select id="findAll" resultMap="BaseResultMap">
+  select
+  <include refid="Base_Column_List" />
+  from personal_information_table
+  </select>
+
+  <select id="findById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from personal_information_table
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from personal_information_table
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <!--<insert id="insert" parameterType="main.java.com.jinhuifeng.model.personalInformationTable">-->
+    <!--insert into personal_information_table (id, application_amount, maximum_monthly_payment, -->
+      <!--personal_name, identification_number, marital_status, -->
+      <!--property_nature, mailbox_number, highest_education, -->
+      <!--mother_name, residence_address, now_living, -->
+      <!--property_location, company_name, entry_time, -->
+      <!--employment_type, company_address, company_phone, -->
+      <!--company_cellphone_number, average_income, spouse_name, -->
+      <!--spouse_identification_number, spouse_company_name, -->
+      <!--spouse_company_address, spouse_company_phone, -->
+      <!--spouse_cellphone_number, spouse_average_income, -->
+      <!--emergency_contact, immediate_kinship, relatives_phone, -->
+      <!--colleague_name, colleague_phone, friend_one_name, -->
+      <!--friend_one_phone, friend_two_name, friend_two_phone, -->
+      <!--property_purchase_method, deed_status, mortgage_application_date, -->
+      <!--mortgage_monthly, house_construction_data, -->
+      <!--house_area, vehicle_number, vehicle_price, -->
+      <!--vehicle_purchase_date, vehicle_model, vehicle_insurance_companyName, -->
+      <!--vehicle_insurance_endDate, borrower_creditCard_status, -->
+      <!--borrower_credit_line, borrower_used_quota, borrower_overdue_status, -->
+      <!--spouse_creditCard_status, spouse_credit_line, -->
+      <!--spouse_used_quota, spouse_overdue_status, loan_status, -->
+      <!--loan_mechanism, loan_date, loan_amount, -->
+      <!--loan_monthly_repayment, insurance_status, insurance_name, -->
+      <!--insurance_annual_payment, insurance_effective_date, -->
+      <!--insurance_type, provident_fund_base, provident_fund_year, -->
+      <!--remark, entry_people, account_manager, -->
+      <!--create_date, Temp1, Temp2-->
+      <!--)-->
+    <!--values (#{id,jdbcType=INTEGER}, #{applicationAmount,jdbcType=DOUBLE}, #{maximumMonthlyPayment,jdbcType=DOUBLE}, -->
+      <!--#{personalName,jdbcType=VARCHAR}, #{identificationNumber,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, -->
+      <!--#{propertyNature,jdbcType=VARCHAR}, #{mailboxNumber,jdbcType=VARCHAR}, #{highestEducation,jdbcType=VARCHAR}, -->
+      <!--#{motherName,jdbcType=VARCHAR}, #{residenceAddress,jdbcType=VARCHAR}, #{nowLiving,jdbcType=VARCHAR}, -->
+      <!--#{propertyLocation,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{entryTime,jdbcType=TIMESTAMP}, -->
+      <!--#{employmentType,jdbcType=VARCHAR}, #{companyAddress,jdbcType=VARCHAR}, #{companyPhone,jdbcType=VARCHAR}, -->
+      <!--#{companyCellphoneNumber,jdbcType=VARCHAR}, #{averageIncome,jdbcType=DOUBLE}, #{spouseName,jdbcType=VARCHAR}, -->
+      <!--#{spouseIdentificationNumber,jdbcType=VARCHAR}, #{spouseCompanyName,jdbcType=VARCHAR}, -->
+      <!--#{spouseCompanyAddress,jdbcType=VARCHAR}, #{spouseCompanyPhone,jdbcType=VARCHAR}, -->
+      <!--#{spouseCellphoneNumber,jdbcType=VARCHAR}, #{spouseAverageIncome,jdbcType=DOUBLE}, -->
+      <!--#{emergencyContact,jdbcType=VARCHAR}, #{immediateKinship,jdbcType=VARCHAR}, #{relativesPhone,jdbcType=VARCHAR}, -->
+      <!--#{colleagueName,jdbcType=VARCHAR}, #{colleaguePhone,jdbcType=VARCHAR}, #{friendOneName,jdbcType=VARCHAR}, -->
+      <!--#{friendOnePhone,jdbcType=VARCHAR}, #{friendTwoName,jdbcType=VARCHAR}, #{friendTwoPhone,jdbcType=VARCHAR}, -->
+      <!--#{propertyPurchaseMethod,jdbcType=VARCHAR}, #{deedStatus,jdbcType=VARCHAR}, #{mortgageApplicationDate,jdbcType=TIMESTAMP}, -->
+      <!--#{mortgageMonthly,jdbcType=DOUBLE}, #{houseConstructionData,jdbcType=TIMESTAMP}, -->
+      <!--#{houseArea,jdbcType=DOUBLE}, #{vehicleNumber,jdbcType=VARCHAR}, #{vehiclePrice,jdbcType=DOUBLE}, -->
+      <!--#{vehiclePurchaseDate,jdbcType=TIMESTAMP}, #{vehicleModel,jdbcType=VARCHAR}, #{vehicleInsuranceCompanyname,jdbcType=VARCHAR}, -->
+      <!--#{vehicleInsuranceEnddate,jdbcType=TIMESTAMP}, #{borrowerCreditcardStatus,jdbcType=VARCHAR}, -->
+      <!--#{borrowerCreditLine,jdbcType=DOUBLE}, #{borrowerUsedQuota,jdbcType=DOUBLE}, #{borrowerOverdueStatus,jdbcType=VARCHAR}, -->
+      <!--#{spouseCreditcardStatus,jdbcType=VARCHAR}, #{spouseCreditLine,jdbcType=DOUBLE}, -->
+      <!--#{spouseUsedQuota,jdbcType=DOUBLE}, #{spouseOverdueStatus,jdbcType=VARCHAR}, #{loanStatus,jdbcType=VARCHAR}, -->
+      <!--#{loanMechanism,jdbcType=VARCHAR}, #{loanDate,jdbcType=TIMESTAMP}, #{loanAmount,jdbcType=DOUBLE}, -->
+      <!--#{loanMonthlyRepayment,jdbcType=DOUBLE}, #{insuranceStatus,jdbcType=VARCHAR}, #{insuranceName,jdbcType=VARCHAR}, -->
+      <!--#{insuranceAnnualPayment,jdbcType=DOUBLE}, #{insuranceEffectiveDate,jdbcType=TIMESTAMP}, -->
+      <!--#{insuranceType,jdbcType=VARCHAR}, #{providentFundBase,jdbcType=DOUBLE}, #{providentFundYear,jdbcType=VARCHAR}, -->
+      <!--#{remark,jdbcType=VARCHAR}, #{entryPeople,jdbcType=VARCHAR}, #{accountManager,jdbcType=VARCHAR}, -->
+      <!--#{createDate,jdbcType=TIMESTAMP}, #{temp1,jdbcType=VARCHAR}, #{temp2,jdbcType=VARCHAR}-->
+      <!--)-->
+  <!--</insert>-->
+
+  <insert id="insertSelective" parameterType="com.jinhuifeng.model.PersonalInformationTable">
+    insert into personal_information_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="applicationAmount != null">
+        application_amount,
+      </if>
+      <if test="maximumMonthlyPayment != null">
+        maximum_monthly_payment,
+      </if>
+      <if test="personalName != null">
+        personal_name,
+      </if>
+      <if test="identificationNumber != null">
+        identification_number,
+      </if>
+      <if test="maritalStatus != null">
+        marital_status,
+      </if>
+      <if test="propertyNature != null">
+        property_nature,
+      </if>
+      <if test="mailboxNumber != null">
+        mailbox_number,
+      </if>
+      <if test="highestEducation != null">
+        highest_education,
+      </if>
+      <if test="motherName != null">
+        mother_name,
+      </if>
+      <if test="residenceAddress != null">
+        residence_address,
+      </if>
+      <if test="nowLiving != null">
+        now_living,
+      </if>
+      <if test="propertyLocation != null">
+        property_location,
+      </if>
+      <if test="companyName != null">
+        company_name,
+      </if>
+      <if test="entryTime != null">
+        entry_time,
+      </if>
+      <if test="employmentType != null">
+        employment_type,
+      </if>
+      <if test="companyAddress != null">
+        company_address,
+      </if>
+      <if test="companyPhone != null">
+        company_phone,
+      </if>
+      <if test="companyCellphoneNumber != null">
+        company_cellphone_number,
+      </if>
+      <if test="averageIncome != null">
+        average_income,
+      </if>
+      <if test="spouseName != null">
+        spouse_name,
+      </if>
+      <if test="spouseIdentificationNumber != null">
+        spouse_identification_number,
+      </if>
+      <if test="spouseCompanyName != null">
+        spouse_company_name,
+      </if>
+      <if test="spouseCompanyAddress != null">
+        spouse_company_address,
+      </if>
+      <if test="spouseCompanyPhone != null">
+        spouse_company_phone,
+      </if>
+      <if test="spouseCellphoneNumber != null">
+        spouse_cellphone_number,
+      </if>
+      <if test="spouseAverageIncome != null">
+        spouse_average_income,
+      </if>
+      <if test="emergencyContact != null">
+        emergency_contact,
+      </if>
+      <if test="immediateKinship != null">
+        immediate_kinship,
+      </if>
+      <if test="relativesPhone != null">
+        relatives_phone,
+      </if>
+      <if test="colleagueName != null">
+        colleague_name,
+      </if>
+      <if test="colleaguePhone != null">
+        colleague_phone,
+      </if>
+      <if test="friendOneName != null">
+        friend_one_name,
+      </if>
+      <if test="friendOnePhone != null">
+        friend_one_phone,
+      </if>
+      <if test="friendTwoName != null">
+        friend_two_name,
+      </if>
+      <if test="friendTwoPhone != null">
+        friend_two_phone,
+      </if>
+      <if test="propertyPurchaseMethod != null">
+        property_purchase_method,
+      </if>
+      <if test="deedStatus != null">
+        deed_status,
+      </if>
+      <if test="mortgageApplicationDate != null">
+        mortgage_application_date,
+      </if>
+      <if test="mortgageMonthly != null">
+        mortgage_monthly,
+      </if>
+      <if test="houseConstructionData != null">
+        house_construction_data,
+      </if>
+      <if test="houseArea != null">
+        house_area,
+      </if>
+      <if test="vehicleNumber != null">
+        vehicle_number,
+      </if>
+      <if test="vehiclePrice != null">
+        vehicle_price,
+      </if>
+      <if test="vehiclePurchaseDate != null">
+        vehicle_purchase_date,
+      </if>
+      <if test="vehicleModel != null">
+        vehicle_model,
+      </if>
+      <if test="vehicleInsuranceCompanyname != null">
+        vehicle_insurance_companyName,
+      </if>
+      <if test="vehicleInsuranceEnddate != null">
+        vehicle_insurance_endDate,
+      </if>
+      <if test="borrowerCreditcardStatus != null">
+        borrower_creditCard_status,
+      </if>
+      <if test="borrowerCreditLine != null">
+        borrower_credit_line,
+      </if>
+      <if test="borrowerUsedQuota != null">
+        borrower_used_quota,
+      </if>
+      <if test="borrowerOverdueStatus != null">
+        borrower_overdue_status,
+      </if>
+      <if test="spouseCreditcardStatus != null">
+        spouse_creditCard_status,
+      </if>
+      <if test="spouseCreditLine != null">
+        spouse_credit_line,
+      </if>
+      <if test="spouseUsedQuota != null">
+        spouse_used_quota,
+      </if>
+      <if test="spouseOverdueStatus != null">
+        spouse_overdue_status,
+      </if>
+      <if test="loanStatus != null">
+        loan_status,
+      </if>
+      <if test="loanMechanism != null">
+        loan_mechanism,
+      </if>
+      <if test="loanDate != null">
+        loan_date,
+      </if>
+      <if test="loanAmount != null">
+        loan_amount,
+      </if>
+      <if test="loanMonthlyRepayment != null">
+        loan_monthly_repayment,
+      </if>
+      <if test="insuranceStatus != null">
+        insurance_status,
+      </if>
+      <if test="insuranceName != null">
+        insurance_name,
+      </if>
+      <if test="insuranceAnnualPayment != null">
+        insurance_annual_payment,
+      </if>
+      <if test="insuranceEffectiveDate != null">
+        insurance_effective_date,
+      </if>
+      <if test="insuranceType != null">
+        insurance_type,
+      </if>
+      <if test="providentFundBase != null">
+        provident_fund_base,
+      </if>
+      <if test="providentFundYear != null">
+        provident_fund_year,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="entryPeople != null">
+        entry_people,
+      </if>
+      <if test="accountManager != null">
+        account_manager,
+      </if>
+      <if test="createDate != null">
+        create_date,
+      </if>
+      <if test="temp1 != null">
+        Temp1,
+      </if>
+      <if test="temp2 != null">
+        Temp2,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="applicationAmount != null">
+        #{applicationAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="maximumMonthlyPayment != null">
+        #{maximumMonthlyPayment,jdbcType=DOUBLE},
+      </if>
+      <if test="personalName != null">
+        #{personalName,jdbcType=VARCHAR},
+      </if>
+      <if test="identificationNumber != null">
+        #{identificationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="maritalStatus != null">
+        #{maritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyNature != null">
+        #{propertyNature,jdbcType=VARCHAR},
+      </if>
+      <if test="mailboxNumber != null">
+        #{mailboxNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="highestEducation != null">
+        #{highestEducation,jdbcType=VARCHAR},
+      </if>
+      <if test="motherName != null">
+        #{motherName,jdbcType=VARCHAR},
+      </if>
+      <if test="residenceAddress != null">
+        #{residenceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="nowLiving != null">
+        #{nowLiving,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyLocation != null">
+        #{propertyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="entryTime != null">
+        #{entryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="employmentType != null">
+        #{employmentType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAddress != null">
+        #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPhone != null">
+        #{companyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCellphoneNumber != null">
+        #{companyCellphoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="averageIncome != null">
+        #{averageIncome,jdbcType=DOUBLE},
+      </if>
+      <if test="spouseName != null">
+        #{spouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseIdentificationNumber != null">
+        #{spouseIdentificationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCompanyName != null">
+        #{spouseCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCompanyAddress != null">
+        #{spouseCompanyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCompanyPhone != null">
+        #{spouseCompanyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCellphoneNumber != null">
+        #{spouseCellphoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseAverageIncome != null">
+        #{spouseAverageIncome,jdbcType=DOUBLE},
+      </if>
+      <if test="emergencyContact != null">
+        #{emergencyContact,jdbcType=VARCHAR},
+      </if>
+      <if test="immediateKinship != null">
+        #{immediateKinship,jdbcType=VARCHAR},
+      </if>
+      <if test="relativesPhone != null">
+        #{relativesPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colleagueName != null">
+        #{colleagueName,jdbcType=VARCHAR},
+      </if>
+      <if test="colleaguePhone != null">
+        #{colleaguePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="friendOneName != null">
+        #{friendOneName,jdbcType=VARCHAR},
+      </if>
+      <if test="friendOnePhone != null">
+        #{friendOnePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="friendTwoName != null">
+        #{friendTwoName,jdbcType=VARCHAR},
+      </if>
+      <if test="friendTwoPhone != null">
+        #{friendTwoPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyPurchaseMethod != null">
+        #{propertyPurchaseMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="deedStatus != null">
+        #{deedStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="mortgageApplicationDate != null">
+        #{mortgageApplicationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mortgageMonthly != null">
+        #{mortgageMonthly,jdbcType=DOUBLE},
+      </if>
+      <if test="houseConstructionData != null">
+        #{houseConstructionData,jdbcType=TIMESTAMP},
+      </if>
+      <if test="houseArea != null">
+        #{houseArea,jdbcType=DOUBLE},
+      </if>
+      <if test="vehicleNumber != null">
+        #{vehicleNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="vehiclePrice != null">
+        #{vehiclePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="vehiclePurchaseDate != null">
+        #{vehiclePurchaseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vehicleModel != null">
+        #{vehicleModel,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleInsuranceCompanyname != null">
+        #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleInsuranceEnddate != null">
+        #{vehicleInsuranceEnddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="borrowerCreditcardStatus != null">
+        #{borrowerCreditcardStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="borrowerCreditLine != null">
+        #{borrowerCreditLine,jdbcType=DOUBLE},
+      </if>
+      <if test="borrowerUsedQuota != null">
+        #{borrowerUsedQuota,jdbcType=DOUBLE},
+      </if>
+      <if test="borrowerOverdueStatus != null">
+        #{borrowerOverdueStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCreditcardStatus != null">
+        #{spouseCreditcardStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCreditLine != null">
+        #{spouseCreditLine,jdbcType=DOUBLE},
+      </if>
+      <if test="spouseUsedQuota != null">
+        #{spouseUsedQuota,jdbcType=DOUBLE},
+      </if>
+      <if test="spouseOverdueStatus != null">
+        #{spouseOverdueStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="loanStatus != null">
+        #{loanStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="loanMechanism != null">
+        #{loanMechanism,jdbcType=VARCHAR},
+      </if>
+      <if test="loanDate != null">
+        #{loanDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loanAmount != null">
+        #{loanAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="loanMonthlyRepayment != null">
+        #{loanMonthlyRepayment,jdbcType=DOUBLE},
+      </if>
+      <if test="insuranceStatus != null">
+        #{insuranceStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceName != null">
+        #{insuranceName,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceAnnualPayment != null">
+        #{insuranceAnnualPayment,jdbcType=DOUBLE},
+      </if>
+      <if test="insuranceEffectiveDate != null">
+        #{insuranceEffectiveDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="insuranceType != null">
+        #{insuranceType,jdbcType=VARCHAR},
+      </if>
+      <if test="providentFundBase != null">
+        #{providentFundBase,jdbcType=DOUBLE},
+      </if>
+      <if test="providentFundYear != null">
+        #{providentFundYear,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPeople != null">
+        #{entryPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="accountManager != null">
+        #{accountManager,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="temp1 != null">
+        #{temp1,jdbcType=VARCHAR},
+      </if>
+      <if test="temp2 != null">
+        #{temp2,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <!--<update id="updateByPrimaryKeySelective" parameterType="main.java.com.jinhuifeng.model.personalInformationTable">-->
+    <!--update personal_information_table-->
+    <!--<set>-->
+      <!--<if test="applicationAmount != null">-->
+        <!--application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="maximumMonthlyPayment != null">-->
+        <!--maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="personalName != null">-->
+        <!--personal_name = #{personalName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="identificationNumber != null">-->
+        <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="maritalStatus != null">-->
+        <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="propertyNature != null">-->
+        <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="mailboxNumber != null">-->
+        <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="highestEducation != null">-->
+        <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="motherName != null">-->
+        <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="residenceAddress != null">-->
+        <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="nowLiving != null">-->
+        <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="propertyLocation != null">-->
+        <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyName != null">-->
+        <!--company_name = #{companyName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="entryTime != null">-->
+        <!--entry_time = #{entryTime,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="employmentType != null">-->
+        <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyAddress != null">-->
+        <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyPhone != null">-->
+        <!--company_phone = #{companyPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyCellphoneNumber != null">-->
+        <!--company_cellphone_number = #{companyCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="averageIncome != null">-->
+        <!--average_income = #{averageIncome,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="spouseName != null">-->
+        <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseIdentificationNumber != null">-->
+        <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyName != null">-->
+        <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyAddress != null">-->
+        <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyPhone != null">-->
+        <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCellphoneNumber != null">-->
+        <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseAverageIncome != null">-->
+        <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="emergencyContact != null">-->
+        <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="immediateKinship != null">-->
+        <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="relativesPhone != null">-->
+        <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="colleagueName != null">-->
+        <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="colleaguePhone != null">-->
+        <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendOneName != null">-->
+        <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendOnePhone != null">-->
+        <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendTwoName != null">-->
+        <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendTwoPhone != null">-->
+        <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="propertyPurchaseMethod != null">-->
+        <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="deedStatus != null">-->
+        <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="mortgageApplicationDate != null">-->
+        <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="mortgageMonthly != null">-->
+        <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="houseConstructionData != null">-->
+        <!--house_construction_data = #{houseConstructionData,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="houseArea != null">-->
+        <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="vehicleNumber != null">-->
+        <!--vehicle_number = #{vehicleNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="vehiclePrice != null">-->
+        <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="vehiclePurchaseDate != null">-->
+        <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="vehicleModel != null">-->
+        <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="vehicleInsuranceCompanyname != null">-->
+        <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="vehicleInsuranceEnddate != null">-->
+        <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="borrowerCreditcardStatus != null">-->
+        <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="borrowerCreditLine != null">-->
+        <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="borrowerUsedQuota != null">-->
+        <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="borrowerOverdueStatus != null">-->
+        <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCreditcardStatus != null">-->
+        <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCreditLine != null">-->
+        <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="spouseUsedQuota != null">-->
+        <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="spouseOverdueStatus != null">-->
+        <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loanStatus != null">-->
+        <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loanMechanism != null">-->
+        <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loanDate != null">-->
+        <!--loan_date = #{loanDate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="loanAmount != null">-->
+        <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="loanMonthlyRepayment != null">-->
+        <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="insuranceStatus != null">-->
+        <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="insuranceName != null">-->
+        <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="insuranceAnnualPayment != null">-->
+        <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="insuranceEffectiveDate != null">-->
+        <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="insuranceType != null">-->
+        <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="providentFundBase != null">-->
+        <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="providentFundYear != null">-->
+        <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="remark != null">-->
+        <!--remark = #{remark,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="entryPeople != null">-->
+        <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="accountManager != null">-->
+        <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="createDate != null">-->
+        <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="temp1 != null">-->
+        <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="temp2 != null">-->
+        <!--Temp2 = #{temp2,jdbcType=VARCHAR},-->
+      <!--</if>-->
+    <!--</set>-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+  <!--<update id="updateByPrimaryKey" parameterType="main.java.com.jinhuifeng.model.personalInformationTable">-->
+    <!--update personal_information_table-->
+    <!--set application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
+      <!--maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},-->
+      <!--personal_name = #{personalName,jdbcType=VARCHAR},-->
+      <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
+      <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
+      <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
+      <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
+      <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
+      <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
+      <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
+      <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
+      <!--company_name = #{companyName,jdbcType=VARCHAR},-->
+      <!--entry_time = #{entryTime,jdbcType=TIMESTAMP},-->
+      <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
+      <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
+      <!--company_phone = #{companyPhone,jdbcType=VARCHAR},-->
+      <!--company_cellphone_number = #{companyCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--average_income = #{averageIncome,jdbcType=DOUBLE},-->
+      <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
+      <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
+      <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
+      <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
+      <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
+      <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
+      <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
+      <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
+      <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=TIMESTAMP},-->
+      <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--house_construction_data = #{houseConstructionData,jdbcType=TIMESTAMP},-->
+      <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
+      <!--vehicle_number = #{vehicleNumber,jdbcType=VARCHAR},-->
+      <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=TIMESTAMP},-->
+      <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
+      <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=TIMESTAMP},-->
+      <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=DOUBLE},-->
+      <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
+      <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
+      <!--loan_date = #{loanDate,jdbcType=TIMESTAMP},-->
+      <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
+      <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
+      <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=TIMESTAMP},-->
+      <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
+      <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
+      <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
+      <!--remark = #{remark,jdbcType=VARCHAR},-->
+      <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
+      <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
+      <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+      <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
+      <!--Temp2 = #{temp2,jdbcType=VARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+
+  <!--<resultMap id="BaseResultMap" type="com.jinhuifeng.model.PersonalInformationTable">-->
+    <!--<id column="id" jdbcType="INTEGER" property="id" />-->
+    <!--<result column="application_amount" jdbcType="DOUBLE" property="applicationAmount" />-->
+    <!--<result column="maximum_monthly_payment" jdbcType="DOUBLE" property="maximumMonthlyPayment" />-->
+    <!--<result column="personal_name" jdbcType="VARCHAR" property="personalName" />-->
+    <!--<result column="identification_number" jdbcType="VARCHAR" property="identificationNumber" />-->
+    <!--<result column="marital_status" jdbcType="VARCHAR" property="maritalStatus" />-->
+    <!--<result column="property_nature" jdbcType="VARCHAR" property="propertyNature" />-->
+    <!--<result column="mailbox_number" jdbcType="VARCHAR" property="mailboxNumber" />-->
+    <!--<result column="highest_education" jdbcType="VARCHAR" property="highestEducation" />-->
+    <!--<result column="mother_name" jdbcType="VARCHAR" property="motherName" />-->
+    <!--<result column="residence_address" jdbcType="VARCHAR" property="residenceAddress" />-->
+    <!--<result column="now_living" jdbcType="VARCHAR" property="nowLiving" />-->
+    <!--<result column="property_location" jdbcType="VARCHAR" property="propertyLocation" />-->
+    <!--<result column="company_name" jdbcType="VARCHAR" property="companyName" />-->
+    <!--<result column="entry_time" jdbcType="DATE" property="entryTime" />-->
+    <!--<result column="employment_type" jdbcType="VARCHAR" property="employmentType" />-->
+    <!--<result column="company_address" jdbcType="VARCHAR" property="companyAddress" />-->
+    <!--<result column="company_phone" jdbcType="VARCHAR" property="companyPhone" />-->
+    <!--<result column="company_cellphone_number" jdbcType="VARCHAR" property="companyCellphoneNumber" />-->
+    <!--<result column="average_income" jdbcType="DOUBLE" property="averageIncome" />-->
+    <!--<result column="spouse_name" jdbcType="VARCHAR" property="spouseName" />-->
+    <!--<result column="spouse_identification_number" jdbcType="VARCHAR" property="spouseIdentificationNumber" />-->
+    <!--<result column="spouse_company_name" jdbcType="VARCHAR" property="spouseCompanyName" />-->
+    <!--<result column="spouse_company_address" jdbcType="VARCHAR" property="spouseCompanyAddress" />-->
+    <!--<result column="spouse_company_phone" jdbcType="VARCHAR" property="spouseCompanyPhone" />-->
+    <!--<result column="spouse_cellphone_number" jdbcType="VARCHAR" property="spouseCellphoneNumber" />-->
+    <!--<result column="spouse_average_income" jdbcType="DOUBLE" property="spouseAverageIncome" />-->
+    <!--<result column="emergency_contact" jdbcType="VARCHAR" property="emergencyContact" />-->
+    <!--<result column="immediate_kinship" jdbcType="VARCHAR" property="immediateKinship" />-->
+    <!--<result column="relatives_phone" jdbcType="VARCHAR" property="relativesPhone" />-->
+    <!--<result column="colleague_name" jdbcType="VARCHAR" property="colleagueName" />-->
+    <!--<result column="colleague_phone" jdbcType="VARCHAR" property="colleaguePhone" />-->
+    <!--<result column="friend_one_name" jdbcType="VARCHAR" property="friendOneName" />-->
+    <!--<result column="friend_one_phone" jdbcType="VARCHAR" property="friendOnePhone" />-->
+    <!--<result column="friend_two_name" jdbcType="VARCHAR" property="friendTwoName" />-->
+    <!--<result column="friend_two_phone" jdbcType="VARCHAR" property="friendTwoPhone" />-->
+    <!--<result column="property_purchase_method" jdbcType="VARCHAR" property="propertyPurchaseMethod" />-->
+    <!--<result column="deed_status" jdbcType="VARCHAR" property="deedStatus" />-->
+    <!--<result column="mortgage_application_date" jdbcType="DATE" property="mortgageApplicationDate" />-->
+    <!--<result column="mortgage_monthly" jdbcType="DOUBLE" property="mortgageMonthly" />-->
+    <!--<result column="house_construction_data" jdbcType="DATE" property="houseConstructionData" />-->
+    <!--<result column="house_area" jdbcType="DOUBLE" property="houseArea" />-->
+    <!--<result column="vehicle_number" jdbcType="VARCHAR" property="vehicleNumber" />-->
+    <!--<result column="vehicle_price" jdbcType="DOUBLE" property="vehiclePrice" />-->
+    <!--<result column="vehicle_purchase_date" jdbcType="DATE" property="vehiclePurchaseDate" />-->
+    <!--<result column="vehicle_model" jdbcType="VARCHAR" property="vehicleModel" />-->
+    <!--<result column="vehicle_insurance_companyName" jdbcType="VARCHAR" property="vehicleInsuranceCompanyname" />-->
+    <!--<result column="vehicle_insurance_endDate" jdbcType="DATE" property="vehicleInsuranceEnddate" />-->
+    <!--<result column="borrower_creditCard_status" jdbcType="VARCHAR" property="borrowerCreditcardStatus" />-->
+    <!--<result column="borrower_credit_line" jdbcType="DOUBLE" property="borrowerCreditLine" />-->
+    <!--<result column="borrower_used_quota" jdbcType="VARCHAR" property="borrowerUsedQuota" />-->
+    <!--<result column="borrower_overdue_status" jdbcType="VARCHAR" property="borrowerOverdueStatus" />-->
+    <!--<result column="spouse_creditCard_status" jdbcType="VARCHAR" property="spouseCreditcardStatus" />-->
+    <!--<result column="spouse_credit_line" jdbcType="DOUBLE" property="spouseCreditLine" />-->
+    <!--<result column="spouse_used_quota" jdbcType="DOUBLE" property="spouseUsedQuota" />-->
+    <!--<result column="spouse_overdue_status" jdbcType="VARCHAR" property="spouseOverdueStatus" />-->
+    <!--<result column="loan_status" jdbcType="VARCHAR" property="loanStatus" />-->
+    <!--<result column="loan_mechanism" jdbcType="VARCHAR" property="loanMechanism" />-->
+    <!--<result column="loan_date" jdbcType="DATE" property="loanDate" />-->
+    <!--<result column="loan_amount" jdbcType="DOUBLE" property="loanAmount" />-->
+    <!--<result column="loan_monthly_repayment" jdbcType="DOUBLE" property="loanMonthlyRepayment" />-->
+    <!--<result column="insurance_status" jdbcType="VARCHAR" property="insuranceStatus" />-->
+    <!--<result column="insurance_name" jdbcType="VARCHAR" property="insuranceName" />-->
+    <!--<result column="insurance_annual_payment" jdbcType="DOUBLE" property="insuranceAnnualPayment" />-->
+    <!--<result column="insurance_effective_date" jdbcType="DATE" property="insuranceEffectiveDate" />-->
+    <!--<result column="insurance_type" jdbcType="VARCHAR" property="insuranceType" />-->
+    <!--<result column="provident_fund_base" jdbcType="DOUBLE" property="providentFundBase" />-->
+    <!--<result column="provident_fund_year" jdbcType="VARCHAR" property="providentFundYear" />-->
+    <!--<result column="remark" jdbcType="VARCHAR" property="remark" />-->
+    <!--<result column="entry_people" jdbcType="VARCHAR" property="entryPeople" />-->
+    <!--<result column="account_manager" jdbcType="VARCHAR" property="accountManager" />-->
+    <!--<result column="create_date" jdbcType="TIMESTAMP" property="createDate" />-->
+    <!--<result column="Temp1" jdbcType="VARCHAR" property="temp1" />-->
+    <!--<result column="Temp2" jdbcType="VARCHAR" property="temp2" />-->
+  <!--</resultMap>-->
+
+  <!--<sql id="Base_Column_List">-->
+    <!--id, application_amount, maximum_monthly_payment, personal_name, identification_number,-->
+    <!--marital_status, property_nature, mailbox_number, highest_education, mother_name,-->
+    <!--residence_address, now_living, property_location, company_name, entry_time, employment_type,-->
+    <!--company_address, company_phone, company_cellphone_number, average_income, spouse_name,-->
+    <!--spouse_identification_number, spouse_company_name, spouse_company_address, spouse_company_phone,-->
+    <!--spouse_cellphone_number, spouse_average_income, emergency_contact, immediate_kinship,-->
+    <!--relatives_phone, colleague_name, colleague_phone, friend_one_name, friend_one_phone,-->
+    <!--friend_two_name, friend_two_phone, property_purchase_method, deed_status, mortgage_application_date,-->
+    <!--mortgage_monthly, house_construction_data, house_area, vehicle_number, vehicle_price,-->
+    <!--vehicle_purchase_date, vehicle_model, vehicle_insurance_companyName, vehicle_insurance_endDate,-->
+    <!--borrower_creditCard_status, borrower_credit_line, borrower_used_quota, borrower_overdue_status,-->
+    <!--spouse_creditCard_status, spouse_credit_line, spouse_used_quota, spouse_overdue_status,-->
+    <!--loan_status, loan_mechanism, loan_date, loan_amount, loan_monthly_repayment, insurance_status,-->
+    <!--insurance_name, insurance_annual_payment, insurance_effective_date, insurance_type,-->
+    <!--provident_fund_base, provident_fund_year, remark, entry_people, account_manager,-->
+    <!--create_date, Temp1, Temp2-->
+  <!--</sql>-->
+  <!--<select id="findAll" resultMap="BaseResultMap">-->
+    <!--select-->
+    <!--<include refid="Base_Column_List" />-->
+    <!--from personal_information_table-->
+  <!--</select>-->
+  <!--&lt;!&ndash;&lt;delete id="deleteByPrimaryKey" parameterType="java.lang.Integer"&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;delete from personal_information_table&ndash;&gt;-->
+    <!--&lt;!&ndash;where id = #{id,jdbcType=INTEGER}&ndash;&gt;-->
+  <!--&lt;!&ndash;&lt;/delete&gt;&ndash;&gt;-->
+  <!--&lt;!&ndash;&lt;insert id="insert" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&gt;&ndash;&gt;-->
+    <!--&lt;!&ndash;insert into personal_information_table (id, application_amount, maximum_monthly_payment, &ndash;&gt;-->
+      <!--&lt;!&ndash;personal_name, identification_number, marital_status, &ndash;&gt;-->
+      <!--&lt;!&ndash;property_nature, mailbox_number, highest_education, &ndash;&gt;-->
+      <!--&lt;!&ndash;mother_name, residence_address, now_living, &ndash;&gt;-->
+      <!--&lt;!&ndash;property_location, company_name, entry_time, &ndash;&gt;-->
+      <!--&lt;!&ndash;employment_type, company_address, company_phone, &ndash;&gt;-->
+      <!--&lt;!&ndash;company_cellphone_number, average_income, spouse_name, &ndash;&gt;-->
+      <!--&lt;!&ndash;spouse_identification_number, spouse_company_name, &ndash;&gt;-->
+      <!--&lt;!&ndash;spouse_company_address, spouse_company_phone, &ndash;&gt;-->
+      <!--&lt;!&ndash;spouse_cellphone_number, spouse_average_income, &ndash;&gt;-->
+      <!--&lt;!&ndash;emergency_contact, immediate_kinship, relatives_phone, &ndash;&gt;-->
+      <!--&lt;!&ndash;colleague_name, colleague_phone, friend_one_name, &ndash;&gt;-->
+      <!--&lt;!&ndash;friend_one_phone, friend_two_name, friend_two_phone, &ndash;&gt;-->
+      <!--&lt;!&ndash;property_purchase_method, deed_status, mortgage_application_date, &ndash;&gt;-->
+      <!--&lt;!&ndash;mortgage_monthly, house_construction_data, house_area, &ndash;&gt;-->
+      <!--&lt;!&ndash;vehicle_number, vehicle_price, vehicle_purchase_date, &ndash;&gt;-->
+      <!--&lt;!&ndash;vehicle_model, vehicle_insurance_companyName, &ndash;&gt;-->
+      <!--&lt;!&ndash;vehicle_insurance_endDate, borrower_creditCard_status, &ndash;&gt;-->
+      <!--&lt;!&ndash;borrower_credit_line, borrower_used_quota, borrower_overdue_status, &ndash;&gt;-->
+      <!--&lt;!&ndash;spouse_creditCard_status, spouse_credit_line, &ndash;&gt;-->
+      <!--&lt;!&ndash;spouse_used_quota, spouse_overdue_status, loan_status, &ndash;&gt;-->
+      <!--&lt;!&ndash;loan_mechanism, loan_date, loan_amount, &ndash;&gt;-->
+      <!--&lt;!&ndash;loan_monthly_repayment, insurance_status, insurance_name, &ndash;&gt;-->
+      <!--&lt;!&ndash;insurance_annual_payment, insurance_effective_date, &ndash;&gt;-->
+      <!--&lt;!&ndash;insurance_type, provident_fund_base, provident_fund_year, &ndash;&gt;-->
+      <!--&lt;!&ndash;remark, entry_people, account_manager, &ndash;&gt;-->
+      <!--&lt;!&ndash;create_date, Temp1, Temp2&ndash;&gt;-->
+      <!--&lt;!&ndash;)&ndash;&gt;-->
+    <!--&lt;!&ndash;values (#{id,jdbcType=INTEGER}, #{applicationAmount,jdbcType=DOUBLE}, #{maximumMonthlyPayment,jdbcType=DOUBLE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{personalName,jdbcType=VARCHAR}, #{identificationNumber,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{propertyNature,jdbcType=VARCHAR}, #{mailboxNumber,jdbcType=VARCHAR}, #{highestEducation,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{motherName,jdbcType=VARCHAR}, #{residenceAddress,jdbcType=VARCHAR}, #{nowLiving,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{propertyLocation,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, #{entryTime,jdbcType=DATE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{employmentType,jdbcType=VARCHAR}, #{companyAddress,jdbcType=VARCHAR}, #{companyPhone,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{companyCellphoneNumber,jdbcType=VARCHAR}, #{averageIncome,jdbcType=DOUBLE}, #{spouseName,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{spouseIdentificationNumber,jdbcType=VARCHAR}, #{spouseCompanyName,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{spouseCompanyAddress,jdbcType=VARCHAR}, #{spouseCompanyPhone,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{spouseCellphoneNumber,jdbcType=VARCHAR}, #{spouseAverageIncome,jdbcType=DOUBLE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{emergencyContact,jdbcType=VARCHAR}, #{immediateKinship,jdbcType=VARCHAR}, #{relativesPhone,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{colleagueName,jdbcType=VARCHAR}, #{colleaguePhone,jdbcType=VARCHAR}, #{friendOneName,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{friendOnePhone,jdbcType=VARCHAR}, #{friendTwoName,jdbcType=VARCHAR}, #{friendTwoPhone,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{propertyPurchaseMethod,jdbcType=VARCHAR}, #{deedStatus,jdbcType=VARCHAR}, #{mortgageApplicationDate,jdbcType=DATE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{mortgageMonthly,jdbcType=DOUBLE}, #{houseConstructionData,jdbcType=DATE}, #{houseArea,jdbcType=DOUBLE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{vehicleNumber,jdbcType=VARCHAR}, #{vehiclePrice,jdbcType=DOUBLE}, #{vehiclePurchaseDate,jdbcType=DATE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{vehicleModel,jdbcType=VARCHAR}, #{vehicleInsuranceCompanyname,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{vehicleInsuranceEnddate,jdbcType=DATE}, #{borrowerCreditcardStatus,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{borrowerCreditLine,jdbcType=DOUBLE}, #{borrowerUsedQuota,jdbcType=VARCHAR}, #{borrowerOverdueStatus,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{spouseCreditcardStatus,jdbcType=VARCHAR}, #{spouseCreditLine,jdbcType=DOUBLE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{spouseUsedQuota,jdbcType=DOUBLE}, #{spouseOverdueStatus,jdbcType=VARCHAR}, #{loanStatus,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{loanMechanism,jdbcType=VARCHAR}, #{loanDate,jdbcType=DATE}, #{loanAmount,jdbcType=DOUBLE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{loanMonthlyRepayment,jdbcType=DOUBLE}, #{insuranceStatus,jdbcType=VARCHAR}, #{insuranceName,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{insuranceAnnualPayment,jdbcType=DOUBLE}, #{insuranceEffectiveDate,jdbcType=DATE}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{insuranceType,jdbcType=VARCHAR}, #{providentFundBase,jdbcType=DOUBLE}, #{providentFundYear,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{remark,jdbcType=VARCHAR}, #{entryPeople,jdbcType=VARCHAR}, #{accountManager,jdbcType=VARCHAR}, &ndash;&gt;-->
+      <!--&lt;!&ndash;#{createDate,jdbcType=TIMESTAMP}, #{temp1,jdbcType=VARCHAR}, #{temp2,jdbcType=VARCHAR}&ndash;&gt;-->
+      <!--&lt;!&ndash;)&ndash;&gt;-->
+  <!--&lt;!&ndash;&lt;/insert&gt;&ndash;&gt;-->
+  <!--<insert id="insertSelective" parameterType="com.jinhuifeng.model.PersonalInformationTable">-->
+    <!--insert into personal_information_table-->
+    <!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
+      <!--<if test="id != null">-->
+        <!--id,-->
+      <!--</if>-->
+      <!--<if test="applicationAmount != null">-->
+        <!--application_amount,-->
+      <!--</if>-->
+      <!--<if test="maximumMonthlyPayment != null">-->
+        <!--maximum_monthly_payment,-->
+      <!--</if>-->
+      <!--<if test="personalName != null">-->
+        <!--personal_name,-->
+      <!--</if>-->
+      <!--<if test="identificationNumber != null">-->
+        <!--identification_number,-->
+      <!--</if>-->
+      <!--<if test="maritalStatus != null">-->
+        <!--marital_status,-->
+      <!--</if>-->
+      <!--<if test="propertyNature != null">-->
+        <!--property_nature,-->
+      <!--</if>-->
+      <!--<if test="mailboxNumber != null">-->
+        <!--mailbox_number,-->
+      <!--</if>-->
+      <!--<if test="highestEducation != null">-->
+        <!--highest_education,-->
+      <!--</if>-->
+      <!--<if test="motherName != null">-->
+        <!--mother_name,-->
+      <!--</if>-->
+      <!--<if test="residenceAddress != null">-->
+        <!--residence_address,-->
+      <!--</if>-->
+      <!--<if test="nowLiving != null">-->
+        <!--now_living,-->
+      <!--</if>-->
+      <!--<if test="propertyLocation != null">-->
+        <!--property_location,-->
+      <!--</if>-->
+      <!--<if test="companyName != null">-->
+        <!--company_name,-->
+      <!--</if>-->
+      <!--<if test="entryTime != null">-->
+        <!--entry_time,-->
+      <!--</if>-->
+      <!--<if test="employmentType != null">-->
+        <!--employment_type,-->
+      <!--</if>-->
+      <!--<if test="companyAddress != null">-->
+        <!--company_address,-->
+      <!--</if>-->
+      <!--<if test="companyPhone != null">-->
+        <!--company_phone,-->
+      <!--</if>-->
+      <!--<if test="companyCellphoneNumber != null">-->
+        <!--company_cellphone_number,-->
+      <!--</if>-->
+      <!--<if test="averageIncome != null">-->
+        <!--average_income,-->
+      <!--</if>-->
+      <!--<if test="spouseName != null">-->
+        <!--spouse_name,-->
+      <!--</if>-->
+      <!--<if test="spouseIdentificationNumber != null">-->
+        <!--spouse_identification_number,-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyName != null">-->
+        <!--spouse_company_name,-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyAddress != null">-->
+        <!--spouse_company_address,-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyPhone != null">-->
+        <!--spouse_company_phone,-->
+      <!--</if>-->
+      <!--<if test="spouseCellphoneNumber != null">-->
+        <!--spouse_cellphone_number,-->
+      <!--</if>-->
+      <!--<if test="spouseAverageIncome != null">-->
+        <!--spouse_average_income,-->
+      <!--</if>-->
+      <!--<if test="emergencyContact != null">-->
+        <!--emergency_contact,-->
+      <!--</if>-->
+      <!--<if test="immediateKinship != null">-->
+        <!--immediate_kinship,-->
+      <!--</if>-->
+      <!--<if test="relativesPhone != null">-->
+        <!--relatives_phone,-->
+      <!--</if>-->
+      <!--<if test="colleagueName != null">-->
+        <!--colleague_name,-->
+      <!--</if>-->
+      <!--<if test="colleaguePhone != null">-->
+        <!--colleague_phone,-->
+      <!--</if>-->
+      <!--<if test="friendOneName != null">-->
+        <!--friend_one_name,-->
+      <!--</if>-->
+      <!--<if test="friendOnePhone != null">-->
+        <!--friend_one_phone,-->
+      <!--</if>-->
+      <!--<if test="friendTwoName != null">-->
+        <!--friend_two_name,-->
+      <!--</if>-->
+      <!--<if test="friendTwoPhone != null">-->
+        <!--friend_two_phone,-->
+      <!--</if>-->
+      <!--<if test="propertyPurchaseMethod != null">-->
+        <!--property_purchase_method,-->
+      <!--</if>-->
+      <!--<if test="deedStatus != null">-->
+        <!--deed_status,-->
+      <!--</if>-->
+      <!--<if test="mortgageApplicationDate != null">-->
+        <!--mortgage_application_date,-->
+      <!--</if>-->
+      <!--<if test="mortgageMonthly != null">-->
+        <!--mortgage_monthly,-->
+      <!--</if>-->
+      <!--<if test="houseConstructionData != null">-->
+        <!--house_construction_data,-->
+      <!--</if>-->
+      <!--<if test="houseArea != null">-->
+        <!--house_area,-->
+      <!--</if>-->
+      <!--<if test="vehicleNumber != null">-->
+        <!--vehicle_number,-->
+      <!--</if>-->
+      <!--<if test="vehiclePrice != null">-->
+        <!--vehicle_price,-->
+      <!--</if>-->
+      <!--<if test="vehiclePurchaseDate != null">-->
+        <!--vehicle_purchase_date,-->
+      <!--</if>-->
+      <!--<if test="vehicleModel != null">-->
+        <!--vehicle_model,-->
+      <!--</if>-->
+      <!--<if test="vehicleInsuranceCompanyname != null">-->
+        <!--vehicle_insurance_companyName,-->
+      <!--</if>-->
+      <!--<if test="vehicleInsuranceEnddate != null">-->
+        <!--vehicle_insurance_endDate,-->
+      <!--</if>-->
+      <!--<if test="borrowerCreditcardStatus != null">-->
+        <!--borrower_creditCard_status,-->
+      <!--</if>-->
+      <!--<if test="borrowerCreditLine != null">-->
+        <!--borrower_credit_line,-->
+      <!--</if>-->
+      <!--<if test="borrowerUsedQuota != null">-->
+        <!--borrower_used_quota,-->
+      <!--</if>-->
+      <!--<if test="borrowerOverdueStatus != null">-->
+        <!--borrower_overdue_status,-->
+      <!--</if>-->
+      <!--<if test="spouseCreditcardStatus != null">-->
+        <!--spouse_creditCard_status,-->
+      <!--</if>-->
+      <!--<if test="spouseCreditLine != null">-->
+        <!--spouse_credit_line,-->
+      <!--</if>-->
+      <!--<if test="spouseUsedQuota != null">-->
+        <!--spouse_used_quota,-->
+      <!--</if>-->
+      <!--<if test="spouseOverdueStatus != null">-->
+        <!--spouse_overdue_status,-->
+      <!--</if>-->
+      <!--<if test="loanStatus != null">-->
+        <!--loan_status,-->
+      <!--</if>-->
+      <!--<if test="loanMechanism != null">-->
+        <!--loan_mechanism,-->
+      <!--</if>-->
+      <!--<if test="loanDate != null">-->
+        <!--loan_date,-->
+      <!--</if>-->
+      <!--<if test="loanAmount != null">-->
+        <!--loan_amount,-->
+      <!--</if>-->
+      <!--<if test="loanMonthlyRepayment != null">-->
+        <!--loan_monthly_repayment,-->
+      <!--</if>-->
+      <!--<if test="insuranceStatus != null">-->
+        <!--insurance_status,-->
+      <!--</if>-->
+      <!--<if test="insuranceName != null">-->
+        <!--insurance_name,-->
+      <!--</if>-->
+      <!--<if test="insuranceAnnualPayment != null">-->
+        <!--insurance_annual_payment,-->
+      <!--</if>-->
+      <!--<if test="insuranceEffectiveDate != null">-->
+        <!--insurance_effective_date,-->
+      <!--</if>-->
+      <!--<if test="insuranceType != null">-->
+        <!--insurance_type,-->
+      <!--</if>-->
+      <!--<if test="providentFundBase != null">-->
+        <!--provident_fund_base,-->
+      <!--</if>-->
+      <!--<if test="providentFundYear != null">-->
+        <!--provident_fund_year,-->
+      <!--</if>-->
+      <!--<if test="remark != null">-->
+        <!--remark,-->
+      <!--</if>-->
+      <!--<if test="entryPeople != null">-->
+        <!--entry_people,-->
+      <!--</if>-->
+      <!--<if test="accountManager != null">-->
+        <!--account_manager,-->
+      <!--</if>-->
+      <!--<if test="createDate != null">-->
+        <!--create_date,-->
+      <!--</if>-->
+      <!--<if test="temp1 != null">-->
+        <!--Temp1,-->
+      <!--</if>-->
+      <!--<if test="temp2 != null">-->
+        <!--Temp2,-->
+      <!--</if>-->
+    <!--</trim>-->
+    <!--<trim prefix="values (" suffix=")" suffixOverrides=",">-->
+      <!--<if test="id != null">-->
+        <!--#{id,jdbcType=INTEGER},-->
+      <!--</if>-->
+      <!--<if test="applicationAmount != null">-->
+        <!--#{applicationAmount,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="maximumMonthlyPayment != null">-->
+        <!--#{maximumMonthlyPayment,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="personalName != null">-->
+        <!--#{personalName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="identificationNumber != null">-->
+        <!--#{identificationNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="maritalStatus != null">-->
+        <!--#{maritalStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="propertyNature != null">-->
+        <!--#{propertyNature,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="mailboxNumber != null">-->
+        <!--#{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="highestEducation != null">-->
+        <!--#{highestEducation,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="motherName != null">-->
+        <!--#{motherName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="residenceAddress != null">-->
+        <!--#{residenceAddress,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="nowLiving != null">-->
+        <!--#{nowLiving,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="propertyLocation != null">-->
+        <!--#{propertyLocation,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyName != null">-->
+        <!--#{companyName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="entryTime != null">-->
+        <!--#{entryTime,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="employmentType != null">-->
+        <!--#{employmentType,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyAddress != null">-->
+        <!--#{companyAddress,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyPhone != null">-->
+        <!--#{companyPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="companyCellphoneNumber != null">-->
+        <!--#{companyCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="averageIncome != null">-->
+        <!--#{averageIncome,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="spouseName != null">-->
+        <!--#{spouseName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseIdentificationNumber != null">-->
+        <!--#{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyName != null">-->
+        <!--#{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyAddress != null">-->
+        <!--#{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCompanyPhone != null">-->
+        <!--#{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCellphoneNumber != null">-->
+        <!--#{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseAverageIncome != null">-->
+        <!--#{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="emergencyContact != null">-->
+        <!--#{emergencyContact,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="immediateKinship != null">-->
+        <!--#{immediateKinship,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="relativesPhone != null">-->
+        <!--#{relativesPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="colleagueName != null">-->
+        <!--#{colleagueName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="colleaguePhone != null">-->
+        <!--#{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendOneName != null">-->
+        <!--#{friendOneName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendOnePhone != null">-->
+        <!--#{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendTwoName != null">-->
+        <!--#{friendTwoName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="friendTwoPhone != null">-->
+        <!--#{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="propertyPurchaseMethod != null">-->
+        <!--#{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="deedStatus != null">-->
+        <!--#{deedStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="mortgageApplicationDate != null">-->
+        <!--#{mortgageApplicationDate,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="mortgageMonthly != null">-->
+        <!--#{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="houseConstructionData != null">-->
+        <!--#{houseConstructionData,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="houseArea != null">-->
+        <!--#{houseArea,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="vehicleNumber != null">-->
+        <!--#{vehicleNumber,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="vehiclePrice != null">-->
+        <!--#{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="vehiclePurchaseDate != null">-->
+        <!--#{vehiclePurchaseDate,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="vehicleModel != null">-->
+        <!--#{vehicleModel,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="vehicleInsuranceCompanyname != null">-->
+        <!--#{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="vehicleInsuranceEnddate != null">-->
+        <!--#{vehicleInsuranceEnddate,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="borrowerCreditcardStatus != null">-->
+        <!--#{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="borrowerCreditLine != null">-->
+        <!--#{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="borrowerUsedQuota != null">-->
+        <!--#{borrowerUsedQuota,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="borrowerOverdueStatus != null">-->
+        <!--#{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCreditcardStatus != null">-->
+        <!--#{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="spouseCreditLine != null">-->
+        <!--#{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="spouseUsedQuota != null">-->
+        <!--#{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="spouseOverdueStatus != null">-->
+        <!--#{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loanStatus != null">-->
+        <!--#{loanStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loanMechanism != null">-->
+        <!--#{loanMechanism,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="loanDate != null">-->
+        <!--#{loanDate,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="loanAmount != null">-->
+        <!--#{loanAmount,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="loanMonthlyRepayment != null">-->
+        <!--#{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="insuranceStatus != null">-->
+        <!--#{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="insuranceName != null">-->
+        <!--#{insuranceName,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="insuranceAnnualPayment != null">-->
+        <!--#{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="insuranceEffectiveDate != null">-->
+        <!--#{insuranceEffectiveDate,jdbcType=DATE},-->
+      <!--</if>-->
+      <!--<if test="insuranceType != null">-->
+        <!--#{insuranceType,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="providentFundBase != null">-->
+        <!--#{providentFundBase,jdbcType=DOUBLE},-->
+      <!--</if>-->
+      <!--<if test="providentFundYear != null">-->
+        <!--#{providentFundYear,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="remark != null">-->
+        <!--#{remark,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="entryPeople != null">-->
+        <!--#{entryPeople,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="accountManager != null">-->
+        <!--#{accountManager,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="createDate != null">-->
+        <!--#{createDate,jdbcType=TIMESTAMP},-->
+      <!--</if>-->
+      <!--<if test="temp1 != null">-->
+        <!--#{temp1,jdbcType=VARCHAR},-->
+      <!--</if>-->
+      <!--<if test="temp2 != null">-->
+        <!--#{temp2,jdbcType=VARCHAR},-->
+      <!--</if>-->
+    <!--</trim>-->
+  <!--</insert>-->
+
+  <!--&lt;update id="updateByPrimaryKeySelective" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&gt;-->
+    <!--update personal_information_table-->
+    <!--&lt;set&gt;-->
+      <!--&lt;if test="applicationAmount != null"&gt;-->
+        <!--application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="maximumMonthlyPayment != null"&gt;-->
+        <!--maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="personalName != null"&gt;-->
+        <!--personal_name = #{personalName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="identificationNumber != null"&gt;-->
+        <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="maritalStatus != null"&gt;-->
+        <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="propertyNature != null"&gt;-->
+        <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="mailboxNumber != null"&gt;-->
+        <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="highestEducation != null"&gt;-->
+        <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="motherName != null"&gt;-->
+        <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="residenceAddress != null"&gt;-->
+        <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="nowLiving != null"&gt;-->
+        <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="propertyLocation != null"&gt;-->
+        <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="companyName != null"&gt;-->
+        <!--company_name = #{companyName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="entryTime != null"&gt;-->
+        <!--entry_time = #{entryTime,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="employmentType != null"&gt;-->
+        <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="companyAddress != null"&gt;-->
+        <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="companyPhone != null"&gt;-->
+        <!--company_phone = #{companyPhone,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="companyCellphoneNumber != null"&gt;-->
+        <!--company_cellphone_number = #{companyCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="averageIncome != null"&gt;-->
+        <!--average_income = #{averageIncome,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseName != null"&gt;-->
+        <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseIdentificationNumber != null"&gt;-->
+        <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseCompanyName != null"&gt;-->
+        <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseCompanyAddress != null"&gt;-->
+        <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseCompanyPhone != null"&gt;-->
+        <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseCellphoneNumber != null"&gt;-->
+        <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseAverageIncome != null"&gt;-->
+        <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="emergencyContact != null"&gt;-->
+        <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="immediateKinship != null"&gt;-->
+        <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="relativesPhone != null"&gt;-->
+        <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="colleagueName != null"&gt;-->
+        <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="colleaguePhone != null"&gt;-->
+        <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="friendOneName != null"&gt;-->
+        <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="friendOnePhone != null"&gt;-->
+        <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="friendTwoName != null"&gt;-->
+        <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="friendTwoPhone != null"&gt;-->
+        <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="propertyPurchaseMethod != null"&gt;-->
+        <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="deedStatus != null"&gt;-->
+        <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="mortgageApplicationDate != null"&gt;-->
+        <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="mortgageMonthly != null"&gt;-->
+        <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="houseConstructionData != null"&gt;-->
+        <!--house_construction_data = #{houseConstructionData,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="houseArea != null"&gt;-->
+        <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="vehicleNumber != null"&gt;-->
+        <!--vehicle_number = #{vehicleNumber,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="vehiclePrice != null"&gt;-->
+        <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="vehiclePurchaseDate != null"&gt;-->
+        <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="vehicleModel != null"&gt;-->
+        <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="vehicleInsuranceCompanyname != null"&gt;-->
+        <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="vehicleInsuranceEnddate != null"&gt;-->
+        <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="borrowerCreditcardStatus != null"&gt;-->
+        <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="borrowerCreditLine != null"&gt;-->
+        <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="borrowerUsedQuota != null"&gt;-->
+        <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="borrowerOverdueStatus != null"&gt;-->
+        <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseCreditcardStatus != null"&gt;-->
+        <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseCreditLine != null"&gt;-->
+        <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseUsedQuota != null"&gt;-->
+        <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="spouseOverdueStatus != null"&gt;-->
+        <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="loanStatus != null"&gt;-->
+        <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="loanMechanism != null"&gt;-->
+        <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="loanDate != null"&gt;-->
+        <!--loan_date = #{loanDate,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="loanAmount != null"&gt;-->
+        <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="loanMonthlyRepayment != null"&gt;-->
+        <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="insuranceStatus != null"&gt;-->
+        <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="insuranceName != null"&gt;-->
+        <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="insuranceAnnualPayment != null"&gt;-->
+        <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="insuranceEffectiveDate != null"&gt;-->
+        <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=DATE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="insuranceType != null"&gt;-->
+        <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="providentFundBase != null"&gt;-->
+        <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="providentFundYear != null"&gt;-->
+        <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="remark != null"&gt;-->
+        <!--remark = #{remark,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="entryPeople != null"&gt;-->
+        <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="accountManager != null"&gt;-->
+        <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="createDate != null"&gt;-->
+        <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="temp1 != null"&gt;-->
+        <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+      <!--&lt;if test="temp2 != null"&gt;-->
+        <!--Temp2 = #{temp2,jdbcType=VARCHAR},-->
+      <!--&lt;/if&gt;-->
+    <!--&lt;/set&gt;-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--&lt;/update&gt;-->
+  <!--&lt;update id="updateByPrimaryKey" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&gt;-->
+    <!--update personal_information_table-->
+    <!--set application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
+      <!--maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},-->
+      <!--personal_name = #{personalName,jdbcType=VARCHAR},-->
+      <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
+      <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
+      <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
+      <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
+      <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
+      <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
+      <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
+      <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
+      <!--company_name = #{companyName,jdbcType=VARCHAR},-->
+      <!--entry_time = #{entryTime,jdbcType=DATE},-->
+      <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
+      <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
+      <!--company_phone = #{companyPhone,jdbcType=VARCHAR},-->
+      <!--company_cellphone_number = #{companyCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--average_income = #{averageIncome,jdbcType=DOUBLE},-->
+      <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
+      <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
+      <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
+      <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
+      <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
+      <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
+      <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
+      <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
+      <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=DATE},-->
+      <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--house_construction_data = #{houseConstructionData,jdbcType=DATE},-->
+      <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
+      <!--vehicle_number = #{vehicleNumber,jdbcType=VARCHAR},-->
+      <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=DATE},-->
+      <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
+      <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=DATE},-->
+      <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=VARCHAR},-->
+      <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
+      <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
+      <!--loan_date = #{loanDate,jdbcType=DATE},-->
+      <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
+      <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
+      <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=DATE},-->
+      <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
+      <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
+      <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
+      <!--remark = #{remark,jdbcType=VARCHAR},-->
+      <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
+      <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
+      <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+      <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
+      <!--Temp2 = #{temp2,jdbcType=VARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--&lt;/update&gt;-->
+  <!--&lt;resultMap id="BaseResultMap" type="com.jinhuifeng.model.personalInformationTable"&gt;-->
+    <!--&lt;id column="id" jdbcType="INTEGER" property="id" /&gt;-->
+    <!--&lt;result column="personal_name" jdbcType="VARCHAR" property="personalName" /&gt;-->
+    <!--&lt;result column="identification_number" jdbcType="VARCHAR" property="identificationNumber" /&gt;-->
+    <!--&lt;result column="marital_status" jdbcType="VARCHAR" property="maritalStatus" /&gt;-->
+    <!--&lt;result column="property_nature" jdbcType="VARCHAR" property="propertyNature" /&gt;-->
+    <!--&lt;result column="mailbox_number" jdbcType="VARCHAR" property="mailboxNumber" /&gt;-->
+    <!--&lt;result column="highest_education" jdbcType="VARCHAR" property="highestEducation" /&gt;-->
+    <!--&lt;result column="mother_name" jdbcType="VARCHAR" property="motherName" /&gt;-->
+    <!--&lt;result column="residence_address" jdbcType="VARCHAR" property="residenceAddress" /&gt;-->
+    <!--&lt;result column="now_living" jdbcType="VARCHAR" property="nowLiving" /&gt;-->
+    <!--&lt;result column="property_location" jdbcType="VARCHAR" property="propertyLocation" /&gt;-->
+    <!--&lt;result column="company_name" jdbcType="VARCHAR" property="companyName" /&gt;-->
+    <!--&lt;result column="entry_time" jdbcType="DATE" property="entryTime" /&gt;-->
+    <!--&lt;result column="employment_type" jdbcType="VARCHAR" property="employmentType" /&gt;-->
+    <!--&lt;result column="company_address" jdbcType="VARCHAR" property="companyAddress" /&gt;-->
+    <!--&lt;result column="spouse_name" jdbcType="VARCHAR" property="spouseName" /&gt;-->
+    <!--&lt;result column="spouse_identification_number" jdbcType="VARCHAR" property="spouseIdentificationNumber" /&gt;-->
+    <!--&lt;result column="spouse_company_name" jdbcType="VARCHAR" property="spouseCompanyName" /&gt;-->
+    <!--&lt;result column="spouse_company_address" jdbcType="VARCHAR" property="spouseCompanyAddress" /&gt;-->
+    <!--&lt;result column="spouse_company_phone" jdbcType="VARCHAR" property="spouseCompanyPhone" /&gt;-->
+    <!--&lt;result column="spouse_cellphone_number" jdbcType="VARCHAR" property="spouseCellphoneNumber" /&gt;-->
+    <!--&lt;result column="spouse_average_income" jdbcType="DOUBLE" property="spouseAverageIncome" /&gt;-->
+    <!--&lt;result column="emergency_contact" jdbcType="VARCHAR" property="emergencyContact" /&gt;-->
+    <!--&lt;result column="immediate_kinship" jdbcType="VARCHAR" property="immediateKinship" /&gt;-->
+    <!--&lt;result column="relatives_phone" jdbcType="VARCHAR" property="relativesPhone" /&gt;-->
+    <!--&lt;result column="colleague_name" jdbcType="VARCHAR" property="colleagueName" /&gt;-->
+    <!--&lt;result column="colleague_phone" jdbcType="VARCHAR" property="colleaguePhone" /&gt;-->
+    <!--&lt;result column="friend_one_name" jdbcType="VARCHAR" property="friendOneName" /&gt;-->
+    <!--&lt;result column="friend_one_phone" jdbcType="VARCHAR" property="friendOnePhone" /&gt;-->
+    <!--&lt;result column="friend_two_name" jdbcType="VARCHAR" property="friendTwoName" /&gt;-->
+    <!--&lt;result column="friend_two_phone" jdbcType="VARCHAR" property="friendTwoPhone" /&gt;-->
+    <!--&lt;result column="property_purchase_method" jdbcType="VARCHAR" property="propertyPurchaseMethod" /&gt;-->
+    <!--&lt;result column="deed_status" jdbcType="VARCHAR" property="deedStatus" /&gt;-->
+    <!--&lt;result column="mortgage_application_date" jdbcType="DATE" property="mortgageApplicationDate" /&gt;-->
+    <!--&lt;result column="mortgage_monthly" jdbcType="DOUBLE" property="mortgageMonthly" /&gt;-->
+    <!--&lt;result column="house_construction_data" jdbcType="DATE" property="houseConstructionData" /&gt;-->
+    <!--&lt;result column="house_area" jdbcType="DOUBLE" property="houseArea" /&gt;-->
+    <!--&lt;result column="vehicle_price" jdbcType="DOUBLE" property="vehiclePrice" /&gt;-->
+    <!--&lt;result column="vehicle_purchase_date" jdbcType="DATE" property="vehiclePurchaseDate" /&gt;-->
+    <!--&lt;result column="vehicle_model" jdbcType="VARCHAR" property="vehicleModel" /&gt;-->
+    <!--&lt;result column="vehicle_insurance_companyName" jdbcType="VARCHAR" property="vehicleInsuranceCompanyname" /&gt;-->
+    <!--&lt;result column="vehicle_insurance_endDate" jdbcType="DATE" property="vehicleInsuranceEnddate" /&gt;-->
+    <!--&lt;result column="borrower_creditCard_status" jdbcType="VARCHAR" property="borrowerCreditcardStatus" /&gt;-->
+    <!--&lt;result column="borrower_credit_line" jdbcType="DOUBLE" property="borrowerCreditLine" /&gt;-->
+    <!--&lt;result column="borrower_used_quota" jdbcType="VARCHAR" property="borrowerUsedQuota" /&gt;-->
+    <!--&lt;result column="borrower_overdue_status" jdbcType="VARCHAR" property="borrowerOverdueStatus" /&gt;-->
+    <!--&lt;result column="spouse_creditCard_status" jdbcType="VARCHAR" property="spouseCreditcardStatus" /&gt;-->
+    <!--&lt;result column="spouse_credit_line" jdbcType="DOUBLE" property="spouseCreditLine" /&gt;-->
+    <!--&lt;result column="spouse_used_quota" jdbcType="DOUBLE" property="spouseUsedQuota" /&gt;-->
+    <!--&lt;result column="spouse_overdue_status" jdbcType="VARCHAR" property="spouseOverdueStatus" /&gt;-->
+    <!--&lt;result column="loan_status" jdbcType="VARCHAR" property="loanStatus" /&gt;-->
+    <!--&lt;result column="loan_mechanism" jdbcType="VARCHAR" property="loanMechanism" /&gt;-->
+    <!--&lt;result column="loan_date" jdbcType="DATE" property="loanDate" /&gt;-->
+    <!--&lt;result column="loan_amount" jdbcType="DOUBLE" property="loanAmount" /&gt;-->
+    <!--&lt;result column="loan_monthly_repayment" jdbcType="DOUBLE" property="loanMonthlyRepayment" /&gt;-->
+    <!--&lt;result column="insurance_status" jdbcType="VARCHAR" property="insuranceStatus" /&gt;-->
+    <!--&lt;result column="insurance_name" jdbcType="VARCHAR" property="insuranceName" /&gt;-->
+    <!--&lt;result column="insurance_annual_payment" jdbcType="DOUBLE" property="insuranceAnnualPayment" /&gt;-->
+    <!--&lt;result column="insurance_effective_date" jdbcType="DATE" property="insuranceEffectiveDate" /&gt;-->
+    <!--&lt;result column="insurance_type" jdbcType="VARCHAR" property="insuranceType" /&gt;-->
+    <!--&lt;result column="provident_fund_base" jdbcType="DOUBLE" property="providentFundBase" /&gt;-->
+    <!--&lt;result column="provident_fund_year" jdbcType="VARCHAR" property="providentFundYear" /&gt;-->
+    <!--&lt;result column="entry_people" jdbcType="VARCHAR" property="entryPeople" /&gt;-->
+    <!--&lt;result column="account_manager" jdbcType="VARCHAR" property="accountManager" /&gt;-->
+    <!--&lt;result column="create_date" jdbcType="TIMESTAMP" property="createDate" /&gt;-->
+    <!--&lt;result column="Temp1" jdbcType="VARCHAR" property="temp1" /&gt;-->
+    <!--&lt;result column="Temp2" jdbcType="VARCHAR" property="temp2" /&gt;-->
+  <!--&lt;/resultMap&gt;-->
+  <!--&amp;lt;sql id="Base_Column_List"&amp;gt;-->
+    <!--id, personal_name, identification_number, marital_status, property_nature, mailbox_number, -->
+    <!--highest_education, mother_name, residence_address, now_living, property_location, -->
+    <!--company_name, entry_time, employment_type, company_address, spouse_name, spouse_identification_number, -->
+    <!--spouse_company_name, spouse_company_address, spouse_company_phone, spouse_cellphone_number, -->
+    <!--spouse_average_income, emergency_contact, immediate_kinship, relatives_phone, colleague_name, -->
+    <!--colleague_phone, friend_one_name, friend_one_phone, friend_two_name, friend_two_phone, -->
+    <!--property_purchase_method, deed_status, mortgage_application_date, mortgage_monthly, -->
+    <!--house_construction_data, house_area, vehicle_price, vehicle_purchase_date, vehicle_model, -->
+    <!--vehicle_insurance_companyName, vehicle_insurance_endDate, borrower_creditCard_status, -->
+    <!--borrower_credit_line, borrower_used_quota, borrower_overdue_status, spouse_creditCard_status, -->
+    <!--spouse_credit_line, spouse_used_quota, spouse_overdue_status, loan_status, loan_mechanism, -->
+    <!--loan_date, loan_amount, loan_monthly_repayment, insurance_status, insurance_name, -->
+    <!--insurance_annual_payment, insurance_effective_date, insurance_type, provident_fund_base, -->
+    <!--provident_fund_year, entry_people, account_manager, create_date, Temp1, Temp2-->
+  <!--&amp;lt;/sql&amp;gt;-->
+  <!--&amp;lt;select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap"&amp;gt;-->
+    <!--select -->
+    <!--&amp;lt;include refid="Base_Column_List" /&amp;gt;-->
+    <!--from personal_information_table-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--&amp;lt;/select&amp;gt;-->
+  <!--&amp;lt;delete id="deleteByPrimaryKey" parameterType="java.lang.Integer"&amp;gt;-->
+    <!--delete from personal_information_table-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--&amp;lt;/delete&amp;gt;-->
+  <!--&amp;lt;insert id="insert" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&amp;gt;-->
+    <!--insert into personal_information_table (id, personal_name, identification_number, -->
+      <!--marital_status, property_nature, mailbox_number, -->
+      <!--highest_education, mother_name, residence_address, -->
+      <!--now_living, property_location, company_name, -->
+      <!--entry_time, employment_type, company_address, -->
+      <!--spouse_name, spouse_identification_number, -->
+      <!--spouse_company_name, spouse_company_address, -->
+      <!--spouse_company_phone, spouse_cellphone_number, -->
+      <!--spouse_average_income, emergency_contact, immediate_kinship, -->
+      <!--relatives_phone, colleague_name, colleague_phone, -->
+      <!--friend_one_name, friend_one_phone, friend_two_name, -->
+      <!--friend_two_phone, property_purchase_method, -->
+      <!--deed_status, mortgage_application_date, mortgage_monthly, -->
+      <!--house_construction_data, house_area, vehicle_price, -->
+      <!--vehicle_purchase_date, vehicle_model, vehicle_insurance_companyName, -->
+      <!--vehicle_insurance_endDate, borrower_creditCard_status, -->
+      <!--borrower_credit_line, borrower_used_quota, borrower_overdue_status, -->
+      <!--spouse_creditCard_status, spouse_credit_line, -->
+      <!--spouse_used_quota, spouse_overdue_status, loan_status, -->
+      <!--loan_mechanism, loan_date, loan_amount, -->
+      <!--loan_monthly_repayment, insurance_status, insurance_name, -->
+      <!--insurance_annual_payment, insurance_effective_date, -->
+      <!--insurance_type, provident_fund_base, provident_fund_year, -->
+      <!--entry_people, account_manager, create_date, -->
+      <!--Temp1, Temp2)-->
+    <!--values (#{id,jdbcType=INTEGER}, #{personalName,jdbcType=VARCHAR}, #{identificationNumber,jdbcType=VARCHAR}, -->
+      <!--#{maritalStatus,jdbcType=VARCHAR}, #{propertyNature,jdbcType=VARCHAR}, #{mailboxNumber,jdbcType=VARCHAR}, -->
+      <!--#{highestEducation,jdbcType=VARCHAR}, #{motherName,jdbcType=VARCHAR}, #{residenceAddress,jdbcType=VARCHAR}, -->
+      <!--#{nowLiving,jdbcType=VARCHAR}, #{propertyLocation,jdbcType=VARCHAR}, #{companyName,jdbcType=VARCHAR}, -->
+      <!--#{entryTime,jdbcType=DATE}, #{employmentType,jdbcType=VARCHAR}, #{companyAddress,jdbcType=VARCHAR}, -->
+      <!--#{spouseName,jdbcType=VARCHAR}, #{spouseIdentificationNumber,jdbcType=VARCHAR}, -->
+      <!--#{spouseCompanyName,jdbcType=VARCHAR}, #{spouseCompanyAddress,jdbcType=VARCHAR}, -->
+      <!--#{spouseCompanyPhone,jdbcType=VARCHAR}, #{spouseCellphoneNumber,jdbcType=VARCHAR}, -->
+      <!--#{spouseAverageIncome,jdbcType=DOUBLE}, #{emergencyContact,jdbcType=VARCHAR}, #{immediateKinship,jdbcType=VARCHAR}, -->
+      <!--#{relativesPhone,jdbcType=VARCHAR}, #{colleagueName,jdbcType=VARCHAR}, #{colleaguePhone,jdbcType=VARCHAR}, -->
+      <!--#{friendOneName,jdbcType=VARCHAR}, #{friendOnePhone,jdbcType=VARCHAR}, #{friendTwoName,jdbcType=VARCHAR}, -->
+      <!--#{friendTwoPhone,jdbcType=VARCHAR}, #{propertyPurchaseMethod,jdbcType=VARCHAR}, -->
+      <!--#{deedStatus,jdbcType=VARCHAR}, #{mortgageApplicationDate,jdbcType=DATE}, #{mortgageMonthly,jdbcType=DOUBLE}, -->
+      <!--#{houseConstructionData,jdbcType=DATE}, #{houseArea,jdbcType=DOUBLE}, #{vehiclePrice,jdbcType=DOUBLE}, -->
+      <!--#{vehiclePurchaseDate,jdbcType=DATE}, #{vehicleModel,jdbcType=VARCHAR}, #{vehicleInsuranceCompanyname,jdbcType=VARCHAR}, -->
+      <!--#{vehicleInsuranceEnddate,jdbcType=DATE}, #{borrowerCreditcardStatus,jdbcType=VARCHAR}, -->
+      <!--#{borrowerCreditLine,jdbcType=DOUBLE}, #{borrowerUsedQuota,jdbcType=VARCHAR}, #{borrowerOverdueStatus,jdbcType=VARCHAR}, -->
+      <!--#{spouseCreditcardStatus,jdbcType=VARCHAR}, #{spouseCreditLine,jdbcType=DOUBLE}, -->
+      <!--#{spouseUsedQuota,jdbcType=DOUBLE}, #{spouseOverdueStatus,jdbcType=VARCHAR}, #{loanStatus,jdbcType=VARCHAR}, -->
+      <!--#{loanMechanism,jdbcType=VARCHAR}, #{loanDate,jdbcType=DATE}, #{loanAmount,jdbcType=DOUBLE}, -->
+      <!--#{loanMonthlyRepayment,jdbcType=DOUBLE}, #{insuranceStatus,jdbcType=VARCHAR}, #{insuranceName,jdbcType=VARCHAR}, -->
+      <!--#{insuranceAnnualPayment,jdbcType=DOUBLE}, #{insuranceEffectiveDate,jdbcType=DATE}, -->
+      <!--#{insuranceType,jdbcType=VARCHAR}, #{providentFundBase,jdbcType=DOUBLE}, #{providentFundYear,jdbcType=VARCHAR}, -->
+      <!--#{entryPeople,jdbcType=VARCHAR}, #{accountManager,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, -->
+      <!--#{temp1,jdbcType=VARCHAR}, #{temp2,jdbcType=VARCHAR})-->
+  <!--&amp;lt;/insert&amp;gt;-->
+  <!--&amp;lt;insert id="insertSelective" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&amp;gt;-->
+    <!--insert into personal_information_table-->
+    <!--&amp;lt;trim prefix="(" suffix=")" suffixOverrides=","&amp;gt;-->
+      <!--&amp;lt;if test="id != null"&amp;gt;-->
+        <!--id,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="personalName != null"&amp;gt;-->
+        <!--personal_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="identificationNumber != null"&amp;gt;-->
+        <!--identification_number,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="maritalStatus != null"&amp;gt;-->
+        <!--marital_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyNature != null"&amp;gt;-->
+        <!--property_nature,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mailboxNumber != null"&amp;gt;-->
+        <!--mailbox_number,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="highestEducation != null"&amp;gt;-->
+        <!--highest_education,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="motherName != null"&amp;gt;-->
+        <!--mother_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="residenceAddress != null"&amp;gt;-->
+        <!--residence_address,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="nowLiving != null"&amp;gt;-->
+        <!--now_living,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyLocation != null"&amp;gt;-->
+        <!--property_location,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="companyName != null"&amp;gt;-->
+        <!--company_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="entryTime != null"&amp;gt;-->
+        <!--entry_time,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="employmentType != null"&amp;gt;-->
+        <!--employment_type,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="companyAddress != null"&amp;gt;-->
+        <!--company_address,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseName != null"&amp;gt;-->
+        <!--spouse_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseIdentificationNumber != null"&amp;gt;-->
+        <!--spouse_identification_number,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyName != null"&amp;gt;-->
+        <!--spouse_company_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyAddress != null"&amp;gt;-->
+        <!--spouse_company_address,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyPhone != null"&amp;gt;-->
+        <!--spouse_company_phone,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCellphoneNumber != null"&amp;gt;-->
+        <!--spouse_cellphone_number,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseAverageIncome != null"&amp;gt;-->
+        <!--spouse_average_income,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="emergencyContact != null"&amp;gt;-->
+        <!--emergency_contact,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="immediateKinship != null"&amp;gt;-->
+        <!--immediate_kinship,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="relativesPhone != null"&amp;gt;-->
+        <!--relatives_phone,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="colleagueName != null"&amp;gt;-->
+        <!--colleague_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="colleaguePhone != null"&amp;gt;-->
+        <!--colleague_phone,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendOneName != null"&amp;gt;-->
+        <!--friend_one_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendOnePhone != null"&amp;gt;-->
+        <!--friend_one_phone,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendTwoName != null"&amp;gt;-->
+        <!--friend_two_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendTwoPhone != null"&amp;gt;-->
+        <!--friend_two_phone,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyPurchaseMethod != null"&amp;gt;-->
+        <!--property_purchase_method,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="deedStatus != null"&amp;gt;-->
+        <!--deed_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mortgageApplicationDate != null"&amp;gt;-->
+        <!--mortgage_application_date,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mortgageMonthly != null"&amp;gt;-->
+        <!--mortgage_monthly,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="houseConstructionData != null"&amp;gt;-->
+        <!--house_construction_data,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="houseArea != null"&amp;gt;-->
+        <!--house_area,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehiclePrice != null"&amp;gt;-->
+        <!--vehicle_price,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehiclePurchaseDate != null"&amp;gt;-->
+        <!--vehicle_purchase_date,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleModel != null"&amp;gt;-->
+        <!--vehicle_model,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleInsuranceCompanyname != null"&amp;gt;-->
+        <!--vehicle_insurance_companyName,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleInsuranceEnddate != null"&amp;gt;-->
+        <!--vehicle_insurance_endDate,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerCreditcardStatus != null"&amp;gt;-->
+        <!--borrower_creditCard_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerCreditLine != null"&amp;gt;-->
+        <!--borrower_credit_line,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerUsedQuota != null"&amp;gt;-->
+        <!--borrower_used_quota,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerOverdueStatus != null"&amp;gt;-->
+        <!--borrower_overdue_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCreditcardStatus != null"&amp;gt;-->
+        <!--spouse_creditCard_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCreditLine != null"&amp;gt;-->
+        <!--spouse_credit_line,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseUsedQuota != null"&amp;gt;-->
+        <!--spouse_used_quota,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseOverdueStatus != null"&amp;gt;-->
+        <!--spouse_overdue_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanStatus != null"&amp;gt;-->
+        <!--loan_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanMechanism != null"&amp;gt;-->
+        <!--loan_mechanism,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanDate != null"&amp;gt;-->
+        <!--loan_date,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanAmount != null"&amp;gt;-->
+        <!--loan_amount,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanMonthlyRepayment != null"&amp;gt;-->
+        <!--loan_monthly_repayment,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceStatus != null"&amp;gt;-->
+        <!--insurance_status,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceName != null"&amp;gt;-->
+        <!--insurance_name,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceAnnualPayment != null"&amp;gt;-->
+        <!--insurance_annual_payment,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceEffectiveDate != null"&amp;gt;-->
+        <!--insurance_effective_date,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceType != null"&amp;gt;-->
+        <!--insurance_type,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="providentFundBase != null"&amp;gt;-->
+        <!--provident_fund_base,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="providentFundYear != null"&amp;gt;-->
+        <!--provident_fund_year,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="entryPeople != null"&amp;gt;-->
+        <!--entry_people,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="accountManager != null"&amp;gt;-->
+        <!--account_manager,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="createDate != null"&amp;gt;-->
+        <!--create_date,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="temp1 != null"&amp;gt;-->
+        <!--Temp1,-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="temp2 != null"&amp;gt;-->
+        <!--Temp2,-->
+      <!--&amp;lt;/if&amp;gt;-->
+    <!--&amp;lt;/trim&amp;gt;-->
+    <!--&amp;lt;trim prefix="values (" suffix=")" suffixOverrides=","&amp;gt;-->
+      <!--&amp;lt;if test="id != null"&amp;gt;-->
+        <!--#{id,jdbcType=INTEGER},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="personalName != null"&amp;gt;-->
+        <!--#{personalName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="identificationNumber != null"&amp;gt;-->
+        <!--#{identificationNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="maritalStatus != null"&amp;gt;-->
+        <!--#{maritalStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyNature != null"&amp;gt;-->
+        <!--#{propertyNature,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mailboxNumber != null"&amp;gt;-->
+        <!--#{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="highestEducation != null"&amp;gt;-->
+        <!--#{highestEducation,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="motherName != null"&amp;gt;-->
+        <!--#{motherName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="residenceAddress != null"&amp;gt;-->
+        <!--#{residenceAddress,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="nowLiving != null"&amp;gt;-->
+        <!--#{nowLiving,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyLocation != null"&amp;gt;-->
+        <!--#{propertyLocation,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="companyName != null"&amp;gt;-->
+        <!--#{companyName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="entryTime != null"&amp;gt;-->
+        <!--#{entryTime,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="employmentType != null"&amp;gt;-->
+        <!--#{employmentType,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="companyAddress != null"&amp;gt;-->
+        <!--#{companyAddress,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseName != null"&amp;gt;-->
+        <!--#{spouseName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseIdentificationNumber != null"&amp;gt;-->
+        <!--#{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyName != null"&amp;gt;-->
+        <!--#{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyAddress != null"&amp;gt;-->
+        <!--#{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyPhone != null"&amp;gt;-->
+        <!--#{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCellphoneNumber != null"&amp;gt;-->
+        <!--#{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseAverageIncome != null"&amp;gt;-->
+        <!--#{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="emergencyContact != null"&amp;gt;-->
+        <!--#{emergencyContact,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="immediateKinship != null"&amp;gt;-->
+        <!--#{immediateKinship,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="relativesPhone != null"&amp;gt;-->
+        <!--#{relativesPhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="colleagueName != null"&amp;gt;-->
+        <!--#{colleagueName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="colleaguePhone != null"&amp;gt;-->
+        <!--#{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendOneName != null"&amp;gt;-->
+        <!--#{friendOneName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendOnePhone != null"&amp;gt;-->
+        <!--#{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendTwoName != null"&amp;gt;-->
+        <!--#{friendTwoName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendTwoPhone != null"&amp;gt;-->
+        <!--#{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyPurchaseMethod != null"&amp;gt;-->
+        <!--#{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="deedStatus != null"&amp;gt;-->
+        <!--#{deedStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mortgageApplicationDate != null"&amp;gt;-->
+        <!--#{mortgageApplicationDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mortgageMonthly != null"&amp;gt;-->
+        <!--#{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="houseConstructionData != null"&amp;gt;-->
+        <!--#{houseConstructionData,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="houseArea != null"&amp;gt;-->
+        <!--#{houseArea,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehiclePrice != null"&amp;gt;-->
+        <!--#{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehiclePurchaseDate != null"&amp;gt;-->
+        <!--#{vehiclePurchaseDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleModel != null"&amp;gt;-->
+        <!--#{vehicleModel,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleInsuranceCompanyname != null"&amp;gt;-->
+        <!--#{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleInsuranceEnddate != null"&amp;gt;-->
+        <!--#{vehicleInsuranceEnddate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerCreditcardStatus != null"&amp;gt;-->
+        <!--#{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerCreditLine != null"&amp;gt;-->
+        <!--#{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerUsedQuota != null"&amp;gt;-->
+        <!--#{borrowerUsedQuota,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerOverdueStatus != null"&amp;gt;-->
+        <!--#{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCreditcardStatus != null"&amp;gt;-->
+        <!--#{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCreditLine != null"&amp;gt;-->
+        <!--#{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseUsedQuota != null"&amp;gt;-->
+        <!--#{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseOverdueStatus != null"&amp;gt;-->
+        <!--#{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanStatus != null"&amp;gt;-->
+        <!--#{loanStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanMechanism != null"&amp;gt;-->
+        <!--#{loanMechanism,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanDate != null"&amp;gt;-->
+        <!--#{loanDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanAmount != null"&amp;gt;-->
+        <!--#{loanAmount,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanMonthlyRepayment != null"&amp;gt;-->
+        <!--#{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceStatus != null"&amp;gt;-->
+        <!--#{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceName != null"&amp;gt;-->
+        <!--#{insuranceName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceAnnualPayment != null"&amp;gt;-->
+        <!--#{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceEffectiveDate != null"&amp;gt;-->
+        <!--#{insuranceEffectiveDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceType != null"&amp;gt;-->
+        <!--#{insuranceType,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="providentFundBase != null"&amp;gt;-->
+        <!--#{providentFundBase,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="providentFundYear != null"&amp;gt;-->
+        <!--#{providentFundYear,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="entryPeople != null"&amp;gt;-->
+        <!--#{entryPeople,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="accountManager != null"&amp;gt;-->
+        <!--#{accountManager,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="createDate != null"&amp;gt;-->
+        <!--#{createDate,jdbcType=TIMESTAMP},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="temp1 != null"&amp;gt;-->
+        <!--#{temp1,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="temp2 != null"&amp;gt;-->
+        <!--#{temp2,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+    <!--&amp;lt;/trim&amp;gt;-->
+  <!--&amp;lt;/insert&amp;gt;-->
+  <!--&amp;lt;update id="updateByPrimaryKeySelective" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&amp;gt;-->
+    <!--update personal_information_table-->
+    <!--&amp;lt;set&amp;gt;-->
+      <!--&amp;lt;if test="personalName != null"&amp;gt;-->
+        <!--personal_name = #{personalName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="identificationNumber != null"&amp;gt;-->
+        <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="maritalStatus != null"&amp;gt;-->
+        <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyNature != null"&amp;gt;-->
+        <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mailboxNumber != null"&amp;gt;-->
+        <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="highestEducation != null"&amp;gt;-->
+        <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="motherName != null"&amp;gt;-->
+        <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="residenceAddress != null"&amp;gt;-->
+        <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="nowLiving != null"&amp;gt;-->
+        <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyLocation != null"&amp;gt;-->
+        <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="companyName != null"&amp;gt;-->
+        <!--company_name = #{companyName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="entryTime != null"&amp;gt;-->
+        <!--entry_time = #{entryTime,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="employmentType != null"&amp;gt;-->
+        <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="companyAddress != null"&amp;gt;-->
+        <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseName != null"&amp;gt;-->
+        <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseIdentificationNumber != null"&amp;gt;-->
+        <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyName != null"&amp;gt;-->
+        <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyAddress != null"&amp;gt;-->
+        <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCompanyPhone != null"&amp;gt;-->
+        <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCellphoneNumber != null"&amp;gt;-->
+        <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseAverageIncome != null"&amp;gt;-->
+        <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="emergencyContact != null"&amp;gt;-->
+        <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="immediateKinship != null"&amp;gt;-->
+        <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="relativesPhone != null"&amp;gt;-->
+        <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="colleagueName != null"&amp;gt;-->
+        <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="colleaguePhone != null"&amp;gt;-->
+        <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendOneName != null"&amp;gt;-->
+        <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendOnePhone != null"&amp;gt;-->
+        <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendTwoName != null"&amp;gt;-->
+        <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="friendTwoPhone != null"&amp;gt;-->
+        <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="propertyPurchaseMethod != null"&amp;gt;-->
+        <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="deedStatus != null"&amp;gt;-->
+        <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mortgageApplicationDate != null"&amp;gt;-->
+        <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="mortgageMonthly != null"&amp;gt;-->
+        <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="houseConstructionData != null"&amp;gt;-->
+        <!--house_construction_data = #{houseConstructionData,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="houseArea != null"&amp;gt;-->
+        <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehiclePrice != null"&amp;gt;-->
+        <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehiclePurchaseDate != null"&amp;gt;-->
+        <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleModel != null"&amp;gt;-->
+        <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleInsuranceCompanyname != null"&amp;gt;-->
+        <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="vehicleInsuranceEnddate != null"&amp;gt;-->
+        <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerCreditcardStatus != null"&amp;gt;-->
+        <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerCreditLine != null"&amp;gt;-->
+        <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerUsedQuota != null"&amp;gt;-->
+        <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="borrowerOverdueStatus != null"&amp;gt;-->
+        <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCreditcardStatus != null"&amp;gt;-->
+        <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseCreditLine != null"&amp;gt;-->
+        <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseUsedQuota != null"&amp;gt;-->
+        <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="spouseOverdueStatus != null"&amp;gt;-->
+        <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanStatus != null"&amp;gt;-->
+        <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanMechanism != null"&amp;gt;-->
+        <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanDate != null"&amp;gt;-->
+        <!--loan_date = #{loanDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanAmount != null"&amp;gt;-->
+        <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="loanMonthlyRepayment != null"&amp;gt;-->
+        <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceStatus != null"&amp;gt;-->
+        <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceName != null"&amp;gt;-->
+        <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceAnnualPayment != null"&amp;gt;-->
+        <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceEffectiveDate != null"&amp;gt;-->
+        <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=DATE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="insuranceType != null"&amp;gt;-->
+        <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="providentFundBase != null"&amp;gt;-->
+        <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="providentFundYear != null"&amp;gt;-->
+        <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="entryPeople != null"&amp;gt;-->
+        <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="accountManager != null"&amp;gt;-->
+        <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="createDate != null"&amp;gt;-->
+        <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="temp1 != null"&amp;gt;-->
+        <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+      <!--&amp;lt;if test="temp2 != null"&amp;gt;-->
+        <!--Temp2 = #{temp2,jdbcType=VARCHAR},-->
+      <!--&amp;lt;/if&amp;gt;-->
+    <!--&amp;lt;/set&amp;gt;-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--&amp;lt;/update&amp;gt;-->
+  <!--&amp;lt;update id="updateByPrimaryKey" parameterType="main.java.com.jinhuifeng.model.personalInformationTable"&amp;gt;-->
+    <!--update personal_information_table-->
+    <!--set personal_name = #{personalName,jdbcType=VARCHAR},-->
+      <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
+      <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
+      <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
+      <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
+      <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
+      <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
+      <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
+      <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
+      <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
+      <!--company_name = #{companyName,jdbcType=VARCHAR},-->
+      <!--entry_time = #{entryTime,jdbcType=DATE},-->
+      <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
+      <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
+      <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
+      <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
+      <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
+      <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
+      <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
+      <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
+      <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
+      <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
+      <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
+      <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
+      <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
+      <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
+      <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
+      <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
+      <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
+      <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
+      <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
+      <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
+      <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=DATE},-->
+      <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
+      <!--house_construction_data = #{houseConstructionData,jdbcType=DATE},-->
+      <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
+      <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
+      <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=DATE},-->
+      <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
+      <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
+      <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=DATE},-->
+      <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
+      <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=VARCHAR},-->
+      <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
+      <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
+      <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
+      <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
+      <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
+      <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
+      <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
+      <!--loan_date = #{loanDate,jdbcType=DATE},-->
+      <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
+      <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
+      <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
+      <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
+      <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
+      <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=DATE},-->
+      <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
+      <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
+      <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
+      <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
+      <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
+      <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
+      <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
+      <!--Temp2 = #{temp2,jdbcType=VARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--&amp;lt;/update&amp;gt;-->
+</mapper>
