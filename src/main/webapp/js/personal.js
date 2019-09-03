@@ -19,9 +19,8 @@ $('#addPersonal').click(function () {
     for(var i=0;i<inputArray.length;i++){
         var thisInput='input[name="'+inputArray[i]+'"]';
         $(thisInput).css("border","");
-        var inputFlag = false;
         if($(thisInput).val()==null||$(thisInput).val()==undefined||$(thisInput).val()==""||$(thisInput).val()==0||$(thisInput).val()=="0"){
-            inputFlag = true;
+            var inputFlag = true;
             $(thisInput).css("border","2px solid red");
         }
     }
@@ -29,15 +28,16 @@ $('#addPersonal').click(function () {
     for(var i=0;i<selectArray.length;i++){
         var thisSelect='#'+selectArray[i];
         $(thisSelect).css("border","");
-        var selectFlag = false;
         if($(thisSelect).val()==null||$(thisSelect).val()==undefined||$(thisSelect).val()==""||$(thisSelect).val()==0||$(thisSelect).val()=="0"){
-            selectFlag = true;
+            var selectFlag = true;
             $(thisSelect).css("border","2px solid red");
         }
     }
 
-    if(inputFlag==false&&selectFlag == false){
-        ajaxFunction();
+    if(selectFlag==null||selectFlag==undefined||selectFlag==""||selectFlag==0||selectFlag=="0"){
+        if(inputFlag==null||inputFlag==undefined||inputFlag==""||inputFlag==0||inputFlag=="0"){
+            ajaxFunction();
+        }
     }
 
 

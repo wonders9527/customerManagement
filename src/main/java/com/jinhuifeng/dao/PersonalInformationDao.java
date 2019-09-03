@@ -8,6 +8,8 @@ public interface PersonalInformationDao {
 
     int insertSelective(PersonalInformationTable personalInformationTable);
 
+    int updateById(PersonalInformationTable personalInformationTable);
+
     List<PersonalInformationTable> findAll();
 
     PersonalInformationTable findById(int id);

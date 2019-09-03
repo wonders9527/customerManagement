@@ -20,7 +20,7 @@ function initPersonalList() {
             console.log("error");
         }
         function succFunction(data){
-
+console.log(data);
             if(data.length>0) {
                 for (var i = 0; i < data.length; i++){
                     $("#personalList").append(
@@ -49,14 +49,14 @@ function initPersonalList() {
     });
 }
 
-function personalEdit(event){
-    var e=event||window.event;
-    var targetElement=e.target||e.srcElement;
-    var trElement=$(targetElement).parents("tr").children();
-    var id=$(trElement[0]).text();
-    console.log(trElement);
-    console.log(id);
-}
+// function personalEdit(event){
+//     var e=event||window.event;
+//     var targetElement=e.target||e.srcElement;
+//     var trElement=$(targetElement).parents("tr").children();
+//     var id=$(trElement[0]).text();
+//     console.log(trElement);
+//     console.log(id);
+// }
 
 function personalDelete(event){
     var e=event||window.event;
@@ -75,10 +75,17 @@ function personalDelete(event){
             success: succFunction   //成功执行方法
         });
         function erryFunction(){
-            console.log("error");
+            $('#promptContent').html('删除失败！');
+            $('#Info_prompt').modal('show');
         }
         function succFunction(data){
-            console.log(data);
+            if(data==1||data=='1'){
+                $('#promptContent').html('删除成功！');
+                $('#Info_prompt').modal('show');
+            }else{
+                $('#promptContent').html('删除失败！');
+                $('#Info_prompt').modal('show');
+            }
         }
     });
 }

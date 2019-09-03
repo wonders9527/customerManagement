@@ -627,231 +627,231 @@
     </trim>
   </insert>
 
-  <!--<update id="updateByPrimaryKeySelective" parameterType="main.java.com.jinhuifeng.model.personalInformationTable">-->
-    <!--update personal_information_table-->
-    <!--<set>-->
-      <!--<if test="applicationAmount != null">-->
-        <!--application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="maximumMonthlyPayment != null">-->
-        <!--maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="personalName != null">-->
-        <!--personal_name = #{personalName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="identificationNumber != null">-->
-        <!--identification_number = #{identificationNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="maritalStatus != null">-->
-        <!--marital_status = #{maritalStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="propertyNature != null">-->
-        <!--property_nature = #{propertyNature,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="mailboxNumber != null">-->
-        <!--mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="highestEducation != null">-->
-        <!--highest_education = #{highestEducation,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="motherName != null">-->
-        <!--mother_name = #{motherName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="residenceAddress != null">-->
-        <!--residence_address = #{residenceAddress,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="nowLiving != null">-->
-        <!--now_living = #{nowLiving,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="propertyLocation != null">-->
-        <!--property_location = #{propertyLocation,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="companyName != null">-->
-        <!--company_name = #{companyName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="entryTime != null">-->
-        <!--entry_time = #{entryTime,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="employmentType != null">-->
-        <!--employment_type = #{employmentType,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="companyAddress != null">-->
-        <!--company_address = #{companyAddress,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="companyPhone != null">-->
-        <!--company_phone = #{companyPhone,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="companyCellphoneNumber != null">-->
-        <!--company_cellphone_number = #{companyCellphoneNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="averageIncome != null">-->
-        <!--average_income = #{averageIncome,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="spouseName != null">-->
-        <!--spouse_name = #{spouseName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseIdentificationNumber != null">-->
-        <!--spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseCompanyName != null">-->
-        <!--spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseCompanyAddress != null">-->
-        <!--spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseCompanyPhone != null">-->
-        <!--spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseCellphoneNumber != null">-->
-        <!--spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseAverageIncome != null">-->
-        <!--spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="emergencyContact != null">-->
-        <!--emergency_contact = #{emergencyContact,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="immediateKinship != null">-->
-        <!--immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="relativesPhone != null">-->
-        <!--relatives_phone = #{relativesPhone,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="colleagueName != null">-->
-        <!--colleague_name = #{colleagueName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="colleaguePhone != null">-->
-        <!--colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="friendOneName != null">-->
-        <!--friend_one_name = #{friendOneName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="friendOnePhone != null">-->
-        <!--friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="friendTwoName != null">-->
-        <!--friend_two_name = #{friendTwoName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="friendTwoPhone != null">-->
-        <!--friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="propertyPurchaseMethod != null">-->
-        <!--property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="deedStatus != null">-->
-        <!--deed_status = #{deedStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="mortgageApplicationDate != null">-->
-        <!--mortgage_application_date = #{mortgageApplicationDate,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="mortgageMonthly != null">-->
-        <!--mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="houseConstructionData != null">-->
-        <!--house_construction_data = #{houseConstructionData,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="houseArea != null">-->
-        <!--house_area = #{houseArea,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="vehicleNumber != null">-->
-        <!--vehicle_number = #{vehicleNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="vehiclePrice != null">-->
-        <!--vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="vehiclePurchaseDate != null">-->
-        <!--vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="vehicleModel != null">-->
-        <!--vehicle_model = #{vehicleModel,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="vehicleInsuranceCompanyname != null">-->
-        <!--vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="vehicleInsuranceEnddate != null">-->
-        <!--vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="borrowerCreditcardStatus != null">-->
-        <!--borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="borrowerCreditLine != null">-->
-        <!--borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="borrowerUsedQuota != null">-->
-        <!--borrower_used_quota = #{borrowerUsedQuota,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="borrowerOverdueStatus != null">-->
-        <!--borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseCreditcardStatus != null">-->
-        <!--spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="spouseCreditLine != null">-->
-        <!--spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="spouseUsedQuota != null">-->
-        <!--spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="spouseOverdueStatus != null">-->
-        <!--spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="loanStatus != null">-->
-        <!--loan_status = #{loanStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="loanMechanism != null">-->
-        <!--loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="loanDate != null">-->
-        <!--loan_date = #{loanDate,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="loanAmount != null">-->
-        <!--loan_amount = #{loanAmount,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="loanMonthlyRepayment != null">-->
-        <!--loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="insuranceStatus != null">-->
-        <!--insurance_status = #{insuranceStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="insuranceName != null">-->
-        <!--insurance_name = #{insuranceName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="insuranceAnnualPayment != null">-->
-        <!--insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="insuranceEffectiveDate != null">-->
-        <!--insurance_effective_date = #{insuranceEffectiveDate,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="insuranceType != null">-->
-        <!--insurance_type = #{insuranceType,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="providentFundBase != null">-->
-        <!--provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},-->
-      <!--</if>-->
-      <!--<if test="providentFundYear != null">-->
-        <!--provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="remark != null">-->
-        <!--remark = #{remark,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="entryPeople != null">-->
-        <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="accountManager != null">-->
-        <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="createDate != null">-->
-        <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
-      <!--</if>-->
-      <!--<if test="temp1 != null">-->
-        <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="temp2 != null">-->
-        <!--Temp2 = #{temp2,jdbcType=VARCHAR},-->
-      <!--</if>-->
-    <!--</set>-->
-    <!--where id = #{id,jdbcType=INTEGER}-->
-  <!--</update>-->
+  <update id="updateById" parameterType="com.jinhuifeng.model.PersonalInformationTable">
+    update personal_information_table
+    <set>
+      <if test="applicationAmount != null">
+        application_amount = #{applicationAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="maximumMonthlyPayment != null">
+        maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},
+      </if>
+      <if test="personalName != null">
+        personal_name = #{personalName,jdbcType=VARCHAR},
+      </if>
+      <if test="identificationNumber != null">
+        identification_number = #{identificationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="maritalStatus != null">
+        marital_status = #{maritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyNature != null">
+        property_nature = #{propertyNature,jdbcType=VARCHAR},
+      </if>
+      <if test="mailboxNumber != null">
+        mailbox_number = #{mailboxNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="highestEducation != null">
+        highest_education = #{highestEducation,jdbcType=VARCHAR},
+      </if>
+      <if test="motherName != null">
+        mother_name = #{motherName,jdbcType=VARCHAR},
+      </if>
+      <if test="residenceAddress != null">
+        residence_address = #{residenceAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="nowLiving != null">
+        now_living = #{nowLiving,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyLocation != null">
+        property_location = #{propertyLocation,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        company_name = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="entryTime != null">
+        entry_time = #{entryTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="employmentType != null">
+        employment_type = #{employmentType,jdbcType=VARCHAR},
+      </if>
+      <if test="companyAddress != null">
+        company_address = #{companyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPhone != null">
+        company_phone = #{companyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCellphoneNumber != null">
+        company_cellphone_number = #{companyCellphoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="averageIncome != null">
+        average_income = #{averageIncome,jdbcType=DOUBLE},
+      </if>
+      <if test="spouseName != null">
+        spouse_name = #{spouseName,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseIdentificationNumber != null">
+        spouse_identification_number = #{spouseIdentificationNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCompanyName != null">
+        spouse_company_name = #{spouseCompanyName,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCompanyAddress != null">
+        spouse_company_address = #{spouseCompanyAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCompanyPhone != null">
+        spouse_company_phone = #{spouseCompanyPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCellphoneNumber != null">
+        spouse_cellphone_number = #{spouseCellphoneNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseAverageIncome != null">
+        spouse_average_income = #{spouseAverageIncome,jdbcType=DOUBLE},
+      </if>
+      <if test="emergencyContact != null">
+        emergency_contact = #{emergencyContact,jdbcType=VARCHAR},
+      </if>
+      <if test="immediateKinship != null">
+        immediate_kinship = #{immediateKinship,jdbcType=VARCHAR},
+      </if>
+      <if test="relativesPhone != null">
+        relatives_phone = #{relativesPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colleagueName != null">
+        colleague_name = #{colleagueName,jdbcType=VARCHAR},
+      </if>
+      <if test="colleaguePhone != null">
+        colleague_phone = #{colleaguePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="friendOneName != null">
+        friend_one_name = #{friendOneName,jdbcType=VARCHAR},
+      </if>
+      <if test="friendOnePhone != null">
+        friend_one_phone = #{friendOnePhone,jdbcType=VARCHAR},
+      </if>
+      <if test="friendTwoName != null">
+        friend_two_name = #{friendTwoName,jdbcType=VARCHAR},
+      </if>
+      <if test="friendTwoPhone != null">
+        friend_two_phone = #{friendTwoPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="propertyPurchaseMethod != null">
+        property_purchase_method = #{propertyPurchaseMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="deedStatus != null">
+        deed_status = #{deedStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="mortgageApplicationDate != null">
+        mortgage_application_date = #{mortgageApplicationDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="mortgageMonthly != null">
+        mortgage_monthly = #{mortgageMonthly,jdbcType=DOUBLE},
+      </if>
+      <if test="houseConstructionData != null">
+        house_construction_data = #{houseConstructionData,jdbcType=TIMESTAMP},
+      </if>
+      <if test="houseArea != null">
+        house_area = #{houseArea,jdbcType=DOUBLE},
+      </if>
+      <if test="vehicleNumber != null">
+        vehicle_number = #{vehicleNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="vehiclePrice != null">
+        vehicle_price = #{vehiclePrice,jdbcType=DOUBLE},
+      </if>
+      <if test="vehiclePurchaseDate != null">
+        vehicle_purchase_date = #{vehiclePurchaseDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vehicleModel != null">
+        vehicle_model = #{vehicleModel,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleInsuranceCompanyname != null">
+        vehicle_insurance_companyName = #{vehicleInsuranceCompanyname,jdbcType=VARCHAR},
+      </if>
+      <if test="vehicleInsuranceEnddate != null">
+        vehicle_insurance_endDate = #{vehicleInsuranceEnddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="borrowerCreditcardStatus != null">
+        borrower_creditCard_status = #{borrowerCreditcardStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="borrowerCreditLine != null">
+        borrower_credit_line = #{borrowerCreditLine,jdbcType=DOUBLE},
+      </if>
+      <if test="borrowerUsedQuota != null">
+        borrower_used_quota = #{borrowerUsedQuota,jdbcType=DOUBLE},
+      </if>
+      <if test="borrowerOverdueStatus != null">
+        borrower_overdue_status = #{borrowerOverdueStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCreditcardStatus != null">
+        spouse_creditCard_status = #{spouseCreditcardStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="spouseCreditLine != null">
+        spouse_credit_line = #{spouseCreditLine,jdbcType=DOUBLE},
+      </if>
+      <if test="spouseUsedQuota != null">
+        spouse_used_quota = #{spouseUsedQuota,jdbcType=DOUBLE},
+      </if>
+      <if test="spouseOverdueStatus != null">
+        spouse_overdue_status = #{spouseOverdueStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="loanStatus != null">
+        loan_status = #{loanStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="loanMechanism != null">
+        loan_mechanism = #{loanMechanism,jdbcType=VARCHAR},
+      </if>
+      <if test="loanDate != null">
+        loan_date = #{loanDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="loanAmount != null">
+        loan_amount = #{loanAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="loanMonthlyRepayment != null">
+        loan_monthly_repayment = #{loanMonthlyRepayment,jdbcType=DOUBLE},
+      </if>
+      <if test="insuranceStatus != null">
+        insurance_status = #{insuranceStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceName != null">
+        insurance_name = #{insuranceName,jdbcType=VARCHAR},
+      </if>
+      <if test="insuranceAnnualPayment != null">
+        insurance_annual_payment = #{insuranceAnnualPayment,jdbcType=DOUBLE},
+      </if>
+      <if test="insuranceEffectiveDate != null">
+        insurance_effective_date = #{insuranceEffectiveDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="insuranceType != null">
+        insurance_type = #{insuranceType,jdbcType=VARCHAR},
+      </if>
+      <if test="providentFundBase != null">
+        provident_fund_base = #{providentFundBase,jdbcType=DOUBLE},
+      </if>
+      <if test="providentFundYear != null">
+        provident_fund_year = #{providentFundYear,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="entryPeople != null">
+        entry_people = #{entryPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="accountManager != null">
+        account_manager = #{accountManager,jdbcType=VARCHAR},
+      </if>
+      <if test="createDate != null">
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="temp1 != null">
+        Temp1 = #{temp1,jdbcType=VARCHAR},
+      </if>
+      <if test="temp2 != null">
+        Temp2 = #{temp2,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
   <!--<update id="updateByPrimaryKey" parameterType="main.java.com.jinhuifeng.model.personalInformationTable">-->
     <!--update personal_information_table-->
     <!--set application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
