@@ -20,6 +20,7 @@ function initCompanyList() {
             console.log("error");
         }
         function succFunction(data){
+            console.log(data);
             if(data.length>0) {
                 for (var i = 0; i < data.length; i++){
                     $("#companyList").append(
@@ -34,9 +35,8 @@ function initCompanyList() {
                         '<td class="text-center">'+data[i].actualController+'</td>'+
                         '<td class="text-center">'+getStatus(data[i].actualControllerChange)+'</td>'+
                         '<td class="text-center">'+getStatus(data[i].equityPledgeStatus)+'</td>'+
-
                         '<td class="text-center">'+
-                        '<a href=\"m_edit_company.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
+                        '<a href=\"edit_company.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
                         '<a href="#" onclick="companyDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
                         '</td>'+
                         '</tr>'
@@ -52,7 +52,6 @@ function companyDelete(event){
     var targetElement=e.target||e.srcElement;
     var trElement=$(targetElement).parents("tr").children();
     var id=$(trElement[0]).text();
-    console.log(id);
     $(function(){
         $.ajax({
             url: 'companyInformation/deleteById',
@@ -82,7 +81,9 @@ function companyDelete(event){
 
 
 function dateFormat(longTypeDate){
-    if(longTypeDate!=null||longTypeDate!=undefined){
+    if(longTypeDate.toString()=="-28800000"){
+        return "";
+    }else if(longTypeDate!=null||longTypeDate!=undefined){
         var dateTypeDate = "";
         var date = new Date();
         date.setTime(longTypeDate);

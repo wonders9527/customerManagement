@@ -28,9 +28,6 @@ function initCompanyById(thisId) {
             console.log("err");
         }
         function succFunction(data){
-            console.log(data);
-            var a=dateFormat(data.createDate);
-
             $('#companyId').val(data.id);
             $('#applicationAmount').val(data.applicationAmount);
             $('#maximumMonthlyPayment').val(data.maximumMonthlyPayment);
@@ -86,7 +83,6 @@ function initCompanyById(thisId) {
 
 
 $('#addCompany').click(function () {
-    console.log("**********************");
     var inputArray=new Array("companyName","companyCreditcode");
 
     var selectArray=new Array("investmentStatus","investmentStandard","equityPledgeStatus","equityFreezeStatus",

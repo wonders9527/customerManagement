@@ -20,6 +20,7 @@ function initPersonalList() {
             console.log("error");
         }
         function succFunction(data){
+            console.log(data);
             if(data.length>0) {
                 for (var i = 0; i < data.length; i++){
                     $("#personalList").append(
@@ -37,7 +38,7 @@ function initPersonalList() {
                         '<td class="text-center">'+data[i].loanMonthlyRepayment+'</td>'+
 
                         '<td class="text-center">'+
-                        '<a href=\"edit_personal.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
+                        '<a href=\"m_edit_personal.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
                         '<a href="#" onclick="personalDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
                         '</td>'+
                         '</tr>'
@@ -47,6 +48,15 @@ function initPersonalList() {
         }
     });
 }
+
+// function personalEdit(event){
+//     var e=event||window.event;
+//     var targetElement=e.target||e.srcElement;
+//     var trElement=$(targetElement).parents("tr").children();
+//     var id=$(trElement[0]).text();
+//     console.log(trElement);
+//     console.log(id);
+// }
 
 function personalDelete(event){
     var e=event||window.event;
@@ -81,19 +91,13 @@ function personalDelete(event){
 }
 
 function dateFormat(longTypeDate){
-    if(longTypeDate.toString()=="-28800000"){
-        return "";
-    }else if(longTypeDate!=null||longTypeDate!=undefined){
-        var dateTypeDate = "";
-        var date = new Date();
-        date.setTime(longTypeDate);
-        dateTypeDate += date.getFullYear();   //年
-        dateTypeDate += "-" + getMonth(date); //月
-        dateTypeDate += "-" + getDay(date);   //日
-        return dateTypeDate;
-    }else {
-        return "";
-    }
+    var dateTypeDate = "";
+    var date = new Date();
+    date.setTime(longTypeDate);
+    dateTypeDate += date.getFullYear();   //年
+    dateTypeDate += "-" + getMonth(date); //月
+    dateTypeDate += "-" + getDay(date);   //日
+    return dateTypeDate;
 }
 
 //返回 01-12 的月份值
