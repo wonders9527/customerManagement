@@ -69,6 +69,7 @@ function personalDelete(event){
             $('#Info_prompt').modal('show');
         }
         function succFunction(data){
+            console.log(data);
             if(data==1||data=='1'){
                 $('#promptContent').html('删除成功！');
                 $('#Info_prompt').modal('show');
