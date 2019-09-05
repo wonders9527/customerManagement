@@ -8,6 +8,8 @@ public interface PersonalInformationService {
 
     int insertPersonal(PersonalInformationTable personalInformationTable);
 
+    int updateById(PersonalInformationTable personalInformationTable);
+
     List<PersonalInformationTable> findAll();
 
     PersonalInformationTable findById(int id);

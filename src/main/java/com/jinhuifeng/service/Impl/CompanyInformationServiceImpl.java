@@ -6,6 +6,8 @@ import com.jinhuifeng.service.CompanyInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -16,9 +18,19 @@ public class CompanyInformationServiceImpl implements CompanyInformationService 
 
 
     @Override
-    public int insertSelective(CompanyInformationTable companyInformationTable) {
+    public int insertCompany(CompanyInformationTable companyInformationTable) {
+        Timestamp timesTamp = new Timestamp(new Date().getTime());
+        companyInformationTable.setCreateDate(timesTamp);
         int insertResult=companyInformationDao.insertSelective(companyInformationTable);
         return insertResult;
+    }
+
+    @Override
+    public int updateById(CompanyInformationTable companyInformationTable) {
+        Timestamp timesTamp = new Timestamp(new Date().getTime());
+        companyInformationTable.setCreateDate(timesTamp);
+        int updateResult=companyInformationDao.updateById(companyInformationTable);
+        return updateResult;
     }
 
     @Override
@@ -28,8 +40,8 @@ public class CompanyInformationServiceImpl implements CompanyInformationService 
     }
 
     @Override
-    public List<CompanyInformationTable> findAll() {
-        List<CompanyInformationTable> companyInformationList =companyInformationDao.findAll();
+    public List<CompanyInformationTable> findAll(){
+        List<CompanyInformationTable> companyInformationList=companyInformationDao.findAll();
         return companyInformationList;
     }
 

@@ -8,6 +8,8 @@ public interface CompanyInformationDao {
 
     int insertSelective(CompanyInformationTable companyInformationTable);
 
+    int updateById(CompanyInformationTable companyInformationTable);
+
     int deleteById(int id);
 
     List<CompanyInformationTable> findAll();

@@ -25,6 +25,14 @@ public class PersonalInformationServiceImpl implements PersonalInformationServic
     }
 
     @Override
+    public int updateById(PersonalInformationTable personalInformationTable) {
+        Timestamp timesTamp = new Timestamp(new Date().getTime());
+        personalInformationTable.setCreateDate(timesTamp);
+        int personalResult=personalInformationDao.updateById(personalInformationTable);
+        return personalResult;
+    }
+
+    @Override
     public List<PersonalInformationTable> findAll() {
         List<PersonalInformationTable> personalInformationList=personalInformationDao.findAll();
         return personalInformationList;

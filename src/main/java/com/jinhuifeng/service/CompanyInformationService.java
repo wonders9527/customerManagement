@@ -6,7 +6,9 @@ import java.util.List;
 
 public interface CompanyInformationService {
 
-    int insertSelective(CompanyInformationTable companyInformationTable);
+    int insertCompany(CompanyInformationTable companyInformationTable);
+
+    int updateById(CompanyInformationTable companyInformationTable);
 
     int deleteById(int id);
 

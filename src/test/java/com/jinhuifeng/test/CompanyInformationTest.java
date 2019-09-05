@@ -35,4 +35,10 @@ public class CompanyInformationTest {
         }
 
     }
+
+    @Test
+    public void daleteTest(){
+        int res=companyInformationService.deleteById(3);
+        System.out.println(res);
+    }
 }

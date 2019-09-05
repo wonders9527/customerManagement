@@ -1,14 +1,14 @@
 'use strict';
 jQuery(document).ready(function() {
 
-    initPersonalList();
+    initCompanyList();
 
 });
 
-function initPersonalList() {
+function initCompanyList() {
     $(function(){
         $.ajax({
-            url: 'personalInformation/findAll',
+            url: 'companyInformation/findAll',
             type: 'post',
             dataType:'json',
             timeout: 3000,
@@ -20,26 +20,24 @@ function initPersonalList() {
             console.log("error");
         }
         function succFunction(data){
-            console.log(data);
             if(data.length>0) {
                 for (var i = 0; i < data.length; i++){
-                    $("#personalList").append(
+                    $("#companyList").append(
                         '<tr>'+
                         '<td style="display: none">'+data[i].id+'</td>'+
-                        '<td class="text-center">'+data[i].personalName+'</td>'+
-                        '<td class="text-center">'+data[i].identificationNumber+'</td>'+
-                        '<td class="text-center">'+data[i].mailboxNumber+'</td>'+
-                        '<td class="text-center">'+getEducation(data[i].highestEducation)+'</td>'+
-                        '<td class="text-center">'+getLoanStatus(data[i].loanStatus)+'</td>'+
-
-                        '<td class="text-center">'+data[i].loanMechanism+'</td>'+
-                        '<td class="text-center">'+dateFormat(data[i].loanDate)+'</td>'+
-                        '<td class="text-center">'+data[i].loanAmount+'</td>'+
-                        '<td class="text-center">'+data[i].loanMonthlyRepayment+'</td>'+
+                        '<td class="text-center">'+data[i].companyName+'</td>'+
+                        '<td class="text-center">'+data[i].companyCreditcode+'</td>'+
+                        '<td class="text-center">'+data[i].companyOrganization+'</td>'+
+                        '<td class="text-center">'+dateFormat(data[i].companyEstablishDate)+'</td>'+
+                        '<td class="text-center">'+data[i].companyRegisteredCapital+'</td>'+
+                        '<td class="text-center">'+data[i].companyPaidinCapital+'</td>'+
+                        '<td class="text-center">'+data[i].actualController+'</td>'+
+                        '<td class="text-center">'+getStatus(data[i].actualControllerChange)+'</td>'+
+                        '<td class="text-center">'+getStatus(data[i].equityPledgeStatus)+'</td>'+
 
                         '<td class="text-center">'+
-                        '<a href=\"m_edit_personal.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
-                        '<a href="#" onclick="personalDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
+                        '<a href=\"m_edit_company.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
+                        '<a href="#" onclick="companyDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
                         '</td>'+
                         '</tr>'
                     );
@@ -49,23 +47,15 @@ function initPersonalList() {
     });
 }
 
-// function personalEdit(event){
-//     var e=event||window.event;
-//     var targetElement=e.target||e.srcElement;
-//     var trElement=$(targetElement).parents("tr").children();
-//     var id=$(trElement[0]).text();
-//     console.log(trElement);
-//     console.log(id);
-// }
-
-function personalDelete(event){
+function companyDelete(event){
     var e=event||window.event;
     var targetElement=e.target||e.srcElement;
     var trElement=$(targetElement).parents("tr").children();
     var id=$(trElement[0]).text();
+    console.log(id);
     $(function(){
         $.ajax({
-            url: 'personalInformation/deleteById',
+            url: 'companyInformation/deleteById',
             type: 'post',
             dataType:'json',
             data:{'id':id},
@@ -90,14 +80,20 @@ function personalDelete(event){
     });
 }
 
+
 function dateFormat(longTypeDate){
-    var dateTypeDate = "";
-    var date = new Date();
-    date.setTime(longTypeDate);
-    dateTypeDate += date.getFullYear();   //年
-    dateTypeDate += "-" + getMonth(date); //月
-    dateTypeDate += "-" + getDay(date);   //日
-    return dateTypeDate;
+    if(longTypeDate!=null||longTypeDate!=undefined){
+        var dateTypeDate = "";
+        var date = new Date();
+        date.setTime(longTypeDate);
+        dateTypeDate += date.getFullYear();   //年
+        dateTypeDate += "-" + getMonth(date); //月
+        dateTypeDate += "-" + getDay(date);   //日
+        return dateTypeDate;
+    }else {
+        return "";
+    }
+
 }
 
 //返回 01-12 的月份值
@@ -144,18 +140,18 @@ function getEducation(education) {
     return thisEducation;
 }
 
-//返回贷款状态
-function getLoanStatus(loanStatus) {
-    var thisLoanStatus;
-    switch (loanStatus) {
-        case "0":thisLoanStatus="";
+//返回有无状态
+function getStatus(status) {
+    var thisStatus;
+    switch (status) {
+        case "0":thisStatus="";
             break;
-        case "1":thisLoanStatus="有";
+        case "1":thisStatus="有";
             break;
-        case "2":thisLoanStatus="无";
+        case "2":thisStatus="无";
             break;
     }
-    return thisLoanStatus;
+    return thisStatus;
 }
 
 

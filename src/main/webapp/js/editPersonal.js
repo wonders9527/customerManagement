@@ -30,6 +30,7 @@ function initPersonalById(thisId){
         function succFunction(data){
             console.log(data);
             var a=dateFormat(data.createDate);
+            $('#personalId').val(data.id);
             $('#applicationAmount').val(data.applicationAmount);
             $('#maximumMonthlyPayment').val(data.maximumMonthlyPayment);
 
@@ -154,6 +155,7 @@ $('#addPersonal').click(function () {
 function ajaxFunction(){
 
     var personalInformationTable={
+        "id":$('#personalId').val(),
         "applicationAmount":$('#applicationAmount').val(),
         "maximumMonthlyPayment":$('#maximumMonthlyPayment').val(),
         "personalName":$('#personalName').val(),
@@ -231,7 +233,7 @@ function ajaxFunction(){
     console.log(personalInformationTable);
     $(function(){
         $.ajax({
-            url: 'personalInformation/insertPersonal',
+            url: 'personalInformation/updateById',
             type: 'post',
             dataType:'json',
             contentType:'application/json; charset=utf-8',

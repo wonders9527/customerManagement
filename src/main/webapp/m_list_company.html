@@ -5,19 +5,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
 <link href="css/style.css" rel='stylesheet' type='text/css' />
-
 <link rel="stylesheet" href="css/font.css" type="text/css"/>
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/font-awesome.css" rel="stylesheet">
 
 <script src="js/modernizr.js"></script>
-<script src="js/jquery.cookie.js"></script>
 <script src="js/screenfull.js"></script>
 
 <link rel="stylesheet" type="text/css" href="css/table-style.css" />
-<!--<link rel="stylesheet" type="text/css" href="css/basictable.css" />-->
-<!--<script type="text/javascript" src="js/jquery.basictable.min.js"></script>-->
 
 </head>
 <body class="dashboard-page">
@@ -67,69 +62,49 @@
 					<div class="w3l-table-info">
 					    <table id="table">
 						<thead>
-						  <tr>
-							<th>Name</th>
-							<th>Age</th>
-							<th>Gender</th>
-							<th>Height</th>
-							<th>Province</th>
-							<th>Sport</th>
-						  </tr>
+						<tr>
+							<th style="display: none"></th>
+							<th class="text-center" style="width:10%">企业名称</th>
+							<th class="text-center" style="width:10%">企业信用代码</th>
+							<th class="text-center" style="width:10%">组织形式</th>
+							<th class="text-center" style="width:10%">成立时间</th>
+							<th class="text-center" style="width:10%">注册资本</th>
+							<th class="text-center" style="width:10%">实收资本</th>
+							<th class="text-center" style="width:10%">实际控制人</th>
+							<th class="text-center" style="width:10%">控制人有无变更</th>
+							<th class="text-center" style="width:10%">有无股权质押</th>
+							<th class="text-center" style="width:10%">操作</th>
+						</tr>
 						</thead>
-						<tbody>
-						  <tr>
-							<td>Jill Smith</td>
-							<td>25</td>
-							<td>Female</td>
-							<td>5'4</td>
-							<td>British Columbia</td>
-							<td>Volleyball</td>
-						  </tr>
-						  <tr>
-							<td>John Stone</td>
-							<td>30</td>
-							<td>Male</td>
-							<td>5'9</td>
-							<td>Ontario</td>
-							<td>Badminton</td>
-						  </tr>
-						  <tr>
-							<td>Jane Strip</td>
-							<td>29</td>
-							<td>Female</td>
-							<td>5'6</td>
-							<td>Manitoba</td>
-							<td>Hockey</td>
-						  </tr>
-						  <tr>
-							<td>Gary Mountain</td>
-							<td>21</td>
-							<td>Male</td>
-							<td>5'8</td>
-							<td>Alberta</td>
-							<td>Curling</td>
-						  </tr>
-						  <tr>
-							<td>James Camera</td>
-							<td>31</td>
-							<td>Male</td>
-							<td>6'1</td>
-							<td>British Columbia</td>
-							<td>Hiking</td>
-						  </tr>
+						<tbody id="companyList">
+
 						</tbody>
 					  </table>
 					</div>
-
-
 				</div>
-				<!-- //tables -->
 			</div>
 		</div>
 	</section>
 
-	<script src="js/bootstrap.js"></script>
-	<!--<script src="js/proton.js"></script>-->
+	<div class="modal fade" id="Info_prompt">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div id="promptContent" class="modal-body">
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="btnClose" class="btn btn-default" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/listCompany.js"></script>
 	
 </body>
 </html>

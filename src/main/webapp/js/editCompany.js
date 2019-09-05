@@ -1,12 +1,92 @@
 'use strict';
 jQuery(document).ready(function() {
-
+    var baseUrl=document.URL;
+    var thisId;
+    if(baseUrl.indexOf('#')>0){
+        thisId = document.URL.split('=')[1].split('#')[0];
+        initCompanyById(thisId);
+    }else if(baseUrl.indexOf('?')>0){
+        thisId = document.URL.split('=')[1];
+        initCompanyById(thisId);
+    }
 
 });
 
+function initCompanyById(thisId) {
+    $(function(){
+        $.ajax({
+            url: 'companyInformation/findCompanyById',
+            type: 'post',
+            dataType:'json',
+            data:{'id':thisId},
+            timeout: 3000,
+            ache: false,
+            error: erryFunction,    //错误执行方法
+            success: succFunction   //成功执行方法
+        });
+        function erryFunction(){
+            console.log("err");
+        }
+        function succFunction(data){
+            console.log(data);
+            var a=dateFormat(data.createDate);
+
+            $('#companyId').val(data.id);
+            $('#applicationAmount').val(data.applicationAmount);
+            $('#maximumMonthlyPayment').val(data.maximumMonthlyPayment);
+
+            $('#companyName').val(data.companyName);
+            $('#companyCreditcode').val(data.companyCreditcode);
+
+            $('#companyOrganization').val(data.companyOrganization);
+            $('#companyEstablishDate').val(dateFormat(data.companyEstablishDate));
+
+            $('#companyRegisteredCapital').val(data.companyRegisteredCapital);
+            $('#companyPaidinCapital').val(data.companyPaidinCapital);
+
+            $('#investmentStatus').val(data.investmentStatus);
+            $('#investmentStandard').val(data.investmentStandard);
+            $('#shareholdersNumber').val(data.shareholdersNumber);
+            $('#actualController').val(data.actualController);
+            $('#actualControllerChange').val(data.actualControllerChange);
+            $('#equityPledgeStatus').val(data.equityPledgeStatus);
+            $('#equityFreezeStatus').val(data.equityFreezeStatus);
+            $('#businessScope').val(data.businessScope);
+            $('#mainBusiness').val(data.mainBusiness);
+            $('#mainBusinessChange').val(data.mainBusinessChange);
+
+            $('#mainBusinessDispersion').val(data.mainBusinessDispersion);
+
+            $('#businessPlace').val(data.businessPlace);
+            $('#businessPlaceWay').val(data.businessPlaceWay);
+
+            $('#previousMainBusiness').val(data.previousMainBusiness);
+            $('#previousNetprofit').val(data.previousNetprofit);
+            $('#previousTotalassets').val(data.previousTotalassets);
+            $('#previousNetassets').val(data.previousNetassets);
+
+            $('#externalBorrowing').val(data.externalBorrowing);
+            $('#guaranteeMethod').val(data.guaranteeMethod);
+            $('#unresolvedDebtGuarantee').val(data.unresolvedDebtGuarantee);
+
+            $('#taxDisputeStatus').val(data.taxDisputeStatus);
+            $('#outstandingClaimStatus').val(data.outstandingClaimStatus);
+            $('#qualityAssuranceStatus').val(data.qualityAssuranceStatus);
+            $('#financialCommitmentStatus').val(data.financialCommitmentStatus);
+            $('#balanceSheetStatus').val(data.balanceSheetStatus);
+            $('#arrearsTaxesStatus').val(data.arrearsTaxesStatus);
+            $('#arbitrationLawStatus').val(data.arbitrationLawStatus);
+            $('#environmentalInspectionStatus').val(data.environmentalInspectionStatus);
+            $('#fireInspectionStatus').val(data.fireInspectionStatus);
+            $('#businessInspectionStatus').val(dateFormat(data.businessInspectionStatus));
+        }
+    });
+}
+
+
 
 $('#addCompany').click(function () {
-
+    console.log("**********************");
     var inputArray=new Array("companyName","companyCreditcode");
 
     var selectArray=new Array("investmentStatus","investmentStandard","equityPledgeStatus","equityFreezeStatus",
@@ -46,6 +126,7 @@ $('#addCompany').click(function () {
 function ajaxFunction(){
 
     var companyInformationTable={
+        "id":$('#companyId').val(),
         "applicationAmount":$('#applicationAmount').val(),
         "maximumMonthlyPayment":$('#maximumMonthlyPayment').val(),
         "companyName":$('#companyName').val(),
@@ -90,7 +171,7 @@ function ajaxFunction(){
     //
     $(function(){
         $.ajax({
-            url: 'companyInformation/insertCompany',
+            url: 'companyInformation/updateById',
             type: 'post',
             dataType:'json',
             contentType:'application/json; charset=utf-8',
@@ -102,28 +183,47 @@ function ajaxFunction(){
             success: succFunction   //成功执行方法
         });
         function erryFunction(){
-            console.log("err");
+            $('#promptContent').html('编辑失败！');
+            $('#Info_prompt').modal('show');
         }
         function succFunction(data){
             console.log(data);
             if(data==1||data=='1'){
-                $('#promptContent').html('保存成功！');
+                $('#promptContent').html('编辑成功！');
                 $('#Info_prompt').modal('show');
             }else{
-                $('#promptContent').html('保存失败！');
+                $('#promptContent').html('编辑失败！');
                 $('#Info_prompt').modal('show');
             }
         }
     });
 }
 
-$('#btnClose').click(function(){
-    $('#Info_prompt').modal('hide');
-});
+function dateFormat(longTypeDate){
+    var dateTypeDate = "";
+    var date = new Date();
+    date.setTime(longTypeDate);
+    dateTypeDate += date.getFullYear();   //年
+    dateTypeDate += "-" + getMonth(date); //月
+    dateTypeDate += "-" + getDay(date);   //日
+    return dateTypeDate;
+}
 
-$(function() {
-    $('#Info_prompt').on('hide.bs.modal',function() {
-        location.reload();
-        // window.location.href='m_add_company.html';
-    })
-});
+//返回 01-12 的月份值
+function getMonth(date){
+    var month = "";
+    month = date.getMonth() + 1; //getMonth()得到的月份是0-11
+    if(month<10){
+        month = "0" + month;
+    }
+    return month;
+}
+//返回01-30的日期
+function getDay(date){
+    var day = "";
+    day = date.getDate();
+    if(day<10){
+        day = "0" + day;
+    }
+    return day;
+}

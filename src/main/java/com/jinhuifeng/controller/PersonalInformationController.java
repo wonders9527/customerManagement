@@ -26,10 +26,17 @@ public class PersonalInformationController {
     }
 
     @ResponseBody
+    @RequestMapping("/updateById")
+    public int updateById(@RequestBody PersonalInformationTable personalInformationTable){
+        int res=personalInformationService.updateById(personalInformationTable);
+        return  res;
+    }
+
+    @ResponseBody
     @RequestMapping("/findAll")
     public List<PersonalInformationTable> findAll(){
-        List<PersonalInformationTable> userList=personalInformationService.findAll();
-        return  userList;
+        List<PersonalInformationTable> personalList=personalInformationService.findAll();
+        return  personalList;
     }
 
     @ResponseBody
