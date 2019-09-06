@@ -82,7 +82,9 @@ function companyDelete(event){
 
 
 function dateFormat(longTypeDate){
-    if(longTypeDate!=null||longTypeDate!=undefined){
+    if(longTypeDate.toString()=="-28800000"){
+        return "";
+    }else if(longTypeDate!=null||longTypeDate!=undefined){
         var dateTypeDate = "";
         var date = new Date();
         date.setTime(longTypeDate);
@@ -93,7 +95,6 @@ function dateFormat(longTypeDate){
     }else {
         return "";
     }
-
 }
 
 //返回 01-12 的月份值

@@ -31,7 +31,6 @@ public class LoginInterceptor implements HandlerInterceptor {
             response.sendRedirect(request.getContextPath()+"/login.html");
             return false;
         }
-
     }
 
     @Override

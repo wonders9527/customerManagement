@@ -91,13 +91,19 @@ function personalDelete(event){
 }
 
 function dateFormat(longTypeDate){
-    var dateTypeDate = "";
-    var date = new Date();
-    date.setTime(longTypeDate);
-    dateTypeDate += date.getFullYear();   //年
-    dateTypeDate += "-" + getMonth(date); //月
-    dateTypeDate += "-" + getDay(date);   //日
-    return dateTypeDate;
+    if(longTypeDate.toString()=="-28800000"){
+        return "";
+    }else if(longTypeDate!=null||longTypeDate!=undefined){
+        var dateTypeDate = "";
+        var date = new Date();
+        date.setTime(longTypeDate);
+        dateTypeDate += date.getFullYear();   //年
+        dateTypeDate += "-" + getMonth(date); //月
+        dateTypeDate += "-" + getDay(date);   //日
+        return dateTypeDate;
+    }else {
+        return "";
+    }
 }
 
 //返回 01-12 的月份值

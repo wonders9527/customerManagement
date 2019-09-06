@@ -27,8 +27,8 @@ function listAccount() {
                         '<td class="text-center">'+data[i].userName+'</td>'+
                         '<td class="text-center">'+data[i].employeeName+'</td>'+
                         '<td class="text-center">'+data[i].employeeNumber+'</td>'+
-                        '<td class="text-center">'+data[i].workStatus+'</td>'+
-                        '<td class="text-center">'+data[i].userType+'</td>'+
+                        '<td class="text-center">'+getWorkStatus(data[i].workStatus)+'</td>'+
+                        '<td class="text-center">'+getUserType(data[i].userType)+'</td>'+
                         '<td class="text-center">'+
                         '<a href="#" onclick="accountEdit(event)" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
                         '<a href="#" onclick="accountDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
@@ -174,3 +174,38 @@ function accountDelete(event){
     });
 }
 
+
+//返回用户类型
+function getUserType(userType) {
+    var thisStatus;
+    switch (userType) {
+        case "0":thisStatus="员工";
+            break;
+        case "1":thisStatus="管理员";
+            break;
+    }
+    return thisStatus;
+}
+
+
+//返回在职状态
+function getWorkStatus(workStatus) {
+    var thisStatus;
+    switch (workStatus) {
+        case "0":thisStatus="离职";
+            break;
+        case "1":thisStatus="在职";
+            break;
+    }
+    return thisStatus;
+}
+
+$('#btnClose').click(function(){
+    $('#Info_prompt').modal('hide');
+});
+
+$(function() {
+    $('#Info_prompt').on('hide.bs.modal',function() {
+        location.reload();
+    });
+});
