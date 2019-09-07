@@ -36,7 +36,7 @@ public class UserController {
             redirectUrl="redirect:/m_index.html";
         }else if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("0") ){
             session.setAttribute("user_session", user);
-            redirectUrl= "redirect:/index.html";
+            redirectUrl= "redirect:/q_index.html";
         }else {
             redirectUrl= "redirect:/login.html";
         }

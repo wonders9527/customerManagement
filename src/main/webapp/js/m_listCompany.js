@@ -27,7 +27,7 @@ function initCompanyList() {
                         '<td style="display: none">'+data[i].id+'</td>'+
                         '<td class="text-center">'+data[i].companyName+'</td>'+
                         '<td class="text-center">'+data[i].companyCreditcode+'</td>'+
-                        '<td class="text-center">'+data[i].companyOrganization+'</td>'+
+                        '<td class="text-center">'+getOrganization(data[i].companyOrganization)+'</td>'+
                         '<td class="text-center">'+dateFormat(data[i].companyEstablishDate)+'</td>'+
                         '<td class="text-center">'+data[i].companyRegisteredCapital+'</td>'+
                         '<td class="text-center">'+data[i].companyPaidinCapital+'</td>'+
@@ -80,6 +80,23 @@ function companyDelete(event){
     });
 }
 
+//返回组织形式
+function getOrganization(organization) {
+    var thisOrganization;
+    switch (organization) {
+        case "0":thisOrganization="";
+            break;
+        case "1":thisOrganization="股份有限公司";
+            break;
+        case "2":thisOrganization="有限责任公司";
+            break;
+        case "3":thisOrganization="合伙企业";
+            break;
+        case "4":thisOrganization="个人独资企业";
+            break;
+    }
+    return thisOrganization;
+}
 
 function dateFormat(longTypeDate){
     if(longTypeDate.toString()=="-28800000"){

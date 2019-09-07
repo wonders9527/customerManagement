@@ -28,7 +28,7 @@ public class LoginFilter implements Filter {
 //        System.out.println(path);
 
 
-        if(path.indexOf("/login.html") > -1||path.contains(".css")||path.contains(".js")){
+        if(path.indexOf("/qcom.html") > -1||path.indexOf("/qper.html") > -1||path.indexOf("/index.html") > -1||path.indexOf("/login.html") > -1||path.contains(".css")||path.contains(".js")){
             chain.doFilter(request, response);
             return;
         }

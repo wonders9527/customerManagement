@@ -4,6 +4,7 @@ jQuery(document).ready(function() {
 
 });
 
+var dataJson;
 function listAccount() {
     $(function(){
         $.ajax({
@@ -19,6 +20,7 @@ function listAccount() {
             console.log("error");
         }
         function succFunction(data){
+            dataJson=data;
             if(data.length>0) {
                 for (var i = 0; i < data.length; i++){
                     $("#accountList").append(
@@ -95,13 +97,17 @@ function accountEdit(event){
     var e=event||window.event;
     var targetElement=e.target||e.srcElement;
     var trElement=$(targetElement).parents("tr");
-
-    $('#editAccountId').val($(trElement.children()[0]).text());
-    $('#eUserName').val($(trElement.children()[1]).text());
-    $('#eEmployeeName').val($(trElement.children()[2]).text());
-    $('#eEmployeeNumber').val($(trElement.children()[3]).text());
-    $('#eWorkStatus').val($(trElement.children()[4]).text());
-    $('#eUserType').val($(trElement.children()[5]).text());
+    var id=$(trElement.children()[0]).text();
+    for(var i=0;i<dataJson.length;i++){
+        if(id==dataJson[i].id){
+            $('#editAccountId').val(dataJson[i].id);
+            $('#eUserName').val(dataJson[i].userName);
+            $('#eEmployeeName').val(dataJson[i].employeeName);
+            $('#eEmployeeNumber').val(dataJson[i].employeeNumber);
+            $('#eWorkStatus').val(dataJson[i].workStatus);
+            $('#eUserType').val(dataJson[i].userType);
+        }
+    }
     $('#editAccountModal').modal('show');
 }
 
@@ -199,6 +205,9 @@ function getWorkStatus(workStatus) {
     }
     return thisStatus;
 }
+
+
+
 
 $('#btnClose').click(function(){
     $('#Info_prompt').modal('hide');
