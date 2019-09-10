@@ -91,7 +91,7 @@ function personalDelete(event){
 }
 
 function dateFormat(longTypeDate){
-    if(longTypeDate.toString()=="-28800000"){
+    if(longTypeDate.toString()=="-28800000"||longTypeDate.toString()=="0"){
         return "";
     }else if(longTypeDate!=null||longTypeDate!=undefined){
         var dateTypeDate = "";

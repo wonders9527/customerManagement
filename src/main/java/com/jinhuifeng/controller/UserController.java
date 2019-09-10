@@ -25,22 +25,33 @@ public class UserController {
 
     UserTable userTable=new UserTable();
 
-//    @ResponseBody
+    @ResponseBody
     @RequestMapping("/login")
-    public String login(@RequestParam("userName")String userName, @RequestParam("password")String password,
+    public UserTable login(@RequestParam("userName")String userName, @RequestParam("password")String password,
                            HttpSession session, HttpServletRequest request){
         UserTable user=userService.queryLogin(userName,password);
-        String redirectUrl;
-        if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("1") ){
+
+        if(user!=null && user.getWorkStatus().equals("1")){
             session.setAttribute("user_session", user);
-            redirectUrl="redirect:/m_index.html";
-        }else if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("0") ){
-            session.setAttribute("user_session", user);
-            redirectUrl= "redirect:/q_index.html";
+            userTable.setUserName(user.getUserName());
+            userTable.setUserType(user.getUserType());
+            userTable.setWorkStatus(user.getWorkStatus());
         }else {
-            redirectUrl= "redirect:/login.html";
+            userTable.setUserName(null);
+            userTable.setUserType(null);
+            userTable.setWorkStatus(null);
         }
-        return redirectUrl;
+//        String redirectUrl;
+//        if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("1") ){
+//            session.setAttribute("user_session", user);
+//            redirectUrl="redirect:/m_index.html";
+//        }else if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("0") ){
+//            session.setAttribute("user_session", user);
+//            redirectUrl= "redirect:/q_index.html";
+//        }else {
+//            redirectUrl= "redirect:/login.html";
+//        }
+        return userTable;
     }
 
     @ResponseBody
@@ -80,11 +91,17 @@ public class UserController {
     @ResponseBody
     @RequestMapping("/saveAccount")
     public String saveAccount(@ModelAttribute UserTable userTable,HttpSession session){
-        System.out.println("Controller"+userTable.toString());
         int resultObj=userService.saveAccount(userTable);
         Map<String, Object> map = new HashMap<>();
         map.put("result", resultObj);
         return  JSONObject.fromObject(map).toString();
+    }
+
+    @RequestMapping("/loginOut")
+    public String loginOut(HttpSession session){
+        //session.removeAttribute("user_session");
+        session.invalidate();
+        return  "redirect:/login.html";
     }
 
 }

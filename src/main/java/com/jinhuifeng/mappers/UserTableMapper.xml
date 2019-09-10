@@ -15,10 +15,10 @@
     <result column="Temp2" jdbcType="VARCHAR" property="temp2" />
   </resultMap>
 
-  <!--<sql id="Base_Column_List">-->
-    <!--id, user_name, password, employee_name, employee_number, work_status, user_type,-->
-    <!--Temp1, Temp2-->
-  <!--</sql>-->
+  <sql id="Base_Column_List">
+    id, user_name, password, employee_name, employee_number, work_status, user_type,
+    Temp1, Temp2
+  </sql>
 
     <select id="findAll" resultMap="BaseResultMap">
       select * from user_table
@@ -52,15 +52,14 @@
     where id = #{id,jdbcType=INTEGER}
   </delete>
 
-  <insert id="insert" parameterType="com.jinhuifeng.model.UserTable">
-  insert into user_table (user_name, password,
-  employee_name, employee_number, work_status,user_type)
-  values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
-  #{employeeName,jdbcType=VARCHAR}, #{employeeNumber,jdbcType=VARCHAR}, #{workStatus,jdbcType=VARCHAR},
-  #{userType,jdbcType=VARCHAR}
-  )
-  </insert>
-
+  <!--<insert id="insert" parameterType="com.jinhuifeng.model.UserTable">-->
+  <!--insert into user_table (user_name, password,-->
+  <!--employee_name, employee_number, work_status,user_type)-->
+  <!--values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},-->
+  <!--#{employeeName,jdbcType=VARCHAR}, #{employeeNumber,jdbcType=VARCHAR}, #{workStatus,jdbcType=VARCHAR},-->
+  <!--#{userType,jdbcType=VARCHAR}-->
+  <!--)-->
+  <!--</insert>-->
 
   <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
     <!--select -->
@@ -69,77 +68,79 @@
     <!--where id = #{id,jdbcType=INTEGER}-->
   <!--</select>-->
 
-  <!--<insert id="insert" parameterType="main.java.com.jinhuifeng.model.UserTable">-->
-    <!--insert into user_table (id, user_name, password, -->
-      <!--employee_name, employee_number, work_status, -->
+  <!--<insert id="insert" parameterType="com.jinhuifeng.model.UserTable">-->
+    <!--insert into user_table (id, user_name, password,-->
+      <!--employee_name, employee_number, work_status,-->
       <!--user_type, Temp1, Temp2-->
       <!--)-->
-    <!--values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, -->
-      <!--#{employeeName,jdbcType=VARCHAR}, #{employeeNumber,jdbcType=VARCHAR}, #{workStatus,jdbcType=VARCHAR}, -->
+    <!--values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},-->
+      <!--#{employeeName,jdbcType=VARCHAR}, #{employeeNumber,jdbcType=VARCHAR}, #{workStatus,jdbcType=VARCHAR},-->
       <!--#{userType,jdbcType=VARCHAR}, #{temp1,jdbcType=VARCHAR}, #{temp2,jdbcType=VARCHAR}-->
       <!--)-->
   <!--</insert>-->
-  <!--<insert id="insertSelective" parameterType="main.java.com.jinhuifeng.model.UserTable">-->
-    <!--insert into user_table-->
-    <!--<trim prefix="(" suffix=")" suffixOverrides=",">-->
-      <!--<if test="id != null">-->
-        <!--id,-->
-      <!--</if>-->
-      <!--<if test="userName != null">-->
-        <!--user_name,-->
-      <!--</if>-->
-      <!--<if test="password != null">-->
-        <!--password,-->
-      <!--</if>-->
-      <!--<if test="employeeName != null">-->
-        <!--employee_name,-->
-      <!--</if>-->
-      <!--<if test="employeeNumber != null">-->
-        <!--employee_number,-->
-      <!--</if>-->
-      <!--<if test="workStatus != null">-->
-        <!--work_status,-->
-      <!--</if>-->
-      <!--<if test="userType != null">-->
-        <!--user_type,-->
-      <!--</if>-->
-      <!--<if test="temp1 != null">-->
-        <!--Temp1,-->
-      <!--</if>-->
-      <!--<if test="temp2 != null">-->
-        <!--Temp2,-->
-      <!--</if>-->
-    <!--</trim>-->
-    <!--<trim prefix="values (" suffix=")" suffixOverrides=",">-->
-      <!--<if test="id != null">-->
-        <!--#{id,jdbcType=INTEGER},-->
-      <!--</if>-->
-      <!--<if test="userName != null">-->
-        <!--#{userName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="password != null">-->
-        <!--#{password,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="employeeName != null">-->
-        <!--#{employeeName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="employeeNumber != null">-->
-        <!--#{employeeNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="workStatus != null">-->
-        <!--#{workStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="userType != null">-->
-        <!--#{userType,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="temp1 != null">-->
-        <!--#{temp1,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="temp2 != null">-->
-        <!--#{temp2,jdbcType=VARCHAR},-->
-      <!--</if>-->
-    <!--</trim>-->
-  <!--</insert>-->
+
+  <insert id="insert" parameterType="com.jinhuifeng.model.UserTable">
+    insert into user_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="employeeName != null">
+        employee_name,
+      </if>
+      <if test="employeeNumber != null">
+        employee_number,
+      </if>
+      <if test="workStatus != null">
+        work_status,
+      </if>
+      <if test="userType != null">
+        user_type,
+      </if>
+      <if test="temp1 != null">
+        Temp1,
+      </if>
+      <if test="temp2 != null">
+        Temp2,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeNumber != null">
+        #{employeeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="workStatus != null">
+        #{workStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        #{userType,jdbcType=VARCHAR},
+      </if>
+      <if test="temp1 != null">
+        #{temp1,jdbcType=VARCHAR},
+      </if>
+      <if test="temp2 != null">
+        #{temp2,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
   <!--<update id="updateByPrimaryKeySelective" parameterType="main.java.com.jinhuifeng.model.UserTable">-->
     <!--update user_table-->
     <!--<set>-->

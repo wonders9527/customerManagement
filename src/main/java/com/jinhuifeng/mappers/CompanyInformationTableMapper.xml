@@ -79,46 +79,7 @@
     delete from company_information_table
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <!--<insert id="insert" parameterType="main.java.com.jinhuifeng.model.CompanyInformationTable">-->
-    <!--insert into company_information_table (id, application_amount, maximum_monthly_payment, -->
-      <!--company_name, company_creditCode, company_organization, -->
-      <!--company_establish_date, company_registered_capital, -->
-      <!--company_paidIn_capital, investment_status, -->
-      <!--investment_standard, shareholders_number, -->
-      <!--actual_controller, actual_controller_change, -->
-      <!--equity_pledge_status, equity_freeze_status, -->
-      <!--business_scope, main_business, main_business_change, -->
-      <!--main_business_dispersion, business_place, -->
-      <!--business_place_way, previous_main_business, -->
-      <!--previous_netProfit, previous_totalAssets, previous_netAssets, -->
-      <!--external_borrowing, guarantee_method, unresolved_debt_guarantee, -->
-      <!--tax_dispute_status, outstanding_claim_status, -->
-      <!--quality_assurance_status, financial_commitment_status, -->
-      <!--balance_sheet_status, environmental_inspection_status, -->
-      <!--fire_inspection_status, business_inspection_status, -->
-      <!--arrears_taxes_status, arbitration_law_status, -->
-      <!--entry_people, account_manager, create_date, -->
-      <!--Temp1, Temp2)-->
-    <!--values (#{id,jdbcType=INTEGER}, #{applicationAmount,jdbcType=DOUBLE}, #{maximumMonthlyPayment,jdbcType=DOUBLE}, -->
-      <!--#{companyName,jdbcType=VARCHAR}, #{companyCreditcode,jdbcType=VARCHAR}, #{companyOrganization,jdbcType=VARCHAR}, -->
-      <!--#{companyEstablishDate,jdbcType=DATE}, #{companyRegisteredCapital,jdbcType=DOUBLE}, -->
-      <!--#{companyPaidinCapital,jdbcType=DOUBLE}, #{investmentStatus,jdbcType=VARCHAR}, -->
-      <!--#{investmentStandard,jdbcType=VARCHAR}, #{shareholdersNumber,jdbcType=DOUBLE}, -->
-      <!--#{actualController,jdbcType=VARCHAR}, #{actualControllerChange,jdbcType=VARCHAR}, -->
-      <!--#{equityPledgeStatus,jdbcType=VARCHAR}, #{equityFreezeStatus,jdbcType=VARCHAR}, -->
-      <!--#{businessScope,jdbcType=VARCHAR}, #{mainBusiness,jdbcType=VARCHAR}, #{mainBusinessChange,jdbcType=VARCHAR}, -->
-      <!--#{mainBusinessDispersion,jdbcType=VARCHAR}, #{businessPlace,jdbcType=VARCHAR}, -->
-      <!--#{businessPlaceWay,jdbcType=VARCHAR}, #{previousMainBusiness,jdbcType=DOUBLE}, -->
-      <!--#{previousNetprofit,jdbcType=DOUBLE}, #{previousTotalassets,jdbcType=DOUBLE}, #{previousNetassets,jdbcType=DOUBLE}, -->
-      <!--#{externalBorrowing,jdbcType=VARCHAR}, #{guaranteeMethod,jdbcType=VARCHAR}, #{unresolvedDebtGuarantee,jdbcType=VARCHAR}, -->
-      <!--#{taxDisputeStatus,jdbcType=VARCHAR}, #{outstandingClaimStatus,jdbcType=VARCHAR}, -->
-      <!--#{qualityAssuranceStatus,jdbcType=VARCHAR}, #{financialCommitmentStatus,jdbcType=VARCHAR}, -->
-      <!--#{balanceSheetStatus,jdbcType=VARCHAR}, #{environmentalInspectionStatus,jdbcType=VARCHAR}, -->
-      <!--#{fireInspectionStatus,jdbcType=VARCHAR}, #{businessInspectionStatus,jdbcType=VARCHAR}, -->
-      <!--#{arrearsTaxesStatus,jdbcType=VARCHAR}, #{arbitrationLawStatus,jdbcType=VARCHAR}, -->
-      <!--#{entryPeople,jdbcType=VARCHAR}, #{accountManager,jdbcType=VARCHAR}, #{createDate,jdbcType=TIMESTAMP}, -->
-      <!--#{temp1,jdbcType=VARCHAR}, #{temp2,jdbcType=VARCHAR})-->
-  <!--</insert>-->
+
   <insert id="insertSelective" parameterType="com.jinhuifeng.model.CompanyInformationTable">
     insert into company_information_table
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -526,51 +487,5 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <!--<update id="updateByPrimaryKey" parameterType="main.java.com.jinhuifeng.model.CompanyInformationTable">-->
-    <!--update company_information_table-->
-    <!--set application_amount = #{applicationAmount,jdbcType=DOUBLE},-->
-      <!--maximum_monthly_payment = #{maximumMonthlyPayment,jdbcType=DOUBLE},-->
-      <!--company_name = #{companyName,jdbcType=VARCHAR},-->
-      <!--company_creditCode = #{companyCreditcode,jdbcType=VARCHAR},-->
-      <!--company_organization = #{companyOrganization,jdbcType=VARCHAR},-->
-      <!--company_establish_date = #{companyEstablishDate,jdbcType=DATE},-->
-      <!--company_registered_capital = #{companyRegisteredCapital,jdbcType=DOUBLE},-->
-      <!--company_paidIn_capital = #{companyPaidinCapital,jdbcType=DOUBLE},-->
-      <!--investment_status = #{investmentStatus,jdbcType=VARCHAR},-->
-      <!--investment_standard = #{investmentStandard,jdbcType=VARCHAR},-->
-      <!--shareholders_number = #{shareholdersNumber,jdbcType=DOUBLE},-->
-      <!--actual_controller = #{actualController,jdbcType=VARCHAR},-->
-      <!--actual_controller_change = #{actualControllerChange,jdbcType=VARCHAR},-->
-      <!--equity_pledge_status = #{equityPledgeStatus,jdbcType=VARCHAR},-->
-      <!--equity_freeze_status = #{equityFreezeStatus,jdbcType=VARCHAR},-->
-      <!--business_scope = #{businessScope,jdbcType=VARCHAR},-->
-      <!--main_business = #{mainBusiness,jdbcType=VARCHAR},-->
-      <!--main_business_change = #{mainBusinessChange,jdbcType=VARCHAR},-->
-      <!--main_business_dispersion = #{mainBusinessDispersion,jdbcType=VARCHAR},-->
-      <!--business_place = #{businessPlace,jdbcType=VARCHAR},-->
-      <!--business_place_way = #{businessPlaceWay,jdbcType=VARCHAR},-->
-      <!--previous_main_business = #{previousMainBusiness,jdbcType=DOUBLE},-->
-      <!--previous_netProfit = #{previousNetprofit,jdbcType=DOUBLE},-->
-      <!--previous_totalAssets = #{previousTotalassets,jdbcType=DOUBLE},-->
-      <!--previous_netAssets = #{previousNetassets,jdbcType=DOUBLE},-->
-      <!--external_borrowing = #{externalBorrowing,jdbcType=VARCHAR},-->
-      <!--guarantee_method = #{guaranteeMethod,jdbcType=VARCHAR},-->
-      <!--unresolved_debt_guarantee = #{unresolvedDebtGuarantee,jdbcType=VARCHAR},-->
-      <!--tax_dispute_status = #{taxDisputeStatus,jdbcType=VARCHAR},-->
-      <!--outstanding_claim_status = #{outstandingClaimStatus,jdbcType=VARCHAR},-->
-      <!--quality_assurance_status = #{qualityAssuranceStatus,jdbcType=VARCHAR},-->
-      <!--financial_commitment_status = #{financialCommitmentStatus,jdbcType=VARCHAR},-->
-      <!--balance_sheet_status = #{balanceSheetStatus,jdbcType=VARCHAR},-->
-      <!--environmental_inspection_status = #{environmentalInspectionStatus,jdbcType=VARCHAR},-->
-      <!--fire_inspection_status = #{fireInspectionStatus,jdbcType=VARCHAR},-->
-      <!--business_inspection_status = #{businessInspectionStatus,jdbcType=VARCHAR},-->
-      <!--arrears_taxes_status = #{arrearsTaxesStatus,jdbcType=VARCHAR},-->
-      <!--arbitration_law_status = #{arbitrationLawStatus,jdbcType=VARCHAR},-->
-      <!--entry_people = #{entryPeople,jdbcType=VARCHAR},-->
-      <!--account_manager = #{accountManager,jdbcType=VARCHAR},-->
-      <!--create_date = #{createDate,jdbcType=TIMESTAMP},-->
-      <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
-      <!--Temp2 = #{temp2,jdbcType=VARCHAR}-->
-    <!--where id = #{id,jdbcType=INTEGER}-->
-  <!--</update>-->
+
 </mapper>

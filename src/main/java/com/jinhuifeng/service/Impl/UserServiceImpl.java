@@ -49,7 +49,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int saveAccount(UserTable userTable) {
-        System.out.println("service"+userTable.toString());
         int saveResult= userDao.insert(userTable);
         return saveResult;
     }

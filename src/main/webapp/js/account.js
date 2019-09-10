@@ -12,7 +12,7 @@ function listAccount() {
             type: 'post',
             dataType:'json',
             timeout: 3000,
-            ache: false,
+            // async: false,
             error: erryFunction,    //错误执行方法
             success: succFunction   //成功执行方法
         });

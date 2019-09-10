@@ -28,8 +28,6 @@ function initPersonalById(thisId){
             console.log("err");
         }
         function succFunction(data){
-            console.log(data);
-            var a=dateFormat(data.createDate);
             $('#personalId').val(data.id);
             $('#applicationAmount').val(data.applicationAmount);
             $('#maximumMonthlyPayment').val(data.maximumMonthlyPayment);
@@ -230,7 +228,6 @@ function ajaxFunction(){
         "remark":$('#remark').val()
     };
 
-    console.log(personalInformationTable);
     $(function(){
         $.ajax({
             url: 'personalInformation/updateById',
@@ -261,7 +258,7 @@ function ajaxFunction(){
 }
 
 function dateFormat(longTypeDate){
-    if(longTypeDate.toString()=="-28800000"){
+    if(longTypeDate.toString()=="-28800000"||longTypeDate.toString()=="0"){
         return "";
     }else if(longTypeDate!=null||longTypeDate!=undefined){
         var dateTypeDate = "";
