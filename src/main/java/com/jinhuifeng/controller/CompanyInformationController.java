@@ -26,6 +26,13 @@ public class CompanyInformationController {
     }
 
     @ResponseBody
+    @RequestMapping("/findByName")
+    public List<CompanyInformationTable> findByName(@RequestParam("accountManager")String accountManager){
+        List<CompanyInformationTable> companyList=companyInformationService.findByName(accountManager);
+        return  companyList;
+    }
+
+    @ResponseBody
     @RequestMapping("/findAll")
     public List<CompanyInformationTable> findAll(){
         List<CompanyInformationTable> companyList=companyInformationService.findAll();

@@ -22,13 +22,11 @@ $('#loginForm').click(function () {
             console.log('err');
         }
         function succFunction(data){
-            console.log(data);
-            console.log(data.length);
-            console.log(data!=null&&data.userName!=null&&data.userType!=null&&data.workStatus!=null);
             if(data!=null&&data.userName!=null&&data.userType!=null&&data.workStatus!=null){
                 sessionStorage.setItem("userName", data.userName);
                 sessionStorage.setItem("userType", data.userType);
                 sessionStorage.setItem("workStatus", data.workStatus);
+                sessionStorage.setItem("employeeName", data.employeeName);
                 window.location.href="m_index.html";
             }else{
                 window.location.href="login.html";

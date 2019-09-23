@@ -29,6 +29,7 @@ public class UserController {
     @RequestMapping("/login")
     public UserTable login(@RequestParam("userName")String userName, @RequestParam("password")String password,
                            HttpSession session, HttpServletRequest request){
+
         UserTable user=userService.queryLogin(userName,password);
 
         if(user!=null && user.getWorkStatus().equals("1")){
@@ -36,21 +37,12 @@ public class UserController {
             userTable.setUserName(user.getUserName());
             userTable.setUserType(user.getUserType());
             userTable.setWorkStatus(user.getWorkStatus());
-        }else {
+            userTable.setEmployeeName(user.getEmployeeName());
+        }else{
             userTable.setUserName(null);
             userTable.setUserType(null);
             userTable.setWorkStatus(null);
         }
-//        String redirectUrl;
-//        if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("1") ){
-//            session.setAttribute("user_session", user);
-//            redirectUrl="redirect:/m_index.html";
-//        }else if(user!=null && user.getWorkStatus().equals("1")  && user.getUserType().equals("0") ){
-//            session.setAttribute("user_session", user);
-//            redirectUrl= "redirect:/q_index.html";
-//        }else {
-//            redirectUrl= "redirect:/login.html";
-//        }
         return userTable;
     }
 

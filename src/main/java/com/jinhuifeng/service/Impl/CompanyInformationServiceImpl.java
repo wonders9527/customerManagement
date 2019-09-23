@@ -5,7 +5,6 @@ import com.jinhuifeng.model.CompanyInformationTable;
 import com.jinhuifeng.service.CompanyInformationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
@@ -15,7 +14,6 @@ public class CompanyInformationServiceImpl implements CompanyInformationService 
 
     @Autowired
     private CompanyInformationDao companyInformationDao;
-
 
     @Override
     public int insertCompany(CompanyInformationTable companyInformationTable) {
@@ -42,6 +40,12 @@ public class CompanyInformationServiceImpl implements CompanyInformationService 
     @Override
     public List<CompanyInformationTable> findAll(){
         List<CompanyInformationTable> companyInformationList=companyInformationDao.findAll();
+        return companyInformationList;
+    }
+
+    @Override
+    public List<CompanyInformationTable> findByName(String accountManager) {
+        List<CompanyInformationTable> companyInformationList=companyInformationDao.findByName(accountManager);
         return companyInformationList;
     }
 

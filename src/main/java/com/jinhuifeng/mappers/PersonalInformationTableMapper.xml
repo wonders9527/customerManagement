@@ -111,6 +111,13 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
 
+  <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from personal_information_table
+    where account_manager = #{accountManager,jdbcType=INTEGER}
+  </select>
+
   <delete id="deleteById" parameterType="java.lang.Integer">
     delete from personal_information_table
     where id = #{id,jdbcType=INTEGER}

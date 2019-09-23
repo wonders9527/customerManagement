@@ -36,48 +36,10 @@
     where id=#{id,jdbcType=INTEGER};
   </select>
 
-  <update id="updateById" parameterType="com.jinhuifeng.model.UserTable">
-    update user_table
-    set user_name = #{userName,jdbcType=VARCHAR},
-      password = #{password,jdbcType=VARCHAR},
-      employee_name = #{employeeName,jdbcType=VARCHAR},
-      employee_number = #{employeeNumber,jdbcType=VARCHAR},
-      work_status = #{workStatus,jdbcType=VARCHAR},
-      user_type = #{userType,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=INTEGER}
-  </update>
-
   <delete id="deleteById" parameterType="java.lang.Integer">
     delete from user_table
     where id = #{id,jdbcType=INTEGER}
   </delete>
-
-  <!--<insert id="insert" parameterType="com.jinhuifeng.model.UserTable">-->
-  <!--insert into user_table (user_name, password,-->
-  <!--employee_name, employee_number, work_status,user_type)-->
-  <!--values (#{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},-->
-  <!--#{employeeName,jdbcType=VARCHAR}, #{employeeNumber,jdbcType=VARCHAR}, #{workStatus,jdbcType=VARCHAR},-->
-  <!--#{userType,jdbcType=VARCHAR}-->
-  <!--)-->
-  <!--</insert>-->
-
-  <!--<select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">-->
-    <!--select -->
-    <!--<include refid="Base_Column_List" />-->
-    <!--from user_table-->
-    <!--where id = #{id,jdbcType=INTEGER}-->
-  <!--</select>-->
-
-  <!--<insert id="insert" parameterType="com.jinhuifeng.model.UserTable">-->
-    <!--insert into user_table (id, user_name, password,-->
-      <!--employee_name, employee_number, work_status,-->
-      <!--user_type, Temp1, Temp2-->
-      <!--)-->
-    <!--values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},-->
-      <!--#{employeeName,jdbcType=VARCHAR}, #{employeeNumber,jdbcType=VARCHAR}, #{workStatus,jdbcType=VARCHAR},-->
-      <!--#{userType,jdbcType=VARCHAR}, #{temp1,jdbcType=VARCHAR}, #{temp2,jdbcType=VARCHAR}-->
-      <!--)-->
-  <!--</insert>-->
 
   <insert id="insert" parameterType="com.jinhuifeng.model.UserTable">
     insert into user_table
@@ -141,35 +103,35 @@
     </trim>
   </insert>
 
-  <!--<update id="updateByPrimaryKeySelective" parameterType="main.java.com.jinhuifeng.model.UserTable">-->
-    <!--update user_table-->
-    <!--<set>-->
-      <!--<if test="userName != null">-->
-        <!--user_name = #{userName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="password != null">-->
-        <!--password = #{password,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="employeeName != null">-->
-        <!--employee_name = #{employeeName,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="employeeNumber != null">-->
-        <!--employee_number = #{employeeNumber,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="workStatus != null">-->
-        <!--work_status = #{workStatus,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="userType != null">-->
-        <!--user_type = #{userType,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="temp1 != null">-->
-        <!--Temp1 = #{temp1,jdbcType=VARCHAR},-->
-      <!--</if>-->
-      <!--<if test="temp2 != null">-->
-        <!--Temp2 = #{temp2,jdbcType=VARCHAR},-->
-      <!--</if>-->
-    <!--</set>-->
-    <!--where id = #{id,jdbcType=INTEGER}-->
-  <!--</update>-->
+  <update id="updateById" parameterType="com.jinhuifeng.model.UserTable">
+    update user_table
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        employee_name = #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeNumber != null">
+        employee_number = #{employeeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="workStatus != null">
+        work_status = #{workStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=VARCHAR},
+      </if>
+      <if test="temp1 != null">
+        Temp1 = #{temp1,jdbcType=VARCHAR},
+      </if>
+      <if test="temp2 != null">
+        Temp2 = #{temp2,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 
 </mapper>

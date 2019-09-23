@@ -14,5 +14,7 @@ public interface PersonalInformationService {
 
     PersonalInformationTable findById(int id);
 
+    List<PersonalInformationTable> findByName(String accountManager);
+
     int deleteById(int id);
 }

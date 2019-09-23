@@ -12,6 +12,8 @@ public interface PersonalInformationDao {
 
     List<PersonalInformationTable> findAll();
 
+    List<PersonalInformationTable> findByName(String accountManager);
+
     PersonalInformationTable findById(int id);
 
     int deleteById(int id);

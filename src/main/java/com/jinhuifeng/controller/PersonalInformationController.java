@@ -42,8 +42,15 @@ public class PersonalInformationController {
     @ResponseBody
     @RequestMapping("/findPersonalById")
     public PersonalInformationTable findPersonalById(@RequestParam("id")int id){
-        PersonalInformationTable userList=personalInformationService.findById(id);
-        return  userList;
+        PersonalInformationTable personalList=personalInformationService.findById(id);
+        return  personalList;
+    }
+
+    @ResponseBody
+    @RequestMapping("/findByName")
+    public List<PersonalInformationTable> findByName(@RequestParam("accountManager")String accountManager){
+        List<PersonalInformationTable> personalList=personalInformationService.findByName(accountManager);
+        return  personalList;
     }
 
     @ResponseBody

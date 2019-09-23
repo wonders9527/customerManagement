@@ -9,7 +9,6 @@ jQuery(document).ready(function() {
         thisId = document.URL.split('=')[1];
         initCompanyById(thisId);
     }
-
 });
 
 function initCompanyById(thisId) {
@@ -75,7 +74,7 @@ function initCompanyById(thisId) {
             $('#arbitrationLawStatus').val(data.arbitrationLawStatus);
             $('#environmentalInspectionStatus').val(data.environmentalInspectionStatus);
             $('#fireInspectionStatus').val(data.fireInspectionStatus);
-            $('#businessInspectionStatus').val(dateFormat(data.businessInspectionStatus));
+            $('#businessInspectionStatus').val(data.businessInspectionStatus);
         }
     });
 }
@@ -160,7 +159,8 @@ function ajaxFunction(){
         "arbitrationLawStatus":$('#arbitrationLawStatus').val(),
         "environmentalInspectionStatus":$('#environmentalInspectionStatus').val(),
         "fireInspectionStatus":$('#fireInspectionStatus').val(),
-        "businessInspectionStatus":$('#businessInspectionStatus').val()
+        "businessInspectionStatus":$('#businessInspectionStatus').val(),
+        "accountManager":sessionStorage.getItem("employeeName")
     };
 
     $(function(){

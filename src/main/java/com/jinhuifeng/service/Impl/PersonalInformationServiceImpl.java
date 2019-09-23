@@ -45,6 +45,12 @@ public class PersonalInformationServiceImpl implements PersonalInformationServic
     }
 
     @Override
+    public List<PersonalInformationTable> findByName(String accountManager) {
+        List<PersonalInformationTable> personalInformationList=personalInformationDao.findByName(accountManager);
+        return personalInformationList;
+    }
+
+    @Override
     public int deleteById(int id) {
         int deleteResult=personalInformationDao.deleteById(id);
         return deleteResult;

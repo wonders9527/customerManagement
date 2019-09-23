@@ -121,11 +121,10 @@ function ajaxFunction(){
 
         "providentFundBase":$('#providentFundBase').val(),
         "providentFundYear":$('#providentFundYear').val(),
-
+        "accountManager":sessionStorage.getItem("employeeName"),
         "remark":$('#remark').val()
     };
 
-    console.log(personalInformationTable);
     $(function(){
         $.ajax({
             url: 'personalInformation/insertPersonal',

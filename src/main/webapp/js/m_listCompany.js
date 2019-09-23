@@ -6,6 +6,15 @@ jQuery(document).ready(function() {
 });
 
 function initCompanyList() {
+    var userType=sessionStorage.getItem("userType");
+    if(userType=="1"){
+        findAll();
+    }else if(userType=="0"){
+        findByName(sessionStorage.getItem("employeeName"));
+    }
+}
+
+function findAll() {
     $(function(){
         $.ajax({
             url: 'companyInformation/findAll',
@@ -34,7 +43,6 @@ function initCompanyList() {
                         '<td class="text-center">'+data[i].actualController+'</td>'+
                         '<td class="text-center">'+getStatus(data[i].actualControllerChange)+'</td>'+
                         '<td class="text-center">'+getStatus(data[i].equityPledgeStatus)+'</td>'+
-
                         '<td class="text-center">'+
                         '<a href=\"m_edit_company.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
                         '<a href="#" onclick="companyDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
@@ -47,12 +55,54 @@ function initCompanyList() {
     });
 }
 
+function findByName(accountManager) {
+    $(function(){
+        $.ajax({
+            url: 'companyInformation/findByName',
+            type: 'post',
+            dataType:'json',
+            data:{"accountManager":accountManager},
+            timeout: 3000,
+            ache: false,
+            error: erryFunction,    //错误执行方法
+            success: succFunction   //成功执行方法
+        });
+        function erryFunction(){
+            console.log("error");
+        }
+        function succFunction(data){
+            if(data.length>0) {
+                for (var i = 0; i < data.length; i++){
+                    $("#companyList").append(
+                        '<tr>'+
+                        '<td style="display: none">'+data[i].id+'</td>'+
+                        '<td class="text-center">'+data[i].companyName+'</td>'+
+                        '<td class="text-center">'+data[i].companyCreditcode+'</td>'+
+                        '<td class="text-center">'+getOrganization(data[i].companyOrganization)+'</td>'+
+                        '<td class="text-center">'+dateFormat(data[i].companyEstablishDate)+'</td>'+
+                        '<td class="text-center">'+data[i].companyRegisteredCapital+'</td>'+
+                        '<td class="text-center">'+data[i].companyPaidinCapital+'</td>'+
+                        '<td class="text-center">'+data[i].actualController+'</td>'+
+                        '<td class="text-center">'+getStatus(data[i].actualControllerChange)+'</td>'+
+                        '<td class="text-center">'+getStatus(data[i].equityPledgeStatus)+'</td>'+
+                        '<td class="text-center">'+
+                        '<a href=\"m_edit_company.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
+                        '<a href="#" onclick="companyDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
+                        '</td>'+
+                        '</tr>'
+                    );
+                }
+            }
+        }
+    });
+}
+
+
 function companyDelete(event){
     var e=event||window.event;
     var targetElement=e.target||e.srcElement;
     var trElement=$(targetElement).parents("tr").children();
     var id=$(trElement[0]).text();
-    console.log(id);
     $(function(){
         $.ajax({
             url: 'companyInformation/deleteById',
@@ -123,6 +173,7 @@ function getMonth(date){
     }
     return month;
 }
+
 //返回01-30的日期
 function getDay(date){
     var day = "";
@@ -154,7 +205,6 @@ function getEducation(education) {
         case "7":thisEducation="小学";
             break;
     }
-
     return thisEducation;
 }
 

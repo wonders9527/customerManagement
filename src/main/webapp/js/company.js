@@ -39,8 +39,6 @@ $('#addCompany').click(function () {
         }
     }
 
-
-
 });
 
 function ajaxFunction(){
@@ -83,10 +81,10 @@ function ajaxFunction(){
         "arbitrationLawStatus":$('#arbitrationLawStatus').val(),
         "environmentalInspectionStatus":$('#environmentalInspectionStatus').val(),
         "fireInspectionStatus":$('#fireInspectionStatus').val(),
-        "businessInspectionStatus":$('#businessInspectionStatus').val()
+        "businessInspectionStatus":$('#businessInspectionStatus').val(),
+        "accountManager":sessionStorage.getItem("employeeName")
     };
 
-    console.log(companyInformationTable);
     //
     $(function(){
         $.ajax({

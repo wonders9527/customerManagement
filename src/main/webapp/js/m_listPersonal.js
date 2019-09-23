@@ -1,11 +1,21 @@
 'use strict';
-jQuery(document).ready(function() {
+jQuery(document).ready(function(){
 
     initPersonalList();
 
 });
 
-function initPersonalList() {
+function initPersonalList(){
+    var userType=sessionStorage.getItem("userType");
+    if(userType=="1"){
+        findAll();
+    }else if(userType=="0"){
+        findByName(sessionStorage.getItem("employeeName"));
+    }
+
+}
+
+function findAll() {
     $(function(){
         $.ajax({
             url: 'personalInformation/findAll',
@@ -20,7 +30,6 @@ function initPersonalList() {
             console.log("error");
         }
         function succFunction(data){
-            console.log(data);
             if(data.length>0) {
                 for (var i = 0; i < data.length; i++){
                     $("#personalList").append(
@@ -31,12 +40,10 @@ function initPersonalList() {
                         '<td class="text-center">'+data[i].mailboxNumber+'</td>'+
                         '<td class="text-center">'+getEducation(data[i].highestEducation)+'</td>'+
                         '<td class="text-center">'+getLoanStatus(data[i].loanStatus)+'</td>'+
-
                         '<td class="text-center">'+data[i].loanMechanism+'</td>'+
                         '<td class="text-center">'+dateFormat(data[i].loanDate)+'</td>'+
                         '<td class="text-center">'+data[i].loanAmount+'</td>'+
                         '<td class="text-center">'+data[i].loanMonthlyRepayment+'</td>'+
-
                         '<td class="text-center">'+
                         '<a href=\"m_edit_personal.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
                         '<a href="#" onclick="personalDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
@@ -49,14 +56,48 @@ function initPersonalList() {
     });
 }
 
-// function personalEdit(event){
-//     var e=event||window.event;
-//     var targetElement=e.target||e.srcElement;
-//     var trElement=$(targetElement).parents("tr").children();
-//     var id=$(trElement[0]).text();
-//     console.log(trElement);
-//     console.log(id);
-// }
+function findByName(accountManager) {
+    $(function(){
+        $.ajax({
+            url: 'personalInformation/findByName',
+            type: 'post',
+            dataType:'json',
+            data:{"accountManager":accountManager},
+            timeout: 3000,
+            ache: false,
+            error: erryFunction,    //错误执行方法
+            success: succFunction   //成功执行方法
+        });
+        function erryFunction(){
+            console.log("error");
+        }
+        function succFunction(data){
+            if(data.length>0) {
+                for (var i = 0; i < data.length; i++){
+                    $("#personalList").append(
+                        '<tr>'+
+                        '<td style="display: none">'+data[i].id+'</td>'+
+                        '<td class="text-center">'+data[i].personalName+'</td>'+
+                        '<td class="text-center">'+data[i].identificationNumber+'</td>'+
+                        '<td class="text-center">'+data[i].mailboxNumber+'</td>'+
+                        '<td class="text-center">'+getEducation(data[i].highestEducation)+'</td>'+
+                        '<td class="text-center">'+getLoanStatus(data[i].loanStatus)+'</td>'+
+                        '<td class="text-center">'+data[i].loanMechanism+'</td>'+
+                        '<td class="text-center">'+dateFormat(data[i].loanDate)+'</td>'+
+                        '<td class="text-center">'+data[i].loanAmount+'</td>'+
+                        '<td class="text-center">'+data[i].loanMonthlyRepayment+'</td>'+
+                        '<td class="text-center">'+
+                        '<a href=\"m_edit_personal.html?id='+data[i].id+'\" class="btn btn-success btn-mini"><i class="fa fa-edit"></i>编辑</a>'+
+                        '<a href="#" onclick="personalDelete(event)" class="btn btn-warning"><i class="fa fa-trash-o"></i>删除</a>'+
+                        '</td>'+
+                        '</tr>'
+                    );
+                }
+            }
+        }
+    });
+}
+
 
 function personalDelete(event){
     var e=event||window.event;
@@ -126,7 +167,7 @@ function getDay(date){
 }
 
 //返回学历
-function getEducation(education) {
+function getEducation(education){
     var thisEducation;
     switch (education) {
         case "0":thisEducation="";
@@ -146,12 +187,11 @@ function getEducation(education) {
         case "7":thisEducation="小学";
             break;
     }
-
     return thisEducation;
 }
 
 //返回贷款状态
-function getLoanStatus(loanStatus) {
+function getLoanStatus(loanStatus){
     var thisLoanStatus;
     switch (loanStatus) {
         case "0":thisLoanStatus="";
@@ -164,13 +204,12 @@ function getLoanStatus(loanStatus) {
     return thisLoanStatus;
 }
 
-
 $('#btnClose').click(function(){
     $('#Info_prompt').modal('hide');
 });
 
-$(function() {
-    $('#Info_prompt').on('hide.bs.modal',function() {
+$(function(){
+    $('#Info_prompt').on('hide.bs.modal',function(){
         location.reload();
     });
 });

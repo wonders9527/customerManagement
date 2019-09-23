@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
 <mapper namespace="com.jinhuifeng.dao.CompanyInformationDao">
 
   <resultMap id="BaseResultMap" type="com.jinhuifeng.model.CompanyInformationTable">
@@ -65,14 +66,18 @@
   <select id="findById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from company_information_table
-    where id = #{id,jdbcType=INTEGER}
+    from company_information_table where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from company_information_table where account_manager = #{accountManager,jdbcType=INTEGER}
   </select>
 
   <select id="findAll" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select
-    <include refid="Base_Column_List" />
-    from company_information_table
+    <include refid="Base_Column_List" /> from company_information_table
   </select>
 
   <delete id="deleteById" parameterType="java.lang.Integer">

@@ -14,5 +14,7 @@ public interface CompanyInformationService {
 
     List<CompanyInformationTable> findAll();
 
+    List<CompanyInformationTable> findByName(String accountManager);
+
     CompanyInformationTable findById(int id);
 }
