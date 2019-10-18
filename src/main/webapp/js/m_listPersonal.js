@@ -12,7 +12,6 @@ function initPersonalList(){
     }else if(userType=="0"){
         findByName(sessionStorage.getItem("employeeName"));
     }
-
 }
 
 function findAll() {
@@ -156,6 +155,7 @@ function getMonth(date){
     }
     return month;
 }
+
 //返回01-30的日期
 function getDay(date){
     var day = "";
@@ -213,3 +213,4 @@ $(function(){
         location.reload();
     });
 });
+

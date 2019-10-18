@@ -31,8 +31,6 @@
         <!-- 连接池最大使用连接数量 -->
         <property name="maxActive" value="${maxActive}" />
 
-        <!-- 连接池最大空闲
-        <property name="maxIdle" value="${maxIdle}" /> -->
         <!-- 连接池最小空闲 -->
         <property name="minIdle" value="${minIdle}" />
         <!-- 获取连接最大等待时间 -->

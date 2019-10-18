@@ -149,7 +149,9 @@ function getOrganization(organization) {
 }
 
 function dateFormat(longTypeDate){
-    if(longTypeDate.toString()=="-28800000"||longTypeDate.toString()=="0"){
+    if(longTypeDate==null||longTypeDate==""){
+        return "";
+    }else if(longTypeDate.toString()=="-28800000"||longTypeDate.toString()=="0"){
         return "";
     }else if(longTypeDate!=null||longTypeDate!=undefined){
         var dateTypeDate = "";
@@ -159,8 +161,6 @@ function dateFormat(longTypeDate){
         dateTypeDate += "-" + getMonth(date); //月
         dateTypeDate += "-" + getDay(date);   //日
         return dateTypeDate;
-    }else {
-        return "";
     }
 }
 
