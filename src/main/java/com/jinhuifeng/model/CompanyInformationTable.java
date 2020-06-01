@@ -10,6 +10,8 @@ public class CompanyInformationTable {
                 "id=" + id +
                 ", applicationAmount=" + applicationAmount +
                 ", maximumMonthlyPayment=" + maximumMonthlyPayment +
+                ", loanUse='" + loanUse + '\'' +
+                ", loanWay='" + loanWay + '\'' +
                 ", companyName='" + companyName + '\'' +
                 ", companyCreditcode='" + companyCreditcode + '\'' +
                 ", companyOrganization='" + companyOrganization + '\'' +
@@ -59,6 +61,10 @@ public class CompanyInformationTable {
     private Double applicationAmount;
 
     private Double maximumMonthlyPayment;
+
+    private String loanUse;
+
+    private String loanWay;
 
     private String companyName;
 
@@ -164,6 +170,22 @@ public class CompanyInformationTable {
 
     public void setMaximumMonthlyPayment(Double maximumMonthlyPayment) {
         this.maximumMonthlyPayment = maximumMonthlyPayment;
+    }
+
+    public String getLoanUse() {
+        return loanUse;
+    }
+
+    public void setLoanUse(String loanUse) {
+        this.loanUse = loanUse == null ? null : loanUse.trim();
+    }
+
+    public String getLoanWay() {
+        return loanWay;
+    }
+
+    public void setLoanWay(String loanWay) {
+        this.loanWay = loanWay == null ? null : loanWay.trim();
     }
 
     public String getCompanyName() {

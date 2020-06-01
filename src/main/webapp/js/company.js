@@ -46,6 +46,8 @@ function ajaxFunction(){
     var companyInformationTable={
         "applicationAmount":$('#applicationAmount').val(),
         "maximumMonthlyPayment":$('#maximumMonthlyPayment').val(),
+        "loanUse":$('#loanUse').val(),
+        "loanWay":$('#loanWay').val(),
         "companyName":$('#companyName').val(),
         "companyCreditcode":$('#companyCreditcode').val(),
         "companyOrganization":$('#companyOrganization').val(),
@@ -103,7 +105,6 @@ function ajaxFunction(){
             console.log("err");
         }
         function succFunction(data){
-            console.log(data);
             if(data==1||data=='1'){
                 $('#promptContent').html('保存成功！');
                 $('#Info_prompt').modal('show');
@@ -122,6 +123,5 @@ $('#btnClose').click(function(){
 $(function() {
     $('#Info_prompt').on('hide.bs.modal',function() {
         location.reload();
-        // window.location.href='m_add_company.html';
     })
 });

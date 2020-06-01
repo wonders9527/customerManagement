@@ -10,6 +10,8 @@ public class PersonalInformationTable {
                 "id=" + id +
                 ", applicationAmount=" + applicationAmount +
                 ", maximumMonthlyPayment=" + maximumMonthlyPayment +
+                ", loanUse='" + loanUse + '\'' +
+                ", loanWay='" + loanWay + '\'' +
                 ", personalName='" + personalName + '\'' +
                 ", identificationNumber='" + identificationNumber + '\'' +
                 ", maritalStatus='" + maritalStatus + '\'' +
@@ -90,6 +92,10 @@ public class PersonalInformationTable {
 
     private Double maximumMonthlyPayment;
 
+    private String loanUse;
+
+    private String loanWay;
+
     private String personalName;
 
     private String identificationNumber;
@@ -112,8 +118,6 @@ public class PersonalInformationTable {
 
     private String companyName;
 
-//    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date entryTime;
 
     private String employmentType;
@@ -258,6 +262,22 @@ public class PersonalInformationTable {
 
     public void setMaximumMonthlyPayment(Double maximumMonthlyPayment) {
         this.maximumMonthlyPayment = maximumMonthlyPayment;
+    }
+
+    public String getLoanUse() {
+        return loanUse;
+    }
+
+    public void setLoanUse(String loanUse) {
+        this.loanUse = loanUse == null ? null : loanUse.trim();
+    }
+
+    public String getLoanWay() {
+        return loanWay;
+    }
+
+    public void setLoanWay(String loanWay) {
+        this.loanWay = loanWay == null ? null : loanWay.trim();
     }
 
     public String getPersonalName() {

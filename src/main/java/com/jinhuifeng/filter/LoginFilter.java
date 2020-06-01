@@ -28,7 +28,7 @@ public class LoginFilter implements Filter {
 //        System.out.println(path);
 
 
-        if(path.indexOf("/qcom.html") > -1||path.indexOf("/qper.html") > -1||path.indexOf("/index.html") > -1||path.indexOf("/login.html") > -1||path.contains(".css")||path.contains(".js")||path.contains(".jpg")||path.contains(".png")){
+        if(path.indexOf("/application.html") > -1||path.indexOf("/qcom.html") > -1||path.indexOf("/qper.html") > -1||path.indexOf("/index.html") > -1||path.indexOf("/login.html") > -1||path.contains(".css")||path.contains(".js")||path.contains(".otf")||path.contains(".eot")||path.contains(".svg")||path.contains(".ttf")||path.contains(".woff")||path.contains(".woff2")||path.contains(".jpg")||path.contains(".png")){
             chain.doFilter(request, response);
             return;
         }

@@ -49,7 +49,8 @@ function ajaxFunction(){
     var personalInformationTable={
         "applicationAmount":$('#applicationAmount').val(),
         "maximumMonthlyPayment":$('#maximumMonthlyPayment').val(),
-
+        "loanUse":$('#loanUse').val(),
+        "loanWay":$('#loanWay').val(),
         "personalName":$('#personalName').val(),
         "identificationNumber":$('#identificationNumber').val(),
         "maritalStatus":$('#maritalStatus').val(),
@@ -151,13 +152,14 @@ function ajaxFunction(){
             }
         }
     });
-
 }
 
+$('#btnClose').click(function(){
+    $('#Info_prompt').modal('hide');
+});
 
-
-
-function ceshi() {
-    $('#promptContent').html('保存成功！');
-    $('#Info_prompt').modal('show');
-}
+$(function() {
+    $('#Info_prompt').on('hide.bs.modal',function() {
+        location.reload();
+    })
+});

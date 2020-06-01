@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+<title>Inputs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="css/bootstrap.css">
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- font CSS -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="css/font.css" type="text/css"/>
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+
+<script src="js/modernizr.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/screenfull.js"></script>
+		
+</head>
+<body class="dashboard-page">
+	<section class="wrapper scrollable">
+		<div class="main-grid">
+			<div class="agile-grids">	
+				<!-- input-forms -->
+				<div class="grids">
+					<div class="panel panel-widget forms-panel">
+						<div class="progressbar-heading general-heading">
+							<h4>General Form :</h4>
+						</div>
+						<div class="forms">
+							<h3 class="title1"></h3>
+							<div class="form-three widget-shadow">
+								<form class="form-horizontal" action="#" method="post">
+									<div class="form-group">
+										<label for="focusedinput" class="col-sm-1 control-label">姓名：</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control1" id="focusedinput">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="radio" class="col-sm-1 control-label">性别：</label>
+										<div class="col-sm-11">
+											<div class="radio-inline"><label><input type="radio">男</label></div>
+											<div class="radio-inline"><label><input type="radio" checked="">女</label></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="selector1" class="col-sm-1 control-label">所在地区：</label>
+										<div class="col-sm-3">
+											<select name="selector1" id="selector1" class="form-control1">
+												<option>Lorem ipsum dolor sit amet.</option>
+												<option>Dolore, ab unde modi est!</option>
+												<option>Illum, fuga minus sit eaque.</option>
+												<option>Consequatur ducimus maiores voluptatum minima.</option>
+											</select>
+										</div>
+										<div class="col-sm-3">
+											<select name="selector1" id="selector1" class="form-control1">
+												<option>Lorem ipsum dolor sit amet.</option>
+												<option>Dolore, ab unde modi est!</option>
+												<option>Illum, fuga minus sit eaque.</option>
+												<option>Consequatur ducimus maiores voluptatum minima.</option>
+											</select>    
+										</div>
+										<div class="col-sm-3">
+											<select name="selector1" id="selector1" class="form-control1">
+												<option>Lorem ipsum dolor sit amet.</option>
+												<option>Dolore, ab unde modi est!</option>
+												<option>Illum, fuga minus sit eaque.</option>
+												<option>Consequatur ducimus maiores voluptatum minima.</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="disabledinput" class="col-sm-1 control-label">贷款金额：</label>
+										<div class="col-sm-9">
+											<input disabled="" type="text" name="Disabled Input" class="form-control1" id="disabledinput" placeholder="Disabled Input">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputPassword" class="col-sm-1 control-label">贷款类型：</label>
+										<div class="col-sm-4">
+											<select name="selector1" id="selector1" class="form-control1">
+												<option>Lorem ipsum dolor sit amet.</option>
+												<option>Dolore, ab unde modi est!</option>
+												<option>Illum, fuga minus sit eaque.</option>
+												<option>Consequatur ducimus maiores voluptatum minima.</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="checkbox" class="col-sm-1 control-label">资产情况：</label>
+										<div class="col-sm-9">
+											<div class="checkbox-inline"><label><input type="checkbox">房产</label></div>
+											<div class="checkbox-inline"><label><input type="checkbox">车产</label></div>
+											<div class="checkbox-inline"><label><input type="checkbox">保单</label></div>
+											<div class="checkbox-inline"><label><input type="checkbox">保单</label></div>
+											<div class="checkbox-inline"><label><input type="checkbox">公积金</label></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="radio" class="col-sm-1 control-label">职业情况：</label>
+										<div class="col-sm-11">
+											<div class="radio-inline"><label><input type="radio">国企/事业单位</label></div>
+											<div class="radio-inline"><label><input type="radio">私企职员</label></div>
+											<div class="radio-inline"><label><input type="radio">公务员/教师</label></div>
+											<div class="radio-inline"><label><input type="radio">企业法人</label></div>
+											<div class="radio-inline"><label><input type="radio">个体户</label></div>
+											<div class="radio-inline"><label><input type="radio">外企/知名企业</label></div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="smallinput" class="col-sm-1 control-label label-input-sm">联系电话：</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control1 input-sm" id="smallinpu t" placeholder="Small Input">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="mediuminput" class="col-sm-1 control-label">验证码：</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control1" id="mediuminput" placeholder="Medium Input">
+										</div>
+									</div>
+									<p>
+										<input type="submit" name="sub-1" value="Submit"    class="btn btn-primary">
+										<input type="reset" name="res-1" id="res-1" value="Reset" class="btn btn-danger">
+										<input type="button" name="but-1" value="Button 1" class="btn btn-default">
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>`
+	<script src="js/bootstrap.js"></script>
+	<script src="js/proton.js"></script>
+</body>
+</html>

@@ -30,16 +30,14 @@ function initCompanyById(thisId) {
             $('#companyId').val(data.id);
             $('#applicationAmount').val(data.applicationAmount);
             $('#maximumMonthlyPayment').val(data.maximumMonthlyPayment);
-
+            $('#loanUse').val(data.loanUse);
+            $('#loanWay').val(data.loanWay);
             $('#companyName').val(data.companyName);
             $('#companyCreditcode').val(data.companyCreditcode);
-
             $('#companyOrganization').val(data.companyOrganization);
             $('#companyEstablishDate').val(dateFormat(data.companyEstablishDate));
-
             $('#companyRegisteredCapital').val(data.companyRegisteredCapital);
             $('#companyPaidinCapital').val(data.companyPaidinCapital);
-
             $('#investmentStatus').val(data.investmentStatus);
             $('#investmentStandard').val(data.investmentStandard);
             $('#shareholdersNumber').val(data.shareholdersNumber);
@@ -50,21 +48,16 @@ function initCompanyById(thisId) {
             $('#businessScope').val(data.businessScope);
             $('#mainBusiness').val(data.mainBusiness);
             $('#mainBusinessChange').val(data.mainBusinessChange);
-
             $('#mainBusinessDispersion').val(data.mainBusinessDispersion);
-
             $('#businessPlace').val(data.businessPlace);
             $('#businessPlaceWay').val(data.businessPlaceWay);
-
             $('#previousMainBusiness').val(data.previousMainBusiness);
             $('#previousNetprofit').val(data.previousNetprofit);
             $('#previousTotalassets').val(data.previousTotalassets);
             $('#previousNetassets').val(data.previousNetassets);
-
             $('#externalBorrowing').val(data.externalBorrowing);
             $('#guaranteeMethod').val(data.guaranteeMethod);
             $('#unresolvedDebtGuarantee').val(data.unresolvedDebtGuarantee);
-
             $('#taxDisputeStatus').val(data.taxDisputeStatus);
             $('#outstandingClaimStatus').val(data.outstandingClaimStatus);
             $('#qualityAssuranceStatus').val(data.qualityAssuranceStatus);
@@ -124,6 +117,8 @@ function ajaxFunction(){
         "id":$('#companyId').val(),
         "applicationAmount":$('#applicationAmount').val(),
         "maximumMonthlyPayment":$('#maximumMonthlyPayment').val(),
+        "loanUse":$('#loanUse').val(),
+        "loanWay":$('#loanWay').val(),
         "companyName":$('#companyName').val(),
         "companyCreditcode":$('#companyCreditcode').val(),
         "companyOrganization":$('#companyOrganization').val(),
@@ -169,7 +164,6 @@ function ajaxFunction(){
             type: 'post',
             dataType:'json',
             contentType:'application/json; charset=utf-8',
-            //data:personalInformationTable,
             data:JSON.stringify(companyInformationTable),
             timeout: 3000,
             ache: false,

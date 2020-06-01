@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="customerManagement:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4809bca1-dbe3-46b9-9342-de383096b0d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customerManagement.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/kwitManagementSystem.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/controller/CompanyInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/controller/CompanyInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/filter/LoginFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/mappers/CompanyInformationTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/mappers/CompanyInformationTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/mappers/PersonalInformationTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/mappers/PersonalInformationTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/model/CompanyInformationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/model/CompanyInformationTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/model/PersonalInformationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jinhuifeng/model/PersonalInformationTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/i_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/i_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/editCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/editCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/editPersonal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/editPersonal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/personal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/personal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_add_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_add_company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_add_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_add_personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_edit_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_edit_company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_edit_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_edit_personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_list_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_list_company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/m_list_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/m_list_personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/qcom.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/qcom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/qper.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/qper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/wenda.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fontawesome-webfont.woff2</find>
+      <find>lilvdi</find>
+      <find>personalName</find>
+      <find>form-control</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1cI13PgOWIo09gfLmPUuEgVbPsl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574930202433" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.3800657" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunManager" selected="Maven.ebms_new [mybatis-generator:generate...]">
+    <configuration name="CompanyInformationTest.findAllTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ebms_new" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jinhuifeng.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jinhuifeng.test" />
+      <option name="MAIN_CLASS_NAME" value="com.jinhuifeng.test.CompanyInformationTest" />
+      <option name="METHOD_NAME" value="findAllTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ebms_new [mybatis-generator:generate...]" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="mybatis-generator:generate" />
+                <option value="-e" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tomcat 8.5.41" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.41" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/ebms_new/" />
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <file path="$PROJECT_DIR$">
+          <settings>
+            <option name="CONTEXT_PATH" value="/ebms_new" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_customerManagement_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59240" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="customerManagement:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.CompanyInformationTest.findAllTest" />
+      <item itemvalue="Maven.ebms_new [mybatis-generator:generate...]" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.41" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CompanyInformationTest.findAllTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4809bca1-dbe3-46b9-9342-de383096b0d2" name="Default Changelist" comment="" />
+      <created>1567675755936</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567675755936</updated>
+      <workItem from="1567675757618" duration="1749000" />
+      <workItem from="1567733269189" duration="17181000" />
+      <workItem from="1567819856651" duration="13237000" />
+      <workItem from="1567991025653" duration="13061000" />
+      <workItem from="1568016187982" duration="5512000" />
+      <workItem from="1568023879164" duration="758000" />
+      <workItem from="1568077950768" duration="21730000" />
+      <workItem from="1568166687925" duration="14621000" />
+      <workItem from="1568250058960" duration="11935000" />
+      <workItem from="1568273888580" duration="7284000" />
+      <workItem from="1568596107383" duration="7545000" />
+      <workItem from="1568681256200" duration="14342000" />
+      <workItem from="1568770565976" duration="12807000" />
+      <workItem from="1568854917542" duration="21296000" />
+      <workItem from="1568941835523" duration="14274000" />
+      <workItem from="1569027826267" duration="13403000" />
+      <workItem from="1569202736827" duration="11286000" />
+      <workItem from="1569286123149" duration="8525000" />
+      <workItem from="1569375802572" duration="7452000" />
+      <workItem from="1569459218453" duration="3290000" />
+      <workItem from="1569547326786" duration="9502000" />
+      <workItem from="1569719265375" duration="1796000" />
+      <workItem from="1569740792603" duration="6530000" />
+      <workItem from="1569828971689" duration="6000" />
+      <workItem from="1570497753077" duration="10416000" />
+      <workItem from="1570583315074" duration="5006000" />
+      <workItem from="1570758447747" duration="661000" />
+      <workItem from="1570844953318" duration="4042000" />
+      <workItem from="1571016251677" duration="4880000" />
+      <workItem from="1571101880384" duration="7179000" />
+      <workItem from="1571190153701" duration="16403000" />
+      <workItem from="1571273552379" duration="11691000" />
+      <workItem from="1571302189757" duration="2179000" />
+      <workItem from="1571363256850" duration="12727000" />
+      <workItem from="1571448087449" duration="9274000" />
+      <workItem from="1571621583941" duration="13109000" />
+      <workItem from="1571707419228" duration="11317000" />
+      <workItem from="1571794181402" duration="8980000" />
+      <workItem from="1571880093190" duration="8975000" />
+      <workItem from="1572226425843" duration="11167000" />
+      <workItem from="1572310536954" duration="13437000" />
+      <workItem from="1572403111936" duration="6689000" />
+      <workItem from="1574760929242" duration="1153000" />
+      <workItem from="1574821799439" duration="20639000" />
+      <workItem from="1574903246244" duration="19532000" />
+      <workItem from="1574930475365" duration="3154000" />
+      <workItem from="1574934841973" duration="391000" />
+      <workItem from="1574989871250" duration="13277000" />
+      <workItem from="1575011075580" duration="9396000" />
+      <workItem from="1575075320089" duration="22375000" />
+      <workItem from="1575249346471" duration="20865000" />
+      <workItem from="1575334419014" duration="17903000" />
+      <workItem from="1575421966198" duration="18066000" />
+      <workItem from="1575507395104" duration="19447000" />
+      <workItem from="1575595447198" duration="16539000" />
+      <workItem from="1575679963452" duration="18414000" />
+      <workItem from="1575856625909" duration="17212000" />
+      <workItem from="1575939013165" duration="13846000" />
+      <workItem from="1576026836711" duration="6036000" />
+      <workItem from="1576041163911" duration="7344000" />
+      <workItem from="1576058660479" duration="2597000" />
+      <workItem from="1576112218238" duration="4062000" />
+      <workItem from="1576135512231" duration="1395000" />
+      <workItem from="1576143074030" duration="1561000" />
+      <workItem from="1576200217981" duration="243000" />
+      <workItem from="1576200490458" duration="484000" />
+      <workItem from="1576805318331" duration="23000" />
+      <workItem from="1578366216370" duration="14000" />
+      <workItem from="1578366274721" duration="12000" />
+      <workItem from="1590201114212" duration="35000" />
+      <workItem from="1590201347308" duration="307000" />
+      <workItem from="1590201665039" duration="250000" />
+      <workItem from="1590202041371" duration="2112000" />
+      <workItem from="1590214602783" duration="167000" />
+      <workItem from="1590215478632" duration="1137000" />
+      <workItem from="1590580449082" duration="983000" />
+      <workItem from="1590997528541" duration="84000" />
+    </task>
+    <task id="LOCAL-00001" summary="20190906">
+      <created>1567760377677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567760377677</updated>
+    </task>
+    <task id="LOCAL-00002" summary="20190907">
+      <created>1567836302555</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1567836302555</updated>
+    </task>
+    <task id="LOCAL-00003" summary="20190910">
+      <created>1568086817726</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568086817726</updated>
+    </task>
+    <task id="LOCAL-00004" summary="20190923">
+      <created>1569207216310</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569207216310</updated>
+    </task>
+    <task id="LOCAL-00005" summary="20191018">
+      <created>1571381972487</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571381972487</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="20190906" />
+    <MESSAGE value="20190907" />
+    <MESSAGE value="20190910" />
+    <MESSAGE value="20190923" />
+    <MESSAGE value="20191018" />
+    <option name="LAST_COMMIT_MESSAGE" value="20191018" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="641" y="120" width="652" height="800" key="#Tomcat_8.5.41" timestamp="1590215659223">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="641" y="120" width="652" height="800" key="#Tomcat_8.5.41/0.0.1920.1040@0.0.1920.1040" timestamp="1590215659223" />
+    <state x="734" y="396" key="#Tomcat_Server" timestamp="1590215556427">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="396" key="#Tomcat_Server/0.0.1920.1040@0.0.1920.1040" timestamp="1590215556427" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590215703630">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590215703630" />
+    <state x="758" y="330" key="FileChooserDialogImpl" timestamp="1590215639966">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="758" y="330" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1590215639966" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1590997630216">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590997630216" />
+  </component>
+</project>

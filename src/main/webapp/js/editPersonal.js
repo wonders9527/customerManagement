@@ -156,6 +156,8 @@ function ajaxFunction(){
         "id":$('#personalId').val(),
         "applicationAmount":$('#applicationAmount').val(),
         "maximumMonthlyPayment":$('#maximumMonthlyPayment').val(),
+        "loanUse":$('#loanUse').val(),
+        "loanWay":$('#loanWay').val(),
         "personalName":$('#personalName').val(),
         "identificationNumber":$('#identificationNumber').val(),
         "maritalStatus":$('#maritalStatus').val(),

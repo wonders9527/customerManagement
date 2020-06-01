@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1b54b522-2c76-4e2c-a8d8-e6566db27634" name="Default Changelist" comment="" />
+    <list default="true" id="1b54b522-2c76-4e2c-a8d8-e6566db27634" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../java/com/jinhuifeng/controller/CompanyInformationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/jinhuifeng/controller/CompanyInformationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/jinhuifeng/mappers/CompanyInformationTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/jinhuifeng/mappers/CompanyInformationTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/jinhuifeng/mappers/PersonalInformationTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/jinhuifeng/mappers/PersonalInformationTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/jinhuifeng/model/CompanyInformationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/jinhuifeng/model/CompanyInformationTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/com/jinhuifeng/model/PersonalInformationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/com/jinhuifeng/model/PersonalInformationTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/company.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/company.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/editCompany.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/editCompany.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/editPersonal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/editPersonal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/personal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/personal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_account.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_add_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_add_company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_add_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_add_personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_edit_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_edit_company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_edit_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_edit_personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_list_company.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_list_company.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m_list_personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/m_list_personal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qcom.html" beforeDir="false" afterPath="$PROJECT_DIR$/qcom.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qper.html" beforeDir="false" afterPath="$PROJECT_DIR$/qper.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/about.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/wenda.html" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,40 +37,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/account.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#section#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-                <element signature="e#3632#3639#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/account.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-              <folding>
-                <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,6 +45,9 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -73,12 +68,12 @@
     <option name="width" value="1657" />
     <option name="height" value="720" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -101,6 +96,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -133,11 +129,12 @@
       <updated>1566373027369</updated>
       <workItem from="1566373029047" duration="3510000" />
       <workItem from="1566441281006" duration="8063000" />
+      <workItem from="1571905128128" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11573000" />
+    <option name="totallyTimeSpent" value="11594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -165,9 +162,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/list_personal0.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/list_personal0.html" />
     <entry file="file://$PROJECT_DIR$/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -215,7 +210,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/account.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
+        <state relative-caret-position="1785">
           <caret line="85" column="24" selection-start-line="85" selection-start-column="24" selection-end-line="85" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#button#0;n#section#0;n#section#0;n#body#0;n#!!top" expanded="true" />
@@ -226,15 +221,14 @@
             <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-            <element signature="e#3632#3639#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/account.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        <state relative-caret-position="440">
+          <caret line="93" column="3" lean-forward="true" selection-start-line="93" selection-start-column="3" selection-end-line="93" selection-end-column="3" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
           </folding>

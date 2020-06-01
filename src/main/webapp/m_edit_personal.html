@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<title>个人信息</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes” />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 	<link rel="stylesheet" href="css/bootstrap.min.css" type='text/css'>
@@ -62,7 +62,21 @@
 										</div>
 										<input type="number" class="form-control" id="maximumMonthlyPayment" name="maximumMonthlyPayment">
 									</div>
-
+									<div class="input-group mb-3">
+										<div class="input-group-prepend">
+											<span class="input-group-text">贷款用途</span>
+										</div>
+										<input type="text" class="form-control" id="loanUse" name="loanUse"/>
+										<div class="input-group-prepend">
+											<span class="input-group-text">贷款方式</span>
+										</div>
+										<select class="form-control" id="loanWay">
+											<option value="0"></option>
+											<option value="1">信用</option>
+											<option value="2">信用担保</option>
+											<option value="3">抵押</option>
+										</select>
+									</div>
 									<div class="input-group mb-3">
 										<div class="input-group-prepend">
 											<span class="input-group-text">姓名</span>
@@ -230,7 +244,6 @@
 										</div>
 										<input type="number" class="form-control" id="spouseAverageIncome" name="spouseAverageIncome">
 									</div>
-
 								</form>
 							</div>
 						</div>

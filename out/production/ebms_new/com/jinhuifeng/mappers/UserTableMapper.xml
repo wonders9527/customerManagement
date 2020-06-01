@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jinhuifeng.dao.UserDao">
+
+  <resultMap id="BaseResultMap" type="com.jinhuifeng.model.UserTable">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="employee_name" jdbcType="VARCHAR" property="employeeName" />
+    <result column="employee_number" jdbcType="VARCHAR" property="employeeNumber" />
+    <result column="work_status" jdbcType="VARCHAR" property="workStatus" />
+    <result column="user_type" jdbcType="VARCHAR" property="userType" />
+    <result column="Temp1" jdbcType="VARCHAR" property="temp1" />
+    <result column="Temp2" jdbcType="VARCHAR" property="temp2" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id, user_name, password, employee_name, employee_number, work_status, user_type,
+    Temp1, Temp2
+  </sql>
+
+    <select id="findAll" resultMap="BaseResultMap">
+      select * from user_table
+    </select>
+
+  <!--据用户名和密码查询 -->
+  <select id="queryLogin" resultMap="BaseResultMap">
+    select * from user_table
+    where user_name=#{userName,jdbcType=VARCHAR} and password=#{password,jdbcType=VARCHAR};
+  </select>
+
+  <!--据用ID查询 -->
+  <select id="findById" resultMap="BaseResultMap">
+    select * from user_table
+    where id=#{id,jdbcType=INTEGER};
+  </select>
+
+  <delete id="deleteById" parameterType="java.lang.Integer">
+    delete from user_table
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="insert" parameterType="com.jinhuifeng.model.UserTable">
+    insert into user_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="employeeName != null">
+        employee_name,
+      </if>
+      <if test="employeeNumber != null">
+        employee_number,
+      </if>
+      <if test="workStatus != null">
+        work_status,
+      </if>
+      <if test="userType != null">
+        user_type,
+      </if>
+      <if test="temp1 != null">
+        Temp1,
+      </if>
+      <if test="temp2 != null">
+        Temp2,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeNumber != null">
+        #{employeeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="workStatus != null">
+        #{workStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        #{userType,jdbcType=VARCHAR},
+      </if>
+      <if test="temp1 != null">
+        #{temp1,jdbcType=VARCHAR},
+      </if>
+      <if test="temp2 != null">
+        #{temp2,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="updateById" parameterType="com.jinhuifeng.model.UserTable">
+    update user_table
+    <set>
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeName != null">
+        employee_name = #{employeeName,jdbcType=VARCHAR},
+      </if>
+      <if test="employeeNumber != null">
+        employee_number = #{employeeNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="workStatus != null">
+        work_status = #{workStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null">
+        user_type = #{userType,jdbcType=VARCHAR},
+      </if>
+      <if test="temp1 != null">
+        Temp1 = #{temp1,jdbcType=VARCHAR},
+      </if>
+      <if test="temp2 != null">
+        Temp2 = #{temp2,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>
