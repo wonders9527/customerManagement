@@ -21,7 +21,7 @@
     <spring.version>5.0.2.RELEASE</spring.version>
     <slf4j.version>1.7.7</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
-    <mysql.version>5.1.6</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <mybatis.version>3.4.5</mybatis.version>
     <shiro.version>1.4.1</shiro.version>
   </properties>
@@ -336,7 +336,7 @@
             <dependency>
               <groupId>mysql</groupId>
               <artifactId>mysql-connector-java</artifactId>
-              <version>5.1.6</version>
+              <version>8.0.28</version>
             </dependency>
             <dependency>
               <groupId>org.mybatis.generator</groupId>
